@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geschichte der KI - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+        /* Timeline-Stile */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid #D1D5DB; /* gray-300 */
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0.25rem;
+            height: 1rem;
+            width: 1rem;
+            background-color: #ffffff;
+            border: 2px solid #2563EB; /* blue-600 */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link active">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "KI-GESCHICHTE"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-center mb-4">Von der Theorie zur Transformation</h1>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Eine Reise durch die entscheidenden Momente, die die künstliche Intelligenz von einer philosophischen Idee zur transformativen Technologie gemacht haben.</p>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline-Item 1943 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">1943</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Das McCulloch-Pitts-Neuron: Der erste Baustein</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Warren McCulloch und Walter Pitts veröffentlichen "A Logical Calculus of the Ideas Immanent in Nervous Activity". Sie schlagen das erste mathematische Modell eines biologischen Neurons vor. Ihre Arbeit beweist, dass Netzwerke aus diesen künstlichen Neuronen prinzipiell jede berechenbare Funktion ausführen können, und legt damit das theoretische Fundament für alle nachfolgenden neuronalen Netze.</p>
+                </div>
+                <!-- Timeline-Item 1950 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">1950</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Der Turing-Test: Eine Frage der Intelligenz</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">In seinem wegweisenden Paper "Computing Machinery and Intelligence" schlägt Alan Turing das "Imitationsspiel" vor. Der später als Turing-Test bekannte Vorschlag definiert ein Kriterium für maschinelle Intelligenz und legt damit das philosophische Fundament für das gesamte Feld der KI.</p>
+                </div>
+                <!-- Timeline-Item 1956 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">1956</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Geburt der "Künstlichen Intelligenz"</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Auf dem "Dartmouth Summer Research Project on Artificial Intelligence" wird der Begriff "Künstliche Intelligenz" offiziell geprägt. Das von John McCarthy organisierte Treffen versammelt die Gründerväter des Feldes und formuliert die Vision, dass eine Maschine prinzipiell jeden Aspekt von Intelligenz simulieren kann.</p>
+                </div>
+                <!-- Timeline-Item 1958 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">1958</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Das Perzeptron: Ein erster Funke des Lernens</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Frank Rosenblatt entwickelt das Perzeptron, eines der ersten künstlichen neuronalen Netze. Obwohl es auf einfache Mustererkennungsaufgaben beschränkt ist, demonstriert es die grundlegende Fähigkeit, aus Daten zu lernen – ein Kernkonzept des modernen maschinellen Lernens.</p>
+                </div>
+                <!-- Timeline-Item 1974-1980 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1974 - 1980</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Der erste KI-Winter: Eine Zeit der Ernüchterung</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Nach einer Phase des großen Optimismus folgten Jahre der Enttäuschung. Die Komplexität realer Probleme wurde unterschätzt, die verfügbare Rechenleistung war unzureichend und die theoretischen Grenzen früher Modelle (z.B. die Unfähigkeit des Perzeptrons, das XOR-Problem zu lösen) wurden deutlich. Berichte wie der Lighthill-Report in Großbritannien führten zu drastischen Kürzungen der Forschungsgelder und leiteten den ersten "KI-Winter" ein.</p>
+                </div>
+                <!-- Timeline-Item 1980s -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">1980er Jahre</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Expertensysteme und die Wiedergeburt der Netze</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Ein neuer Aufschwung kam mit dem Erfolg von Expertensystemen, die menschliches Wissen in Form von Regeln kodifizierten. Gleichzeitig wurde der Backpropagation-Algorithmus popularisiert, der ein effizientes Training mehrschichtiger Netze ermöglichte. Doch der Hype um Expertensysteme führte zu einer Blase, deren Platzen Ende der 80er Jahre den zweiten, längeren KI-Winter einleitete.</p>
+                </div>
+                <!-- Timeline-Item 2015 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">2015</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">ResNet: Deep Residual Learning</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Microsoft Research löste mit "Deep Residual Learning for Image Recognition" das Problem des verschwindenden Gradienten. Die Einführung von "Residual Blocks" ermöglichte das Training extrem tiefer neuronaler Netze und revolutionierte die Computer Vision.</p>
+                </div>
+                <!-- Timeline-Item 2017 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">2017</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Der Transformer: Attention Is All You Need</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Googles Paper "Attention Is All You Need" stellte die Transformer-Architektur vor. Durch den alleinigen Einsatz von Aufmerksamkeitsmechanismen wurde die Notwendigkeit von Rekurrenz in der Sprachverarbeitung beseitigt, was die massive Parallelisierung und die Ära der großen Sprachmodelle (LLMs) einläutete.</p>
+                </div>
+                <!-- Timeline-Item 2020 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">2020</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">GPT-3: Die Macht der Skalierung</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">OpenAIs "Language Models are Few-Shot Learners" zeigte, dass die immense Skalierung eines Modells (GPT-3 mit 175 Mrd. Parametern) zu "emergenten" Fähigkeiten wie dem In-Context-Lernen führt. Der Fokus verlagerte sich vom Fine-Tuning zum Prompt Engineering.</p>
+                </div>
+                <!-- Timeline-Item 2022 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">2022</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">InstructGPT & RLHF: Die Zähmung der KI</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">OpenAI führte mit "Training language models to follow instructions with human feedback" die Methode des Reinforcement Learning from Human Feedback (RLHF) ein. Dieser Alignment-Ansatz war entscheidend, um Modelle wie ChatGPT sicherer, hilfreicher und für die Öffentlichkeit nutzbar zu machen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
