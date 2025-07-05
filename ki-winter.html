@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der erste KI-Winter - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "KI-Winter"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Der erste KI-Winter (ca. 1974–1980)</h1>
+            <p class="text-lg text-gray-500 mb-8">Eine Periode der Ernüchterung, die das Feld der KI nachhaltig prägte.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Nach der anfänglichen Euphorie der 1950er und 60er Jahre stieß die KI-Forschung Mitte der 1970er Jahre an eine harte Realität. Die hochgesteckten Erwartungen konnten nicht erfüllt werden, was zu einer Phase der Desillusionierung, massiven Kürzungen von Forschungsgeldern und wissenschaftlicher Stagnation führte. Diese Periode ist als der "erste KI-Winter" bekannt.</p>
+
+                <h2 class="mt-10">Die Ursachen des Winters</h2>
+                <p>Mehrere Faktoren trugen zum Einbruch des Vertrauens und der Finanzierung bei:</p>
+                <ol>
+                    <li><strong>Überzogene Versprechen:</strong> Pioniere wie Herbert A. Simon hatten prognostiziert, dass Maschinen innerhalb von 20 Jahren in der Lage sein würden, jede Arbeit zu verrichten, die ein Mensch tun kann. Solche Vorhersagen erwiesen sich als grob unrealistisch und schufen eine Erwartungshaltung, die zwangsläufig enttäuscht werden musste.</li>
+                    <li><strong>Das Problem der kombinatorischen Explosion:</strong> Frühe KI-Programme funktionierten gut bei einfachen Problemen in "Spielzeugwelten", scheiterten aber an der Komplexität der realen Welt. Forscher erkannten, dass die Anzahl der möglichen Zustände in realen Problemen exponentiell ansteigt, was die damaligen Algorithmen und Computer völlig überforderte.</li>
+                    <li><strong>Die Grenzen der frühen Modelle:</strong> Wie im Buch "Perceptrons" (1969) von Minsky und Papert dargelegt, waren die theoretischen Grundlagen begrenzt. Die Unfähigkeit eines einfachen Perzeptrons, das XOR-Problem zu lösen, wurde zum Symbol für die Unzulänglichkeit der damaligen neuronalen Netzwerke.</li>
+                    <li><strong>Mangel an Rechenleistung und Daten:</strong> Die Computer der damaligen Zeit waren bei weitem nicht leistungsfähig genug, um die komplexen Berechnungen durchzuführen, die für anspruchsvollere KI-Aufgaben erforderlich gewesen wären. Zudem gab es keine großen, digitalisierten Datensätze, die für das Training hätten verwendet werden können.</li>
+                </ol>
+
+                <h2 class="mt-10">Der Lighthill-Report und seine Folgen</h2>
+                <p>Ein entscheidender Wendepunkt war der <strong>Lighthill-Report</strong>, der 1973 vom britischen Parlament in Auftrag gegeben wurde. Der Mathematiker Sir James Lighthill kam zu einem vernichtenden Urteil über den Stand der KI-Forschung. Er erklärte, dass die KI in keinem ihrer Anwendungsbereiche die versprochenen "großen Auswirkungen" erzielt habe und dass die Forschung an der kombinatorischen Explosion scheitere.</p>
+                <blockquote>
+                    "In keinem Teil des Feldes haben die bisherigen Entdeckungen die großen Auswirkungen gehabt, die damals vorhergesagt wurden." - Sir James Lighthill, 1973
+                </blockquote>
+                <p>Der Bericht führte dazu, dass die britische Regierung die KI-Forschung an den meisten Universitäten des Landes fast vollständig einstellte. In den USA kam es zu ähnlichen Entwicklungen, als die DARPA, die zuvor ein Hauptfinanzier der KI-Forschung war, ihre Mittel auf spezifische, zielgerichtete Projekte umlenkte und die Grundlagenforschung stark reduzierte.</p>
+
+                <h2 class="mt-10">Das Vermächtnis des KI-Winters</h2>
+                <p>Obwohl der KI-Winter eine schwierige Zeit für das Forschungsfeld war, hatte er auch wichtige langfristige Auswirkungen. Er zwang die Forscher zu einem realistischeren und pragmatischeren Ansatz. Die Notwendigkeit, die theoretischen Grundlagen zu stärken und die Grenzen der eigenen Methoden zu verstehen, wurde deutlich.</p>
+                <p>Die Lehren aus diesem Winter trugen dazu bei, das Fundament für den nächsten Aufschwung in den 1980er Jahren zu legen, der durch den Erfolg von Expertensystemen und die Wiederentdeckung des Backpropagation-Algorithmus angetrieben wurde – auch wenn auf diesen Aufschwung ein zweiter, noch längerer KI-Winter folgen sollte.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
