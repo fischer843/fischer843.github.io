@@ -60,9 +60,43 @@
                     <li><strong>Fester Schwellenwert:</strong> Ein Neuron feuert nur dann, wenn die Summe seiner erregenden Eingänge einen bestimmten Schwellenwert (Threshold) erreicht oder überschreitet, vorausgesetzt, es erhält keine hemmende Eingabe.</li>
                 </ol>
 
+                <h3 class="mt-8 font-semibold">Der Prozess im Neuron</h3>
+                <p>Im Inneren des Neurons findet ein einfacher, aber entscheidender Prozess statt, um seinen Zustand zu ändern:</p>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li><strong>Summation:</strong> Das Neuron addiert die Werte aller seiner aktiven, erregenden Eingänge. In diesem ursprünglichen Modell hat jeder Eingang ein implizites Gewicht von 1.</li>
+                    <li><strong>Schwellenwert-Vergleich:</strong> Die berechnete Summe wird mit dem festen Schwellenwert (θ) des Neurons verglichen.</li>
+                    <li><strong>Aktivierung (Feuern):</strong> Wenn die Summe den Schwellenwert erreicht oder überschreitet, ändert das Neuron seinen Zustand von "aus" zu "an" und sendet ein Ausgabesignal (eine 1). Bleibt die Summe unter dem Schwellenwert, bleibt das Neuron "aus" und sendet eine 0.</li>
+                </ol>
+
                 <div class="bg-gray-100 p-6 rounded-lg my-8 text-center">
-                    <img src="https://placehold.co/600x300/E0E7FF/4F46E5?text=Diagramm+eines+MCP-Neurons" alt="Diagramm eines McCulloch-Pitts-Neurons" class="mx-auto rounded-md shadow-md">
-                    <p class="text-sm text-gray-600 mt-2">Ein einfaches Modell: Mehrere binäre Eingänge (x1, x2, ...) werden verarbeitet. Wenn die Summe der Eingänge den Schwellenwert (θ) erreicht, wird eine binäre Ausgabe (y) erzeugt.</p>
+                    <!-- SVG-Diagramm anstelle des img-Tags -->
+                    <svg width="100%" height="200" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12px">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280" />
+                            </marker>
+                        </defs>
+
+                        <!-- Eingänge -->
+                        <text x="20" y="35">x₁</text>
+                        <line x1="40" y1="35" x2="150" y2="75" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                        <text x="20" y="75">x₂</text>
+                        <line x1="40" y1="75" x2="150" y2="75" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                        <text x="20" y="115">x₃</text>
+                        <line x1="40" y1="115" x2="150" y2="75" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" />
+
+                        <!-- Neuron-Körper -->
+                        <circle cx="180" cy="75" r="30" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2" />
+                        <text x="172" y="80" font-size="24px" fill="#2563EB">Σ</text>
+                        
+                        <!-- Schwellenwert -->
+                        <text x="220" y="80" font-size="14px">θ</text>
+
+                        <!-- Ausgabe -->
+                        <line x1="210" y1="75" x2="320" y2="75" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                        <text x="330" y="80">y = {1 if Σ ≥ θ, 0 else}</text>
+                    </svg>
+                    <p class="text-sm text-gray-600 mt-2">Ein einfaches Modell: Mehrere binäre Eingänge (x1, x2, ...) werden verarbeitet. Wenn die Summe der Eingänge (Σ) den Schwellenwert (θ) erreicht, wird eine binäre Ausgabe (y) erzeugt.</p>
                 </div>
 
                 <h2 class="mt-10">Fähigkeiten und Bedeutung</h2>
