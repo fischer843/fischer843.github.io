@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Transformer: Attention Is All You Need - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "Transformer"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Der Transformer: Attention Is All You Need (2017)</h1>
+            <p class="text-lg text-gray-500 mb-8">Die Architektur, die die moderne KI definierte.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Das 2017 von einem Team bei Google veröffentlichte Paper "Attention Is All You Need" ist wohl eine der einflussreichsten wissenschaftlichen Arbeiten des 21. Jahrhunderts. Es stellte die <strong>Transformer-Architektur</strong> vor und löste damit eine Revolution in der Verarbeitung natürlicher Sprache (NLP) und darüber hinaus aus. Die zentrale und radikale These des Papers war, dass komplexe Rekurrenz- und Faltungsoperationen, die damals das Feld dominierten, nicht notwendig sind.</p>
+
+                <h2 class="mt-10">Das Problem: Die Grenzen von RNNs und LSTMs</h2>
+                <p>Vor dem Transformer basierten die führenden Modelle für Sequenz-zu-Sequenz-Aufgaben (wie maschinelle Übersetzung) auf rekurrierenden neuronalen Netzen (RNNs) und deren Weiterentwicklung, den Long Short-Term Memory (LSTM) Netzwerken. Diese Modelle verarbeiten Daten sequenziell, Wort für Wort. Dieser Ansatz hatte zwei wesentliche Nachteile:</p>
+                <ul>
+                    <li><strong>Mangelnde Parallelisierbarkeit:</strong> Da jedes Wort von der Verarbeitung des vorherigen Wortes abhängt, können diese Modelle nicht effizient auf moderner Hardware (GPUs) parallel trainiert werden. Dies begrenzte die Größe und Komplexität der trainierbaren Modelle.</li>
+                    <li><strong>Verlust von Langzeit-Abhängigkeiten:</strong> Obwohl LSTMs dieses Problem abmilderten, hatten RNNs Schwierigkeiten, den Kontext über lange Sätze oder Absätze hinweg aufrechtzuerhalten (das Problem des "verschwindenden Gradienten").</li>
+                </ul>
+
+                <h2 class="mt-10">Die Lösung: Self-Attention</h2>
+                <p>Der Kern der Transformer-Architektur ist der <strong>Self-Attention-Mechanismus</strong>. Anstatt sich auf einen sequenziellen Informationsfluss zu verlassen, ermöglicht Self-Attention dem Modell, für jedes Wort in einem Satz die Wichtigkeit aller anderen Wörter im selben Satz abzuwägen. Es kann direkt Verbindungen zwischen weit entfernten Wörtern herstellen und so ein tiefes kontextuelles Verständnis entwickeln.</p>
+                <p>Konzeptionell funktioniert dies, indem für jedes Wort drei Vektoren gelernt werden:</p>
+                <ol>
+                    <li><strong>Query (Q):</strong> Repräsentiert das aktuelle Wort, das nach Kontext sucht.</li>
+                    <li><strong>Key (K):</strong> Repräsentiert die anderen Wörter im Satz, die "Informationen anbieten".</li>
+                    <li><strong>Value (V):</strong> Repräsentiert den eigentlichen Inhalt der anderen Wörter.</li>
+                </ol>
+                <p>Die Ähnlichkeit zwischen der Query des aktuellen Wortes und den Keys aller anderen Wörter bestimmt, wie viel "Aufmerksamkeit" das aktuelle Wort auf die Values der anderen Wörter richtet. Dieser Mechanismus, kombiniert mit <strong>Multi-Head Attention</strong> (parallele Ausführung mehrerer Attention-Berechnungen), ermöglicht es dem Modell, verschiedene Arten von Beziehungen gleichzeitig zu lernen.</p>
+                
+                <div class="bg-gray-100 p-6 rounded-lg my-8 text-center">
+                     <svg width="100%" height="300" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12px">
+                        <defs>
+                            <marker id="arrowhead-trans" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#4B5563"></polygon>
+                            </marker>
+                        </defs>
+                        <!-- Encoder Stack -->
+                        <rect x="50" y="50" width="150" height="150" rx="10" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+                        <text x="95" y="120" font-weight="bold">Encoder</text>
+                        <text x="105" y="140" font-size="10px">(N x)</text>
+                        <text x="20" y="220" font-weight="bold">Inputs</text>
+                        <line x1="125" y1="200" x2="125" y2="230" stroke="#4B5563" stroke-width="2" marker-start="url(#arrowhead-trans)"/>
+
+                        <!-- Decoder Stack -->
+                        <rect x="300" y="50" width="150" height="150" rx="10" fill="#D1FAE5" stroke="#34D399" stroke-width="2"/>
+                        <text x="345" y="120" font-weight="bold">Decoder</text>
+                        <text x="355" y="140" font-size="10px">(N x)</text>
+                        <text x="320" y="220" font-weight="bold">Output Probabilities</text>
+                        <line x1="375" y1="200" x2="375" y2="230" stroke="#4B5563" stroke-width="2" marker-start="url(#arrowhead-trans)"/>
+                        
+                        <!-- Connection -->
+                        <line x1="200" y1="125" x2="300" y2="125" stroke="#4B5563" stroke-width="2" marker-end="url(#arrowhead-trans)"/>
+
+                        <!-- Shifted Output -->
+                         <text x="320" y="30" font-weight="bold">Outputs (shifted right)</text>
+                         <line x1="375" y1="50" x2="375" y2="20" stroke="#4B5563" stroke-width="2" marker-end="url(#arrowhead-trans)"/>
+                    </svg>
+                    <p class="text-sm text-gray-600 mt-2">Die hochrangige Architektur des Transformers, bestehend aus einem Encoder- und einem Decoder-Stapel.</p>
+                </div>
+
+                <h2 class="mt-10">Auswirkungen und Vermächtnis</h2>
+                <p>Die Veröffentlichung von "Attention Is All You Need" war ein Wendepunkt. Die massive Parallelisierbarkeit der Transformer-Architektur ermöglichte es der Forschungsgemeinschaft, weitaus größere und leistungsfähigere Modelle zu trainieren, als es mit RNNs je möglich gewesen wäre. Dies ebnete direkt den Weg für die Ära der großen Sprachmodelle (LLMs).</p>
+                <p>Nahezu jedes einflussreiche Sprachmodell, das nach 2017 entwickelt wurde, einschließlich Googles eigenem <strong>BERT</strong> und OpenAIs gesamter <strong>GPT-Serie</strong>, basiert auf der Transformer-Architektur. Ihr Einfluss reicht mittlerweile weit über die Sprachverarbeitung hinaus und findet Anwendung in der Computer Vision (Vision Transformers), der Biologie (AlphaFold) und vielen anderen Bereichen. Das Paper hat nicht nur eine neue Architektur eingeführt, sondern ein völlig neues Paradigma für das maschinelle Lernen im großen Stil geschaffen.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
