@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dartmouth Workshop (1956) - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "Dartmouth"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Dartmouth Summer Research Project on Artificial Intelligence (1956)</h1>
+            <p class="text-lg text-gray-500 mb-8">Die Geburtsstunde eines wissenschaftlichen Feldes.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Im Sommer 1956 fand am Dartmouth College in Hanover, New Hampshire, ein sechswöchiger Workshop statt, der heute als das Gründungsereignis der künstlichen Intelligenz als eigenständige Disziplin gilt. Organisiert von vier jungen Forschern – John McCarthy, Marvin Minsky, Nathaniel Rochester und Claude Shannon – brachte das Projekt eine kleine Gruppe von Wissenschaftlern zusammen, um die Möglichkeiten von denkenden Maschinen zu erörtern.</p>
+
+                <h2 class="mt-10">Der bahnbrechende Antrag</h2>
+                <p>Die Grundlage des Workshops war ein Antrag an die Rockefeller Foundation, in dem die Organisatoren ihre kühne Vision darlegten. Der Antrag ist berühmt für seine optimistische und weitreichende These:</p>
+                <blockquote>
+                    "Die Studie geht von der Vermutung aus, dass jeder Aspekt des Lernens oder jedes andere Merkmal der Intelligenz im Prinzip so genau beschrieben werden kann, dass eine Maschine zur Simulation gebaut werden kann. Es wird versucht herauszufinden, wie man Maschinen dazu bringen kann, Sprache zu benutzen, Abstraktionen und Konzepte zu bilden, Probleme zu lösen, die bisher dem Menschen vorbehalten sind, und sich selbst zu verbessern."
+                </blockquote>
+                <p>In diesem Antrag prägte John McCarthy zum ersten Mal den Begriff <strong>"Künstliche Intelligenz"</strong>, um das neue Forschungsfeld von der etablierten Kybernetik abzugrenzen.</p>
+
+                <h2 class="mt-10">Die Teilnehmer: Die Gründerväter der KI</h2>
+                <p>Obwohl nicht alle Teilnehmer die gesamte Zeit anwesend waren, versammelte der Workshop die zukünftigen Anführer des Feldes. Zu den wichtigsten Teilnehmern gehörten:</p>
+                <ul>
+                    <li><strong>John McCarthy:</strong> Prägte den Begriff "KI" und erfand später die Programmiersprache Lisp.</li>
+                    <li><strong>Marvin Minsky:</strong> Ein Pionier der neuronalen Netze und Mitbegründer des MIT AI Lab.</li>
+                    <li><strong>Claude Shannon:</strong> Der "Vater der Informationstheorie", dessen Arbeiten die mathematische Grundlage für die digitale Kommunikation legten.</li>
+                    <li><strong>Nathaniel Rochester:</strong> Chef-Architekt des IBM 701, des ersten kommerziellen wissenschaftlichen Computers.</li>
+                    <li><strong>Allen Newell und Herbert A. Simon:</strong> Präsentierten auf dem Workshop den "Logic Theorist", das wohl erste lauffähige KI-Programm, das Theoreme der Logik beweisen konnte.</li>
+                </ul>
+
+                <h2 class="mt-10">Ergebnisse und Vermächtnis</h2>
+                <p>Der Dartmouth Workshop selbst führte nicht zu einem einzigen großen Durchbruch. Sein wahres Vermächtnis liegt in seiner Rolle als Katalysator:</p>
+                <ul>
+                    <li><strong>Etablierung eines Feldes:</strong> Er gab dem Forschungsfeld einen Namen, eine Vision und eine erste Gemeinschaft von Forschern.</li>
+                    <li><strong>Festlegung der Agenda:</strong> Die im Antrag genannten Themen – Sprachverarbeitung, neuronale Netze, Kreativität, Problemlösung – definierten die Forschungsagenda der KI für die nächsten Jahrzehnte.</li>
+                    <li><strong>Optimismus und Finanzierung:</strong> Der Workshop schuf eine Welle des Optimismus, die zu erheblicher Forschungsförderung, insbesondere durch die DARPA, führte und die "goldene Ära" der KI-Forschung einleitete.</li>
+                </ul>
+                <p>Obwohl viele der ursprünglichen Ziele weitaus schwieriger zu erreichen waren als damals angenommen, legte das Dartmouth Summer Research Project von 1956 unbestreitbar den Grundstein für alle nachfolgenden Entwicklungen in der künstlichen Intelligenz. Es war der Moment, in dem die Idee einer denkenden Maschine von der reinen Theorie in ein konkretes wissenschaftliches und technisches Unterfangen überging.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
