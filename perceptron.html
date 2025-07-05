@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Perzeptron (1958) - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "Perzeptron"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Das Perzeptron (1958)</h1>
+            <p class="text-lg text-gray-500 mb-8">Der erste Algorithmus, der aus Erfahrung lernen konnte.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Aufbauend auf der theoretischen Grundlage des McCulloch-Pitts-Neurons entwickelte der Psychologe Frank Rosenblatt am Cornell Aeronautical Laboratory im Jahr 1958 das <strong>Perzeptron</strong>. Es war mehr als nur ein Modell; es war ein Algorithmus und eine physische Maschine (der Mark I Perceptron), die eine entscheidende Fähigkeit besaß, die ihrem Vorgänger fehlte: die Fähigkeit zu lernen.</p>
+
+                <h2 class="mt-10">Der entscheidende Unterschied: Lernbare Gewichte</h2>
+                <p>Während beim McCulloch-Pitts-Neuron die Gewichte und der Schwellenwert manuell festgelegt werden mussten, führte Rosenblatt die revolutionäre Idee ein, dass diese Parameter automatisch aus Daten gelernt werden können. Das Perzeptron war damit das erste Modell eines künstlichen neuronalen Netzes, das eine Lernregel implementierte.</p>
+                <p>Der Prozess funktioniert konzeptionell wie folgt:</p>
+                <ol>
+                    <li><strong>Initialisierung:</strong> Das Perzeptron startet mit zufälligen Werten für seine Gewichte.</li>
+                    <li><strong>Vorhersage:</strong> Für einen gegebenen Eingabedatensatz berechnet es eine Ausgabe (typischerweise 0 oder 1), indem es die gewichtete Summe der Eingaben mit einem Schwellenwert vergleicht.</li>
+                    <li><strong>Fehlerberechnung:</strong> Die Vorhersage des Modells wird mit der korrekten, bekannten Ausgabe verglichen. Wenn sie nicht übereinstimmen, liegt ein Fehler vor.</li>
+                    <li><strong>Gewichtsanpassung:</strong> Dies ist der Kern der Lernregel. Wenn ein Fehler auftritt, werden die Gewichte angepasst.
+                        <ul>
+                            <li>Wenn die Ausgabe 0 sein sollte, aber 1 war, werden die Gewichte der aktiven Eingänge verringert.</li>
+                            <li>Wenn die Ausgabe 1 sein sollte, aber 0 war, werden die Gewichte der aktiven Eingänge erhöht.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Dieser Prozess wird für viele Beispiele wiederholt, wodurch das Perzeptron schrittweise lernt, eine korrekte Trennlinie zwischen zwei Klassen von Daten zu finden.</p>
+
+                <h2 class="mt-10">Hype und die Grenzen der Linearität</h2>
+                <p>Die Erfindung des Perzeptrons löste einen enormen Hype aus. Die New York Times berichtete 1958 über eine "elektronische Maschine, von der erwartet wird, dass sie gehen, sprechen, sehen, schreiben, sich selbst reproduzieren und sich ihres eigenen Daseins bewusst sein wird". Dieser frühe Optimismus war jedoch verfrüht.</p>
+                <p>Die entscheidende Einschränkung des einfachen Perzeptrons wurde 1969 in dem einflussreichen Buch "Perceptrons" von Marvin Minsky und Seymour Papert mathematisch präzise dargelegt. Sie bewiesen, dass ein einstufiges Perzeptron nur Probleme lösen kann, die <strong>linear separierbar</strong> sind. Das bedeutet, es kann nur eine gerade Linie (oder in höheren Dimensionen eine Hyperebene) ziehen, um Datenpunkte zu klassifizieren.</p>
+                <p>Das berühmteste Beispiel für ein nicht-linear separierbares Problem ist das <strong>XOR-Problem</strong>. Es ist unmöglich, mit einer einzigen geraden Linie die XOR-Fälle (0,1) und (1,0) von den Fällen (0,0) und (1,1) zu trennen. Diese Enthüllung trug maßgeblich zum Beginn des ersten KI-Winters bei, da sie die fundamentalen Grenzen der damaligen Modelle aufzeigte.</p>
+
+                <div class="bg-gray-100 p-6 rounded-lg my-8 text-center">
+                    <svg width="100%" height="250" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12px">
+                        <text x="50" y="20" font-weight="bold">AND (Linear Separierbar)</text>
+                        <circle cx="50" cy="50" r="5" fill="#EF4444"/>
+                        <text x="45" y="40">(0,0)</text>
+                        <circle cx="50" cy="150" r="5" fill="#EF4444"/>
+                        <text x="45" y="170">(0,1)</text>
+                        <circle cx="150" cy="50" r="5" fill="#EF4444"/>
+                        <text x="145" y="40">(1,0)</text>
+                        <circle cx="150" cy="150" r="5" fill="#22C55E"/>
+                        <text x="145" y="170">(1,1)</text>
+                        <line x1="100" y1="200" x2="200" y2="0" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,5"/>
+
+                        <text x="300" y="20" font-weight="bold">XOR (Nicht-Linear Separierbar)</text>
+                        <circle cx="300" cy="50" r="5" fill="#EF4444"/>
+                        <text x="295" y="40">(0,0)</text>
+                        <circle cx="300" cy="150" r="5" fill="#22C55E"/>
+                        <text x="295" y="170">(0,1)</text>
+                        <circle cx="400" cy="50" r="5" fill="#22C55E"/>
+                        <text x="395" y="40">(1,0)</text>
+                        <circle cx="400" cy="150" r="5" fill="#EF4444"/>
+                        <text x="395" y="170">(1,1)</text>
+                    </svg>
+                    <p class="text-sm text-gray-600 mt-2">Während das AND-Problem mit einer Linie lösbar ist, ist es für das XOR-Problem unmöglich.</p>
+                </div>
+
+                <h2 class="mt-10">Das Vermächtnis des Perzeptrons</h2>
+                <p>Trotz seiner Grenzen ist das Perzeptron ein fundamentaler Baustein des maschinellen Lernens geblieben. Die Idee, Gewichte basierend auf Fehlern iterativ anzupassen, ist das Kernprinzip des gradientenbasierten Lernens, das heute in allen modernen tiefen neuronalen Netzen verwendet wird. Das Problem der nicht-linearen Separierbarkeit wurde später durch die Einführung von mehrschichtigen Perzeptrons (Multi-Layer Perceptrons, MLPs) und dem Backpropagation-Algorithmus gelöst, die es neuronalen Netzen ermöglichten, komplexe, nicht-lineare Zusammenhänge zu lernen.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
