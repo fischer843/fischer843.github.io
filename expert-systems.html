@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertensysteme & die Wiedergeburt der Netze - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "Expertensysteme"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Expertensysteme & die Wiedergeburt der Netze (1980er)</h1>
+            <p class="text-lg text-gray-500 mb-8">Ein Jahrzehnt der kommerziellen Erfolge und stillen Revolutionen.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Nach dem ersten KI-Winter brachten die 1980er Jahre einen neuen Frühling für die künstliche Intelligenz, der von zwei parallelen, aber sehr unterschiedlichen Entwicklungen angetrieben wurde: dem kommerziellen Boom der Expertensysteme und der Wiederentdeckung eines mächtigen Lernalgorithmus für neuronale Netze.</p>
+
+                <h2 class="mt-10">Der Aufstieg der Expertensysteme</h2>
+                <p>Expertensysteme waren die erste wirklich erfolgreiche kommerzielle Anwendung der KI. Die Idee war, das Wissen menschlicher Experten in einer bestimmten Domäne (z.B. Medizin, Chemie, Finanzen) in einem Computerprogramm zu kodifizieren, um deren Entscheidungsfähigkeit zu simulieren.</p>
+                <p>Ihre Architektur bestand typischerweise aus zwei Hauptkomponenten:</p>
+                <ol>
+                    <li><strong>Wissensbasis (Knowledge Base):</strong> Eine Sammlung von Fakten und Regeln, die oft in Form von "WENN-DANN"-Anweisungen (IF-THEN) vorlagen. (z.B. "WENN der Patient Fieber hat UND einen steifen Nacken, DANN besteht der Verdacht auf Meningitis.")</li>
+                    <li><strong>Inferenzmaschine (Inference Engine):</strong> Eine Software, die logische Schlussfolgerungen aus der Wissensbasis zog, indem sie die Regeln auf bekannte Fakten anwendete.</li>
+                </ol>
+                <p>Programme wie <strong>MYCIN</strong> (zur Diagnose von Blutinfektionen) und <strong>XCON</strong> (zur Konfiguration von Computersystemen für DEC) zeigten, dass dieser Ansatz bemerkenswert gut funktionieren konnte. Dies führte zu einem massiven Investitionsboom. Firmen wie Symbolics und Lisp Machines entstanden, und viele Fortune-500-Unternehmen investierten in die Entwicklung eigener Expertensysteme.</p>
+
+                <h2 class="mt-10">Die stille Revolution: Backpropagation</h2>
+                <p>Während die Expertensysteme im Rampenlicht standen, fand in den Forschungslaboren eine leisere, aber letztlich weitaus bedeutendere Revolution statt. Forscher suchten nach Wegen, die durch das XOR-Problem aufgezeigten Grenzen des Perzeptrons zu überwinden.</p>
+                <p>Die Lösung lag in <strong>mehrschichtigen neuronalen Netzen</strong> (Multi-Layer Perceptrons, MLPs), die theoretisch in der Lage waren, auch nicht-lineare Probleme zu lösen. Das entscheidende Hindernis war jedoch, einen Weg zu finden, die Gewichte in den "versteckten" Schichten (hidden layers) effizient zu trainieren.</p>
+                <p>Der Durchbruch gelang 1986 mit dem Paper "Learning representations by back-propagating errors" von David Rumelhart, Geoffrey Hinton und Ronald Williams. Sie popularisierten den <strong>Backpropagation-Algorithmus</strong>, eine Methode, die den Fehler am Ausgang des Netzwerks berechnet und ihn dann Schicht für Schicht rückwärts durch das Netzwerk "propagiert", um die Gewichte so anzupassen, dass der Fehler minimiert wird. Dieser auf dem Gradientenabstiegsverfahren basierende Algorithmus ist bis heute das Fundament für das Training von tiefen neuronalen Netzen (Deep Learning).</p>
+
+                <h2 class="mt-10">Der zweite KI-Winter</h2>
+                <p>Ende der 1980er und Anfang der 1990er Jahre kühlte sich das Klima für die KI erneut ab. Der Markt für Expertensysteme brach zusammen, weil sich die Systeme als teuer in der Entwicklung, schwierig zu warten und oft als zu "spröde" erwiesen – sie scheiterten, wenn sie mit Problemen konfrontiert wurden, die nicht exakt in ihrer Wissensbasis abgedeckt waren.</p>
+                <p>Gleichzeitig waren neuronale Netze trotz des Backpropagation-Algorithmus noch nicht bereit für den großen Durchbruch. Die verfügbare Rechenleistung und die Menge an Trainingsdaten waren noch immer nicht ausreichend, um die tiefen Netze zu trainieren, die für die Lösung komplexer realer Probleme erforderlich waren. Dies führte zum zweiten, längeren KI-Winter.</p>
+                <p>Das Vermächtnis der 1980er Jahre war jedoch entscheidend: Expertensysteme bewiesen, dass KI einen kommerziellen Wert haben kann, und der Backpropagation-Algorithmus legte das schlafende Fundament, auf dem zwei Jahrzehnte später die Deep-Learning-Revolution aufbauen sollte.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
