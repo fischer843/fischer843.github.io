@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die 1977 Trinity - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "1977 Trinity"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Die "1977 Trinity": Der Urknall des Personal Computing</h1>
+            <p class="text-lg text-gray-500 mb-8">Drei Maschinen, die den Computer aus den Laboren in die Wohnzimmer brachten.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Das Jahr 1977 markiert einen Wendepunkt in der Computergeschichte. Es war das Jahr, in dem der Personal Computer kein Bausatz für Hobbyisten mehr war, sondern ein fertiges Produkt, das man im Laden kaufen und zu Hause anschließen konnte. Drei Maschinen, die oft als die "1977 Trinity" bezeichnet werden, waren für diesen Wandel verantwortlich.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 my-8">
+                    <!-- Apple II -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Apple II</h3>
+                        <p>Der von Steve Wozniak entworfene Apple II war der Star der Trinity. Er war der erste, der Farbgrafik unterstützte, was ihn sofort für Spiele und Bildungsanwendungen attraktiv machte. Seine offene Architektur mit acht Erweiterungssteckplätzen schuf ein riesiges Ökosystem für Drittanbieter-Hardware und -Software. Programme wie die Tabellenkalkulation VisiCalc machten den Apple II zu einem ernstzunehmenden Werkzeug für kleine Unternehmen und zementierten seinen legendären Status.</p>
+                    </div>
+                    <!-- Commodore PET 2001 -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Commodore PET 2001</h3>
+                        <p>Der Commodore PET (Personal Electronic Transactor) verfolgte einen anderen Ansatz. Mit seinem robusten Metallgehäuse, das Monitor, Tastatur und Kassettenlaufwerk in einer einzigen Einheit vereinte, war er für den Bildungs- und Büromarkt konzipiert. Sein "All-in-One"-Design machte ihn einfach aufzustellen und zu benutzen, was ihm besonders in Schulen in Nordamerika und Europa große Beliebtheit einbrachte. Er legte den Grundstein für den späteren, noch größeren Erfolg von Commodore.</p>
+                    </div>
+                    <!-- Tandy TRS-80 -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Tandy TRS-80</h3>
+                        <p>Der TRS-80 von Tandy, liebevoll "Trash-80" genannt, hatte einen entscheidenden Vorteil: den Vertrieb. Er wurde über die landesweite Kette von RadioShack-Läden verkauft, was ihn für Millionen von Amerikanern sofort verfügbar machte. Obwohl er technisch weniger fortschrittlich war als der Apple II, machten ihn sein niedriger Preis und seine einfache Verfügbarkeit zu einem enormen kommerziellen Erfolg und für viele zum allerersten Kontakt mit einem Computer.</p>
+                    </div>
+                </div>
+
+                <h2 class="mt-10">Gemeinsames Vermächtnis</h2>
+                <p>Obwohl sie technologisch sehr unterschiedlich waren, teilten diese drei Computer ein gemeinsames Vermächtnis: Sie bewiesen, dass es einen riesigen, unerschlossenen Markt für Personal Computer gab. Sie verwandelten den Computer von einer obskuren Maschine für große Unternehmen und Universitäten in ein zugängliches Werkzeug und Unterhaltungsgerät für die breite Masse. Gemeinsam legten sie das Fundament für die gesamte PC-Industrie und die digitale Revolution der folgenden Jahrzehnte.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
