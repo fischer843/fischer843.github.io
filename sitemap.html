@@ -6,24 +6,7 @@
     <title>Sitemap - Innovate Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .nav-link.active {
-            color: #2563EB; /* blue-600 */
-            font-weight: 600;
-        }
-        .sitemap-link {
-            @apply text-blue-600 hover:underline;
-        }
-        .sitemap-list {
-            @apply list-disc space-y-2 pl-5; /* Adjusted padding for alignment */
-        }
-        .sitemap-sublist {
-            @apply list-disc space-y-2 pl-5 mt-2; /* Adjusted padding */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -36,20 +19,13 @@
                 <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
                 <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
                 <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
                 <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <!-- Mobiles Menü -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
-            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
-            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
-            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
-            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
-        </div>
     </header>
 
     <main class="container mx-auto p-6 md:p-12">
@@ -58,19 +34,9 @@
             <h1 class="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
 
             <div class="prose prose-lg max-w-none grid md:grid-cols-3 gap-x-8">
-                <!-- Spalte 1: Hauptseiten -->
+                <!-- Spalte 1: Geschichte der KI -->
                 <div>
-                    <h2 class="text-2xl font-semibold mb-4">Hauptseiten</h2>
-                    <ul class="sitemap-list">
-                        <li><a href="index.html" class="sitemap-link">Startseite</a></li>
-                        <li><a href="about.html" class="sitemap-link">Über uns</a></li>
-                        <li><a href="contact.html" class="sitemap-link">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <!-- Spalte 2: Geschichte der KI -->
-                <div>
-                    <h2 class="text-2xl font-semibold mb-4">Geschichte der KI</h2>
+                    <h2 class="text-2xl font-semibold mb-4"><a href="history.html" class="sitemap-link">Geschichte der KI</a></h2>
                     <ul class="sitemap-list">
                         <li><a href="mcculloch-pitts.html" class="sitemap-link">Das McCulloch-Pitts-Neuron (1943)</a></li>
                         <li><a href="turing.html" class="sitemap-link">Der Turing-Test (1950)</a></li>
@@ -88,18 +54,38 @@
                     </ul>
                 </div>
 
-                <!-- Spalte 3: Geschichte des Computers -->
+                <!-- Spalte 2: Geschichte des Computers -->
                 <div>
-                    <h2 class="text-2xl font-semibold mb-4">Geschichte des Computers</h2>
+                    <h2 class="text-2xl font-semibold mb-4"><a href="computer-history.html" class="sitemap-link">Geschichte des Computers</a></h2>
                     <ul class="sitemap-list">
-                        <li><a href="computer-history.html" class="sitemap-link">Übersicht</a></li>
                         <li>
                             <a href="homecomputer.html" class="sitemap-link">Die Homecomputer-Revolution</a>
                             <ul class="sitemap-sublist">
                                 <li><a href="1977-trinity.html" class="sitemap-link">Die "1977 Trinity"</a></li>
                             </ul>
                         </li>
-                        <li><a href="dtp-history.html" class="sitemap-link">Die DTP-Revolution</a></li>
+                        <li><a href="internet-history.html" class="sitemap-link">Die Internet-Revolution</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Spalte 3: Gesellschaftliche Folgen -->
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4"><a href="societal-impact.html" class="sitemap-link">Gesellschaftliche Folgen</a></h2>
+                    <ul class="sitemap-list">
+                         <li>
+                            <a href="dtp-history.html" class="sitemap-link">Die DTP-Revolution</a>
+                             <ul class="sitemap-sublist">
+                                <li><a href="dtp-impact.html" class="sitemap-link">Auswirkungen auf das Druckgewerbe</a></li>
+                                <li><a href="document-ai.html" class="sitemap-link">Document AI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="office-revolution.html" class="sitemap-link">Die Büro-Revolution</a></li>
+                        <li><a href="copyshop-impact.html" class="sitemap-link">Transformation der Copy-Shops</a></li>
+                    </ul>
+                     <h2 class="text-2xl font-semibold mb-4 mt-8">Über uns</h2>
+                     <ul class="sitemap-list">
+                        <li><a href="about.html" class="sitemap-link">Unsere Geschichte</a></li>
+                        <li><a href="contact.html" class="sitemap-link">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
