@@ -18,10 +18,10 @@
             @apply text-blue-600 hover:underline;
         }
         .sitemap-list {
-            @apply list-disc space-y-2;
+            @apply list-disc space-y-2 pl-5; /* Adjusted padding for alignment */
         }
         .sitemap-sublist {
-            @apply list-disc space-y-2 pl-8 mt-2;
+            @apply list-disc space-y-2 pl-5 mt-2; /* Adjusted padding */
         }
     </style>
 </head>
@@ -57,43 +57,49 @@
         <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
             <h1 class="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
 
-            <div class="prose prose-lg max-w-none grid md:grid-cols-2 gap-x-8">
+            <div class="prose prose-lg max-w-none grid md:grid-cols-3 gap-x-8">
+                <!-- Spalte 1: Hauptseiten -->
                 <div>
                     <h2 class="text-2xl font-semibold mb-4">Hauptseiten</h2>
                     <ul class="sitemap-list">
                         <li><a href="index.html" class="sitemap-link">Startseite</a></li>
                         <li><a href="about.html" class="sitemap-link">Über uns</a></li>
                         <li><a href="contact.html" class="sitemap-link">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 2: Geschichte der KI -->
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Geschichte der KI</h2>
+                    <ul class="sitemap-list">
+                        <li><a href="mcculloch-pitts.html" class="sitemap-link">Das McCulloch-Pitts-Neuron (1943)</a></li>
+                        <li><a href="turing.html" class="sitemap-link">Der Turing-Test (1950)</a></li>
+                        <li><a href="dartmouth.html" class="sitemap-link">Dartmouth Workshop (1956)</a></li>
+                        <li><a href="perceptron.html" class="sitemap-link">Das Perzeptron (1958)</a></li>
+                        <li><a href="ki-winter.html" class="sitemap-link">Der erste KI-Winter (ca. 1974-1980)</a></li>
+                        <li><a href="expert-systems.html" class="sitemap-link">Expertensysteme & Backpropagation (1980er)</a></li>
+                        <li><a href="ki-winter-2.html" class="sitemap-link">Der zweite KI-Winter (ca. 1987-1993)</a></li>
+                        <li><a href="resnet.html" class="sitemap-link">ResNet: Deep Residual Learning (2015)</a></li>
+                        <li><a href="transformer.html" class="sitemap-link">Der Transformer (2017)</a></li>
+                        <li><a href="bert.html" class="sitemap-link">BERT (2018)</a></li>
+                        <li><a href="gpt3.html" class="sitemap-link">GPT-3 (2020)</a></li>
+                        <li><a href="instructgpt.html" class="sitemap-link">InstructGPT & RLHF (2022)</a></li>
                         <li><a href="bert-vs-gpt.html" class="sitemap-link">Vergleich: BERT vs. GPT</a></li>
                     </ul>
                 </div>
+
+                <!-- Spalte 3: Geschichte des Computers -->
                 <div>
-                    <h2 class="text-2xl font-semibold mb-4">Themenbereiche</h2>
+                    <h2 class="text-2xl font-semibold mb-4">Geschichte des Computers</h2>
                     <ul class="sitemap-list">
+                        <li><a href="computer-history.html" class="sitemap-link">Übersicht</a></li>
                         <li>
-                            <a href="history.html" class="sitemap-link">Geschichte der KI</a>
+                            <a href="homecomputer.html" class="sitemap-link">Die Homecomputer-Revolution</a>
                             <ul class="sitemap-sublist">
-                                <li><a href="mcculloch-pitts.html" class="sitemap-link">Das McCulloch-Pitts-Neuron (1943)</a></li>
-                                <li><a href="turing.html" class="sitemap-link">Der Turing-Test (1950)</a></li>
-                                <li><a href="dartmouth.html" class="sitemap-link">Dartmouth Workshop (1956)</a></li>
-                                <li><a href="perceptron.html" class="sitemap-link">Das Perzeptron (1958)</a></li>
-                                <li><a href="ki-winter.html" class="sitemap-link">Der erste KI-Winter (ca. 1974-1980)</a></li>
-                                <li><a href="expert-systems.html" class="sitemap-link">Expertensysteme & Backpropagation (1980er)</a></li>
-                                <li><a href="ki-winter-2.html" class="sitemap-link">Der zweite KI-Winter (ca. 1987-1993)</a></li>
-                                <li><a href="resnet.html" class="sitemap-link">ResNet: Deep Residual Learning (2015)</a></li>
-                                <li><a href="transformer.html" class="sitemap-link">Der Transformer: Attention Is All You Need (2017)</a></li>
-                                <li><a href="bert.html" class="sitemap-link">BERT: Bidirektionales Sprachverständnis (2018)</a></li>
-                                <li><a href="gpt3.html" class="sitemap-link">GPT-3: Die Macht der Skalierung (2020)</a></li>
-                                <li><a href="instructgpt.html" class="sitemap-link">InstructGPT & RLHF (2022)</a></li>
+                                <li><a href="1977-trinity.html" class="sitemap-link">Die "1977 Trinity"</a></li>
                             </ul>
                         </li>
-                        <li class="mt-4">
-                            <a href="computer-history.html" class="sitemap-link">Geschichte des Computers</a>
-                             <ul class="sitemap-sublist">
-                                <li><a href="homecomputer.html" class="sitemap-link">Die Homecomputer-Revolution (ca. 1977-1985)</a></li>
-                                <li>(Weitere Detailseiten können hier hinzugefügt werden)</li>
-                            </ul>
-                        </li>
+                        <li><a href="dtp-history.html" class="sitemap-link">Die DTP-Revolution</a></li>
                     </ul>
                 </div>
             </div>
