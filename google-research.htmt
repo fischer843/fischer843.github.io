@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse: Google KI-Forschung - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
+                <a href="research-analysis.html" class="nav-link active">Analyse</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <div class="prose prose-lg max-w-none">
+                <a href="research-analysis.html" class="text-blue-600 hover:underline">&larr; Zurück zur Analyse-Übersicht</a>
+                <h1 class="mt-4">Google (DeepMind & Google Brain) – Die Architekten der modernen KI</h1>
+                
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Forschungsethos: Von der fundamentalen Theorie zur großen wissenschaftlichen Entdeckung</h2>
+                    <p>Das Forschungsethos von Google verbindet den Ehrgeiz akademischer Grundlagenforschung mit den industriellen Ressourcen eines Technologiegiganten. Die Veröffentlichungen des Unternehmens zeugen von einem Fokus auf die Lösung fundamentaler Probleme und das Erreichen von Meilensteinen, die nicht nur die Informatik, sondern auch andere Wissenschaftsbereiche wie die Biologie nachhaltig prägen. Diese Strategie, grundlegende Probleme auf eine allgemeine Weise zu lösen, führt dazu, dass die Ergebnisse oft weit über ihre ursprüngliche Anwendung hinauswirken und ein ganzes Ökosystem von Technologien schaffen, das auf Googles anfänglichen Durchbrüchen aufbaut.</p>
+                </div>
+
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Die Transformer-Revolution: „Attention Is All You Need“ (2017)</h2>
+                    <p>Vor 2017 wurde der Bereich der Sequenzverarbeitung von rekurrierenden neuronalen Netzen (RNNs) dominiert. Das 2017 von Forschern bei Google veröffentlichte Paper „Attention Is All You Need“ stellte eine radikale und revolutionäre These auf: Rekurrenz ist für hochwertige Sequenz-zu-Sequenz-Aufgaben nicht notwendig; Aufmerksamkeitsmechanismen allein sind ausreichend. Die Parallelisierbarkeit der daraus resultierenden Transformer-Architektur ermöglichte das Training weitaus größerer Modelle auf massiven Datensätzen und legte damit den Grundstein für die Ära der großen Sprachmodelle (LLMs). Praktisch alle nachfolgenden einflussreichen LLMs, einschließlich BERT und der GPT-Serie, basieren auf dieser Architektur.</p>
+                </div>
+
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Sprache und Kontext meistern: „BERT“ (2018)</h2>
+                    <p>Aufbauend auf dem Transformer entwickelte ein Team bei Google BERT (Bidirectional Encoder Representations from Transformers). Die zentrale Innovation war das „Masked Language Model“ (MLM) als Trainingsziel. Im Gegensatz zu autoregressiven Modellen, die eine Sequenz von links nach rechts vorhersagen, maskierte BERT zufällig Wörter und trainierte das Modell darauf, diese basierend auf dem Kontext von *beiden* Seiten vorherzusagen. Dies ermöglichte erstmals ein echtes bidirektionales Verständnis von Sprache in einem tiefen neuronalen Netzwerk und revolutionierte das Transferlernen in der NLP.</p>
+                </div>
+
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Übermenschliche Strategie erreichen: Die Saga von AlphaGo, AlphaZero und MuZero (2016-2020)</h2>
+                    <p>Das Brettspiel Go galt lange als eine der größten Herausforderungen für die KI. DeepMinds Entwicklungskette von AlphaGo zu MuZero ist mehr als nur die Beherrschung von Spielen. Sie zeigt eine methodische Abkehr von externen Abhängigkeiten (menschliche Daten, explizite Regeln) hin zu einem autonomen, allgemeinen Planungsalgorithmus. Der historische Sieg von AlphaGo über Lee Sedol 2016 bewies, dass KI komplexe strategische Spiele meistern kann. AlphaZero lernte Go, Schach und Shogi nur durch Selbstspiel. MuZero ging noch einen Schritt weiter und eliminierte sogar die Notwendigkeit, die Spielregeln zu kennen.</p>
+                </div>
+
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Die Lösung einer 50 Jahre alten großen Herausforderung: Der AlphaFold-Durchbruch (2021)</h2>
+                    <p>Das Proteinfaltungsproblem war eine der größten ungelösten Herausforderungen der Biologie. 2021 veröffentlichte DeepMind das Paper zu AlphaFold, das diesen Durchbruch beschrieb. AlphaFold verwendet ein auf Aufmerksamkeit basierendes neuronales Netzwerk, um die 3D-Struktur von Proteinen mit einer Genauigkeit vorherzusagen, die mit experimentellen Methoden konkurriert. Die Veröffentlichung der AlphaFold Protein Structure Database hat die biologische Forschung weltweit demokratisiert und beschleunigt.</p>
+                </div>
+
+                <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-8">
+                    <h2 class="text-2xl font-bold mt-0">Die Ökonomie des Skalierens: Chinchilla und die Gemini-Ära</h2>
+                    <p>Das 2022 von DeepMind veröffentlichte Chinchilla-Paper stellte die Annahme „größer ist immer besser“ in Frage. Die zentrale Erkenntnis war, dass für ein optimales Training bei einem gegebenen Rechenbudget die Modellgröße und die Größe des Trainingsdatensatzes in gleichem Maße skaliert werden sollten. Diese Erkenntnis führte zu effizienteren Modellen und beeinflusst die Entwicklung nachfolgender Modellfamilien wie PaLM und Gemini.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
