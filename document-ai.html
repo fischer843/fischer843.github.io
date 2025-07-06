@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document AI - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "Document AI"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Document AI: Wenn Maschinen Dokumente verstehen</h1>
+            <p class="text-lg text-gray-500 mb-8">Die Brücke zwischen dem visuellen Chaos von Dokumenten und der strukturierten Welt der Daten.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Document AI ist ein spezialisiertes Feld der künstlichen Intelligenz, das Computern beibringt, Dokumente so zu verstehen wie ein Mensch. Es geht weit über die reine Texterkennung hinaus und konzentriert sich darauf, die Struktur, das Layout und den Kontext von Informationen zu erfassen, wie sie in Rechnungen, Verträgen, Formularen und Berichten vorkommen.</p>
+
+                <h2 class="mt-10">Das Problem: Ein PDF ist mehr als nur Text</h2>
+                <p>Die DTP-Revolution und das PDF-Format haben uns ein riesiges digitales Archiv beschert. Eine einfache Textextraktion (OCR) aus diesen Dokumenten ist jedoch oft unzureichend. Sie liefert einen unstrukturierten Textblock und ignoriert entscheidende Informationen, die im Layout kodiert sind:</p>
+                <ul>
+                    <li>Welche Zahl ist der Gesamtbetrag einer Rechnung?</li>
+                    <li>Welche Textblöcke gehören zu einer bestimmten Spalte in einer Tabelle?</li>
+                    <li>Welche Unterschrift gehört zu welchem Namen in einem Vertrag?</li>
+                </ul>
+                <p>Um diese Fragen zu beantworten, muss eine Maschine nicht nur lesen, sondern auch sehen können.</p>
+
+                <h2 class="mt-10">Die Lösung: Eine Kombination von Technologien</h2>
+                <p>Document AI löst dieses Problem durch die Kombination von drei Kerntechnologien:</p>
+                <ol>
+                    <li><strong>Optical Character Recognition (OCR):</strong> Die Grundlage, die Pixel in Buchstaben und Wörter umwandelt.</li>
+                    <li><strong>Computer Vision (CV):</strong> Analysiert die Seite visuell. CV-Modelle erkennen Layout-Elemente wie Absätze, Überschriften, Tabellen, Bilder und Formularfelder. Sie verstehen die räumliche Beziehung zwischen diesen Elementen.</li>
+                    <li><strong>Natural Language Processing (NLP):</strong> Verarbeitet den extrahierten Text, um seine semantische Bedeutung zu erfassen. NLP-Modelle klassifizieren die erkannten Blöcke (z.B. "Dies ist eine Rechnungsadresse", "Dies ist der Nettobetrag") und extrahieren Schlüssel-Wert-Paare.</li>
+                </ol>
+
+                <div class="bg-gray-100 p-6 rounded-lg my-8 text-center">
+                    <svg width="100%" height="150" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12px">
+                        <defs><marker id="arrowhead-docai" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0, 7 2.5, 0 5" fill="#4B5563"></polygon></marker></defs>
+                        <!-- PDF -->
+                        <rect x="10" y="30" width="80" height="40" rx="5" fill="#FEE2E2" stroke="#F87171" stroke-width="2"/>
+                        <text x="25" y="55" font-weight="bold">PDF / Bild</text>
+                        <!-- OCR/CV -->
+                        <rect x="150" y="30" width="100" height="40" rx="5" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+                        <text x="175" y="50" font-weight="bold">OCR / CV</text>
+                        <text x="160" y="65">(Layout-Analyse)</text>
+                        <!-- NLP -->
+                        <rect x="310" y="30" width="100" height="40" rx="5" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+                        <text x="340" y="50" font-weight="bold">NLP</text>
+                        <text x="320" y="65">(Kontext-Verständnis)</text>
+                        <!-- Structured Data -->
+                        <rect x="470" y="30" width="120" height="40" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="2"/>
+                        <text x="480" y="55" font-weight="bold">Strukturierte Daten</text>
+                        <!-- Arrows -->
+                        <line x1="90" y1="50" x2="150" y2="50" stroke="#4B5563" stroke-width="2" marker-end="url(#arrowhead-docai)"/>
+                        <line x1="250" y1="50" x2="310" y2="50" stroke="#4B5563" stroke-width="2" marker-end="url(#arrowhead-docai)"/>
+                        <line x1="410" y1="50" x2="470" y2="50" stroke="#4B5563" stroke-width="2" marker-end="url(#arrowhead-docai)"/>
+                    </svg>
+                    <p class="text-sm text-gray-600 mt-2">Der Prozess der Document AI: Vom unstrukturierten Dokument zu strukturierten, nutzbaren Daten.</p>
+                </div>
+
+                <h2 class="mt-10">Anwendungsfälle und Bedeutung für die KI</h2>
+                <p>Die Anwendungsfälle für Document AI sind riesig und transformieren ganze Branchen, von der automatisierten Rechnungsverarbeitung in der Buchhaltung bis zur Analyse von Krankenakten im Gesundheitswesen. Für die allgemeine KI-Entwicklung ist sie von entscheidender Bedeutung:</p>
+                <p><strong>Document AI ist der "Übersetzer" zwischen der visuellen Welt der menschlichen Dokumente und der datengetriebenen Welt der großen Sprachmodelle.</strong> Sie bereitet die unordentlichen, layout-basierten Informationen aus PDFs so auf, dass LLMs sie effektiv nutzen können, um Fragen zu beantworten, Zusammenfassungen zu erstellen oder Schlussfolgerungen zu ziehen. Ohne Document AI wäre das riesige Wissensarchiv, das durch DTP geschaffen wurde, für die moderne KI nur sehr eingeschränkt nutzbar.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
