@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesellschaftliche Folgen - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="societal-impact.html" class="nav-link active">Gesellschaftliche Folgen</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
+            <a href="societal-impact.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Gesellschaftliche Folgen</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-center mb-4">Gesellschaftliche Folgen der Digitalisierung</h1>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Wie die digitale Revolution die Arbeitswelt und unseren Alltag für immer verändert hat.</p>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline-Item ca. 1985 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1985</time>
+                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                        <a href="dtp-impact.html">Disruption im Druckgewerbe</a>
+                    </h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die Einführung von Desktop-Publishing (DTP) löscht traditionelle Handwerksberufe wie den des Setzers und die Belichtungsstudios aus. Ein ganzer Industriezweig wird durch Software neu definiert. <a href="dtp-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
+                </div>
+                <!-- Timeline-Item ca. 1990 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1990</time>
+                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                        <a href="office-revolution.html">Die Revolution im Büro</a>
+                    </h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Der Personal Computer und Office-Pakete verdrängen die Schreibmaschine. Das Berufsbild der Sekretärin wandelt sich von einer reinen Schreibkraft zur Informationsmanagerin. <a href="office-revolution.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
+                </div>
+                <!-- Timeline-Item ca. 1995 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1995</time>
+                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                        <a href="copyshop-impact.html">Die Transformation der Copy-Shops</a>
+                    </h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Mit dem Aufkommen von Heim- und Bürodruckern bricht das Kerngeschäft der Copy-Shops weg. Die Branche erfindet sich neu als Anbieter für Digitaldruck und spezialisierte Dienstleistungen wie Binden und Großformatdruck. <a href="copyshop-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
