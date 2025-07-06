@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vom Tipp-Ex zum digitalen Büro - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-center mb-4">Vom Tipp-Ex zum digitalen Büro</h1>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Wie der Personal Computer die Schreibmaschine verdrängte und das Berufsbild der Sekretärin für immer veränderte.</p>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline-Item ca. 1960-1980 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1960 - 1980</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Ära der Schreibmaschine</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die Sekretärin ist eine hochspezialisierte Fachkraft. Ihre Kernkompetenzen sind Stenografie für Diktate, schnelles und fehlerfreies Tippen auf mechanischen oder elektrischen Schreibmaschinen (z.B. der IBM Selectric mit Kugelkopf) und die physische Verwaltung von Dokumenten (Durchschläge mit Kohlepapier, Korrekturen mit Tipp-Ex). Jede größere Änderung bedeutet das komplette Abtippen einer Seite.</p>
+                </div>
+                <!-- Timeline-Item ca. 1975-1985 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1975 - 1985</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Der Übergang: Computergestützte Schreibmaschinen</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die ersten "intelligenten" Schreibmaschinen kommen auf den Markt. Modelle mit Typenrad (z.B. von Brother oder Triumph-Adler) und einem kleinen einzeiligen Display erlauben es, eine Zeile vor dem Druck zu korrigieren. Sogenannte "Memory Typewriters" können sogar einige Seiten Text speichern. Dies sind die ersten Schritte zur Trennung von Eingabe und Ausgabe, aber der Workflow bleibt dokumentenbasiert.</p>
+                </div>
+                <!-- Timeline-Item ca. 1981-1990 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1981 - 1990</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Disruption: Der PC und die Textverarbeitung</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die Ankunft des IBM PC und seiner Klone verändert alles. Die entscheidende Innovation ist die Software: Programme wie <strong>WordStar</strong> und später <strong>WordPerfect</strong> revolutionieren die Texterstellung. Ein Dokument ist nun eine digitale Datei, die beliebig oft und ohne Qualitätsverlust bearbeitet, gespeichert und neu ausgedruckt werden kann. Die Fähigkeit, Texte zu formatieren, zu kopieren und einzufügen, steigert die Effizienz exponentiell. Das mühsame Neu-Abtippen entfällt.</p>
+                </div>
+                <!-- Timeline-Item ca. 1990-2000 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1990 - 2000</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Transformation: Office-Pakete und das Internet</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Mit dem Aufstieg von Windows und Microsoft Office wird der Wandel zementiert. Die Sekretärin ist nicht mehr nur für Text zuständig. Die Erstellung von Präsentationen (PowerPoint), die Verwaltung von Daten in Tabellen (Excel) und die Kommunikation per E-Mail werden zu Kernaufgaben. Die Stenografie verliert an Bedeutung, da Manager nun oft ihre eigenen Entwürfe tippen. Der Beruf wandelt sich von einer reinen Schreibkraft zur "Informationsmanagerin".</p>
+                </div>
+            </div>
+
+            <div class="prose prose-lg max-w-none mt-16">
+                <h2 class="text-3xl font-bold">Fazit: Vom "Vorzimmerdrachen" zur "Administrative Assistant"</h2>
+                <p>Die Entwicklung des Computers hat das Berufsbild der Sekretärin fundamental neu definiert. Die Schreibmaschine als zentrales Werkzeug wurde vollständig verdrängt. Die einst entscheidenden manuellen Fähigkeiten (Steno, schnelles fehlerfreies Tippen) wurden durch technologische Kompetenzen ersetzt. Die moderne "Administrative Assistant" oder "Office Managerin" ist eine hochqualifizierte Kraft für Organisation, Kommunikation und Informationsmanagement, deren wichtigstes Werkzeug der Computer mit seiner vielseitigen Software ist. Der Computer hat den Beruf nicht abgeschafft, sondern ihn auf eine neue, anspruchsvollere Ebene gehoben.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
