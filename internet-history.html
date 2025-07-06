@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vom Modem zum Exabyte - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-center mb-4">Vom Modem zum Exabyte: Wie das Internet die KI befeuerte</h1>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Die Evolution der Datenübertragung war die stille Voraussetzung für die Explosion der künstlichen Intelligenz. Ohne schnelles Internet gäbe es keine Big Data und keine modernen KI-Modelle.</p>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline-Item ca. 1985-1995 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1985 - 1995</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Ära von Modem und ISDN: Der Kurier wird digital</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die ersten kommerziellen Internetzugänge über analoge Modems (mit Geschwindigkeiten von 14.4 kbit/s bis 56 kbit/s) und später über ISDN (64/128 kbit/s) waren langsam, aber revolutionär. Sie ersetzten den physischen Transport von Disketten und Dokumenten durch den Fahrradkurier. Für die KI-Forschung bedeutete dies die Möglichkeit, Code und kleine Datensätze erstmals global und fast augenblicklich auszutauschen.</p>
+                </div>
+                <!-- Timeline-Item ca. 1999-2005 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1999 - 2005</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Die Breitband-Revolution (DSL & Kabel): Daten werden verfügbar</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die Einführung von "Always-on"-Breitbandverbindungen veränderte alles. Plötzlich war es praktikabel, große Datenmengen herunterzuladen. Dies war die Geburtsstunde von riesigen, öffentlich zugänglichen Datensätzen, die für die KI-Forschung entscheidend waren. Das beste Beispiel ist <strong>ImageNet</strong>, ein Datensatz mit Millionen von gelabelten Bildern. Ohne Breitband wäre es für Forscher weltweit unmöglich gewesen, diesen Datensatz zu nutzen, der die Deep-Learning-Revolution in der Bilderkennung direkt auslöste.</p>
+                </div>
+                <!-- Timeline-Item ca. 2010-Heute -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 2010 - Heute</time>
+                    <h3 class="text-2xl font-semibold text-gray-900">Glasfaser & Cloud Computing: Die Ära der Exabytes</h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Der letzte und entscheidende Schritt war die Kombination aus Glasfaser-Hochgeschwindigkeitsnetzen und der Entstehung von Cloud-Computing-Plattformen (AWS, Azure, GCP). Dies ermöglichte es, gewaltige Datenmengen (Petabytes und Exabytes) nicht nur zu speichern, sondern auch die massive Rechenleistung von Tausenden von GPUs für das Training von KI-Modellen zu mieten. Die heutigen großen Sprachmodelle wie GPT-4 oder Gemini sind ohne diese Infrastruktur – schnelle Netzwerke, die riesige Datenmengen zu riesigen Rechenclustern transportieren – schlicht undenkbar.</p>
+                </div>
+            </div>
+
+            <div class="prose prose-lg max-w-none mt-16">
+                <h2 class="text-3xl font-bold">Fazit: Eine symbiotische Beziehung</h2>
+                <p>Die Geschichte der KI und des Internets ist untrennbar miteinander verbunden. Während die KI-Forschung die Algorithmen lieferte, schuf die Entwicklung der Übertragungstechnik die physische Voraussetzung, um diese Algorithmen mit der notwendigen Menge an Daten zu "füttern". Jede Stufe der Internet-Evolution – vom Modem, das den Kurier ersetzte, bis zur Cloud, die das Training von Billionen-Parameter-Modellen ermöglicht – war ein notwendiger Schritt, der die nächste Welle der KI-Innovation freisetzte.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
