@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der zweite KI-Winter - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
+            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <!-- INHALT DER "KI-Winter-2"-SEITE -->
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Der zweite KI-Winter (ca. 1987–1993)</h1>
+            <p class="text-lg text-gray-500 mb-8">Die geplatzte Blase der Expertensysteme.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Nach dem kommerziellen Boom der Expertensysteme in den frühen 1980er Jahren folgte Ende des Jahrzehnts eine weitere Periode der Ernüchterung. Der Hype hatte erneut die realen Fähigkeiten der Technologie überholt, was zum Zusammenbruch eines Multi-Milliarden-Dollar-Marktes und zum Beginn des zweiten, längeren KI-Winters führte.</p>
+
+                <h2 class="mt-10">Die Ursachen des Winters</h2>
+                <p>Dieser zweite Winter wurde hauptsächlich durch das Scheitern der Expertensysteme auf breiter Front verursacht:</p>
+                <ol>
+                    <li><strong>Der Kollaps des Lisp-Maschinen-Marktes:</strong> Expertensysteme liefen oft auf teurer, hochspezialisierter Hardware, den sogenannten Lisp-Maschinen. In den späten 80er Jahren wurden jedoch leistungsstarke und weitaus günstigere Desktop-Workstations (z.B. von Sun Microsystems) und Personal Computer populär, was den Markt für die teuren Spezialrechner obsolet machte.</li>
+                    <li><strong>Hohe Kosten und schwierige Wartung:</strong> Die Entwicklung und Pflege von Expertensystemen war extrem aufwändig. Das Wissen von Experten musste mühsam in "WENN-DANN"-Regeln übersetzt werden. Jede Aktualisierung der Wissensbasis war ein komplexes Unterfangen, und die Systeme wurden schnell unübersichtlich und schwer zu verwalten.</li>
+                    <li><strong>Das Problem der "Sprödigkeit" (Brittleness):</strong> Expertensysteme waren extrem "spröde". Sie konnten beeindruckende Leistungen in ihrem eng definierten Fachgebiet erbringen, scheiterten aber kläglich, sobald sie mit einem Problem konfrontiert wurden, das nicht exakt von ihren Regeln abgedeckt war. Ihnen fehlte jeglicher gesunder Menschenverstand.</li>
+                    <li><strong>Langsame Fortschritte im Konnektionismus:</strong> Obwohl der Backpropagation-Algorithmus die Forschung an neuronalen Netzen wiederbelebt hatte, waren die Fortschritte langsam. Die verfügbare Rechenleistung und die Datenmengen reichten bei weitem nicht aus, um die tiefen Netze zu trainieren, die für die Lösung komplexer Probleme notwendig gewesen wären. Die praktischen Erfolge blieben aus, um den Hype zu rechtfertigen.</li>
+                </ol>
+                
+                <h2 class="mt-10">Das Ende des Hypes</h2>
+                <p>Als die Unternehmen erkannten, dass die Einführung und Wartung von Expertensystemen teurer und komplizierter war als die Beschäftigung menschlicher Experten, platzte die Blase. Die Finanzierung für KI-Projekte versiegte erneut, und der Begriff "KI" wurde in vielen Kreisen zu einem Synonym für überzogene Versprechen.</p>
+                <p>Dieser zweite Winter war tiefgreifender und länger als der erste. Er zwang die Forschungsgemeinschaft, sich von der Suche nach einem einzigen, allumfassenden Ansatz für Intelligenz abzuwenden. Stattdessen begannen Forscher, sich auf spezifische, klar definierte Teilprobleme zu konzentrieren und robustere, statistische Methoden zu entwickeln. Ansätze wie Support Vector Machines und probabilistische Modelle gewannen an Bedeutung und legten das Fundament für den datengesteuerten Ansatz, der schließlich zur modernen Deep-Learning-Revolution führen sollte.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
