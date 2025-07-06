@@ -6,35 +6,7 @@
     <title>Die DTP-Revolution - Innovate Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .nav-link.active {
-            color: #2563EB; /* blue-600 */
-            font-weight: 600;
-        }
-        /* Timeline-Stile */
-        .timeline-item {
-            position: relative;
-            padding-left: 2.5rem;
-            padding-bottom: 2rem;
-            border-left: 2px solid #D1D5DB; /* gray-300 */
-        }
-        .timeline-item:last-child {
-            border-left: 2px solid transparent;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -0.5rem;
-            top: 0.25rem;
-            height: 1rem;
-            width: 1rem;
-            background-color: #ffffff;
-            border: 2px solid #2563EB; /* blue-600 */
-            border-radius: 9999px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -66,35 +38,37 @@
                     <div class="timeline-dot"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-gray-400">1978</time>
                     <h3 class="text-2xl font-semibold text-gray-900">TeX: Der wissenschaftliche Anfang</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Donald Knuth entwickelt das Satzsystem TeX. Es ist eine reine Softwarelösung, die es Wissenschaftlern erstmals ermöglicht, komplexe mathematische Formeln und Texte in höchster typografischer Qualität digital zu setzen. TeX etabliert die Idee, Dokumentenstruktur und -layout durch Code zu definieren.</p>
+                    <p class="text-base font-normal text-gray-600 mt-2">Donald Knuth entwickelt das Satzsystem TeX. Es ist eine reine Softwarelösung, die es Wissenschaftlern erstmals ermöglicht, komplexe mathematische Formeln und Texte in höchster typografischer Qualität digital zu setzen.</p>
                 </div>
                 <!-- Timeline-Item 1984 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-gray-400">1984</time>
                     <h3 class="text-2xl font-semibold text-gray-900">Adobe PostScript: Die universelle Sprache für Drucker</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Adobe Systems veröffentlicht PostScript. Diese geräteunabhängige Seitenbeschreibungssprache ist der entscheidende Software-Baustein. Sie ermöglicht es, ein Dokument auf dem Bildschirm exakt so darzustellen, wie es später gedruckt wird ("What You See Is What You Get" - WYSIWYG). PostScript wird zur Lingua franca zwischen Computern und Druckern.</p>
+                    <p class="text-base font-normal text-gray-600 mt-2">Adobe Systems veröffentlicht PostScript. Diese geräteunabhängige Seitenbeschreibungssprache ermöglicht es, ein Dokument auf dem Bildschirm exakt so darzustellen, wie es später gedruckt wird (WYSIWYG).</p>
                 </div>
                 <!-- Timeline-Item 1985 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-gray-400">1985</time>
-                    <h3 class="text-2xl font-semibold text-gray-900">PageMaker & LaserWriter: Das DTP-Trio ist komplett</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Die DTP-Revolution zündet auf dem <strong>Apple Macintosh</strong>: Die Software <strong>Aldus PageMaker</strong> macht das Layouten am Computer intuitiv und der <strong>Apple LaserWriter</strong> ist der erste Drucker, der die PostScript-Software versteht. Dieses Zusammenspiel macht den Mac zur ersten Wahl für die Kreativbranche.</p>
+                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                        <a href="dtp-impact.html">PageMaker & LaserWriter: Die Disruption beginnt</a>
+                    </h3>
+                    <p class="text-base font-normal text-gray-600 mt-2">Die DTP-Revolution zündet auf dem <strong>Apple Macintosh</strong>: Die Software <strong>Aldus PageMaker</strong> und der <strong>Apple LaserWriter</strong> Drucker demokratisieren das Publizieren und lösen einen massiven Strukturwandel im Druckgewerbe aus. <a href="dtp-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
                 </div>
-                <!-- NEUER Timeline-Item 1987 -->
+                <!-- Timeline-Item 1987 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-gray-400">1987</time>
                     <h3 class="text-2xl font-semibold text-gray-900">DTP erobert den PC: PageMaker für Windows</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Aldus portiert PageMaker auf das noch junge Windows-Betriebssystem. Zusammen mit Programmen wie Ventura Publisher (1986) wird professionelles DTP nun auch auf den günstigeren und weiter verbreiteten IBM-PC-kompatiblen Rechnern verfügbar. Dies untergräbt Apples Alleinstellungsmerkmal, demokratisiert den Zugang zu Design-Werkzeugen und legitimiert Windows als grafische Plattform.</p>
+                    <p class="text-base font-normal text-gray-600 mt-2">Aldus portiert PageMaker auf das noch junge Windows-Betriebssystem. Professionelles DTP wird nun auch auf günstigeren IBM-PC-kompatiblen Rechnern verfügbar, was den Zugang zu Design-Werkzeugen weiter demokratisiert.</p>
                 </div>
                 <!-- Timeline-Item 1993 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-gray-400">1993</time>
                     <h3 class="text-2xl font-semibold text-gray-900">Adobe PDF: Das digitale Papier</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Adobe entwickelt das Portable Document Format (PDF). Basierend auf PostScript, löst diese Software das Problem des plattformübergreifenden Dokumentenaustauschs. Ein PDF sieht auf jedem Computer und jedem Betriebssystem exakt gleich aus und bewahrt das gesamte visuelle Layout. Es wird zum globalen Standard für die Archivierung und Verteilung von Dokumenten.</p>
+                    <p class="text-base font-normal text-gray-600 mt-2">Adobe entwickelt das Portable Document Format (PDF). Basierend auf PostScript, löst diese Software das Problem des plattformübergreifenden Dokumentenaustauschs und wird zum globalen Standard für die Archivierung und Verteilung von Dokumenten.</p>
                 </div>
             </div>
 
@@ -103,18 +77,13 @@
                 <p>Die Verbindung ist nicht sofort offensichtlich, aber die Entwicklung von DTP und dem PDF-Format ist eine entscheidende, oft übersehene Grundlage für die heutige KI. DTP und PDF haben das strukturierte Wissen der Welt digitalisiert und archiviert. Dieses riesige digitale Archiv ist heute einer der wichtigsten Rohstoffe für das Training großer KI-Modelle.</p>
                 
                 <h3 class="mt-8 font-semibold">1. Die Erschaffung eines maschinenlesbaren Wissensarchivs</h3>
-                <p>Vor DTP war das Layout von Büchern und Berichten ein analoger Prozess. DTP-Software und das PDF-Format ermöglichten es, Dokumente mit ihrem vollständigen visuellen und strukturellen Layout digital zu erstellen und zu verteilen. Das Ergebnis war ein gigantisches, globales Archiv an hochwertigem, strukturiertem Wissen – von wissenschaftlichen Veröffentlichungen bis zu technischen Handbüchern.</p>
+                <p>Vor DTP war das Layout von Büchern und Berichten ein analoger Prozess. DTP-Software und das PDF-Format ermöglichten es, Dokumente mit ihrem vollständigen visuellen und strukturellen Layout digital zu erstellen und zu verteilen. Das Ergebnis war ein gigantisches, globales Archiv an hochwertigem, strukturiertem Wissen.</p>
                 
                 <h3 class="mt-8 font-semibold">2. Futter für große Sprachmodelle (LLMs)</h3>
-                <p>Moderne LLMs lernen durch die Analyse riesiger Textmengen. Wissenschaftliche Paper im PDF-Format sind eine Goldgrube für dieses Training. Sie enthalten hochspezialisiertes Wissen, komplexe Argumentationen und eine formale Sprache. Das Training auf diesen Dokumenten ist ein wesentlicher Grund, warum Modelle in der Lage sind, über komplexe Themen zu "schlussfolgern" und fachliche Fragen zu beantworten.</p>
+                <p>Moderne LLMs lernen durch die Analyse riesiger Textmengen. Wissenschaftliche Paper im PDF-Format sind eine Goldgrube für dieses Training. Sie enthalten hochspezialisiertes Wissen, komplexe Argumentationen und eine formale Sprache, was die "Denkfähigkeit" von KI-Modellen entscheidend verbessert.</p>
 
                 <h3 class="mt-8 font-semibold">3. Grundlage für multimodale KI und Document AI</h3>
-                <p>Ein PDF ist nicht gleich ein PDF. Man unterscheidet zwischen "echten" (textbasierten) PDFs, bei denen der Text digital vorliegt, und bildbasierten PDFs (z.B. Scans), bei denen der Text Teil eines Bildes ist. Hier wird die Rolle der KI entscheidend:</p>
-                <ul class="list-disc pl-6 mt-2">
-                   <li><strong>Textbasierte PDFs:</strong> Hier wird kein OCR zur Texterkennung benötigt. Dennoch ist das reine Extrahieren des Textes oft unzureichend, da die gesamte Layout-Information (Spalten, Tabellen, Überschriften) verloren geht.</li>
-                   <li><strong>Bildbasierte PDFs:</strong> Hier ist OCR der erste, unerlässliche Schritt, um den reinen Text überhaupt erst zugänglich zu machen.</li>
-                </ul>
-                <p class="mt-4">In beiden Fällen ist die anschließende Analyse durch <a href="document-ai.html" class="text-blue-600 hover:underline"><strong>Document AI</strong></a> der entscheidende Schritt. Sie kombiniert Computer Vision zur Analyse des visuellen Layouts mit NLP, um die extrahierten Informationen in einen sinnvollen Kontext zu setzen. Diese Fähigkeit, Struktur und Semantik zu verbinden, ist die Grundlage für multimodale Modelle, die die Beziehung zwischen Text, Tabellen und Bildern in einem Dokument analysieren können. <a href="document-ai.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
+                <p>Ein PDF ist nicht gleich ein PDF. Man unterscheidet zwischen "echten" (textbasierten) PDFs, bei denen der Text digital vorliegt, und bildbasierten PDFs (z.B. Scans), bei denen der Text Teil eines Bildes ist. In beiden Fällen ist die anschließende Analyse durch <a href="document-ai.html" class="text-blue-600 hover:underline"><strong>Document AI</strong></a> der entscheidende Schritt, um die visuelle Struktur zu verstehen und die Informationen für die KI nutzbar zu machen. <a href="document-ai.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
 
                 <p class="mt-8 font-bold">Fazit: Man kann DTP und das PDF-Format als die unbesungenen Helden der KI-Revolution betrachten. Sie sind nicht selbst eine KI-Technologie, aber sie haben die digitale Bibliothek geschaffen, aus der die moderne KI lernt.</p>
             </div>
