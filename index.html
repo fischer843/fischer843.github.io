@@ -10,7 +10,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Stil für den aktiven Navigationslink */
         .nav-link.active {
             color: #2563EB; /* blue-600 */
             font-weight: 600;
@@ -26,8 +25,8 @@
             <div class="hidden md:flex space-x-6">
                 <a href="index.html" class="nav-link active">Startseite</a>
                 <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
-                <a href="services.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Dienstleistungen</a>
                 <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
                 <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
@@ -38,8 +37,8 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="index.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Startseite</a>
             <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
-            <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Dienstleistungen</a>
             <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
             <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
         </div>
     </header>
@@ -47,33 +46,35 @@
     <main class="container mx-auto p-6 md:p-12">
         <!-- INHALT DER STARTSEITE -->
         <section class="text-center bg-white p-12 rounded-xl shadow-lg">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">Gestalten Sie die Zukunft.</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Wir verwandeln komplexe Herausforderungen in elegante, innovative Lösungen, die Ihr Unternehmen voranbringen.</p>
-            <a href="services.html" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">Entdecken Sie unsere Lösungen</a>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">Die Geschichte der digitalen Revolution.</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Entdecken Sie die Meilensteine der künstlichen Intelligenz und der Computertechnologie, die unsere Welt geformt haben.</p>
         </section>
+        
+        <!-- NEUER ABSCHNITT -->
         <section class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Warum Innovate Solutions?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Innovation</h3>
-                    <p class="text-gray-600">Wir nutzen die neuesten Technologien, um bahnbrechende Produkte zu entwickeln.</p>
+            <h2 class="text-3xl font-bold text-center mb-10">Entdecken Sie unsere Themen</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <a href="history.html" class="flex flex-col items-center text-center">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Geschichte der KI</h3>
+                        <p class="text-gray-600">Verfolgen Sie die Entwicklung von den ersten theoretischen Konzepten bis hin zu den heutigen großen Sprachmodellen.</p>
+                    </a>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                     <div class="text-blue-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Qualität</h3>
-                    <p class="text-gray-600">Unsere Lösungen sind robust, zuverlässig und auf Langlebigkeit ausgelegt.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                     <div class="text-blue-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Partnerschaft</h3>
-                    <p class="text-gray-600">Wir arbeiten eng mit unseren Kunden zusammen, um deren Erfolg sicherzustellen.</p>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <a href="computer-history.html" class="flex flex-col items-center text-center">
+                        <div class="text-blue-500 mb-4">
+                             <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.03 1.125 0 1.131.094 1.976 1.057 1.976 2.192V7.5M8.25 7.5h7.5m-7.5 0l-1 11.25m1-11.25l1 11.25m6.5 0l1-11.25m-1 11.25l-1-11.25M3.75 7.5h16.5c.621 0 1.125-.504 1.125-1.125V6.375c0-.621-.504-1.125-1.125-1.125H3.75c-.621 0-1.125.504-1.125 1.125v.001c0 .621.504 1.125 1.125 1.125z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Geschichte des Computers</h3>
+                        <p class="text-gray-600">Erleben Sie die Hardware-Revolutionen, vom ersten Transistor bis zur GPU, die die KI erst möglich machten.</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -82,6 +83,9 @@
     <!-- Footer -->
     <footer class="bg-white mt-16">
         <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <div class="mb-4">
+                <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            </div>
             <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
