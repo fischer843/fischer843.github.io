@@ -3,151 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesellschaftliche Folgen - Innovate Solutions</title>
+    <title>Gesellschaftliche Folgen - Jens Fischer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header und Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
-                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
-                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
-                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
-                <a href="societal-impact.html" class="nav-link active">Gesellschaftliche Folgen</a>
-                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+    <div class="bg-white sticky top-0 z-50 shadow-sm">
+        <!-- Neuer Top-Header -->
+        <div class="container mx-auto px-6 py-3 border-b border-gray-200">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">Jens Fischer</a>
+                <div class="flex items-center space-x-4">
+                    <!-- Social Media Links (Platzhalter) -->
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-1.01.03-2.319-1.4-2.319-1.43 0-1.658 1.11-1.658 2.245v4.252H7.93V7.924h2.643v1.21h.037c.368-.698 1.264-1.426 2.604-1.426 2.783 0 3.297 1.824 3.297 4.203v4.825zM5.033 6.71c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.322 9.628H3.71V7.924h2.644v8.414zM18 1H6c-2.76 0-5 2.24-5 5v12c0 2.76 2.24 5 5 5h12c2.76 0 5-2.24 5-5V6c0-2.76-2.24-5-5-5z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobiles Menü -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
-            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
-            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
-            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
-            <a href="societal-impact.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Gesellschaftliche Folgen</a>
-            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
         </div>
-    </header>
+
+        <!-- Navigationsleiste -->
+        <nav class="container mx-auto px-6 py-2">
+            <div class="flex justify-between items-center">
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
+                    <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                    <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                    <a href="societal-impact.html" class="nav-link active">Gesellschaftliche Folgen</a>
+                    <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Analyse</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+                </div>
+                <div class="md:hidden">
+                     <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+     <!-- Mobiles Menü -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
+        <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über mich</a>
+        <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+        <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
+        <a href="societal-impact.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Gesellschaftliche Folgen</a>
+        <a href="research-analysis.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Analyse</a>
+        <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+    </div>
 
     <main class="container mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
-            <h1 class="text-4xl font-bold text-center mb-4">Gesellschaftliche Folgen der Digitalisierung</h1>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Wie die digitale Revolution die Arbeitswelt und unseren Alltag für immer verändert hat.</p>
-
+        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
             <div class="max-w-4xl mx-auto">
-                <!-- Timeline-Item ca. 1985 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1985</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="dtp-impact.html">Disruption im Druckgewerbe</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Die Einführung von Desktop-Publishing (DTP) löscht traditionelle Handwerksberufe wie den des Setzers und die Belichtungsstudios aus. Ein ganzer Industriezweig wird durch Software neu definiert. <a href="dtp-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                <!-- Timeline-Item ca. 1990 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1990</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="office-revolution.html">Die Revolution im Büro</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Der Personal Computer und Office-Pakete verdrängen die Schreibmaschine. Das Berufsbild der Sekretärin wandelt sich von einer reinen Schreibkraft zur Informationsmanagerin. <a href="office-revolution.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                <!-- Timeline-Item ca. 1991 -->
-                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1991</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="laptop-revolution.html">Die Laptop-Revolution: Das Büro wird mobil</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Der tragbare Computer befreit die Arbeit vom Schreibtisch. Die Entstehung der mobilen Arbeitskraft löst die Grenzen zwischen Büro und Privatleben auf. <a href="laptop-revolution.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                <!-- Timeline-Item ca. 1995 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1995</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="copyshop-impact.html">Die Transformation der Copy-Shops</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Mit dem Aufkommen von Heim- und Bürodruckern bricht das Kerngeschäft der Copy-Shops weg. Die Branche erfindet sich neu als Anbieter für Digitaldruck und spezialisierte Dienstleistungen. <a href="copyshop-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                <!-- Timeline-Item ca. 1996-2006 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 1996 - 2006</time>
-                    <h3 class="text-2xl font-semibold text-gray-900">Die Wegbereiter: PDAs & Feature Phones</h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Geräte wie der <strong>Palm Pilot</strong>, der <strong>Nokia Communicator</strong> und der <strong>Blackberry</strong> etablieren das Konzept des "Computers für die Hosentasche". Sie sind hochspezialisierte Werkzeuge für E-Mail, Kalender und Kontakte, schaffen aber als geschlossene Systeme noch keine offene Plattform.</p>
-                </div>
-                 <!-- Timeline-Item ca. 2007 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 2007</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="self-publishing.html">Die Self-Publishing-Revolution</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Das Internet und Plattformen wie Amazon KDP demokratisieren nicht nur die Produktion, sondern auch die Distribution von Büchern. Dies stürzt die traditionelle Verlagsbranche in eine Krise. <a href="self-publishing.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item ca. 2008 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 2008</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="smartphone-revolution.html">Die Smartphone-Revolution</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Das iPhone und der App Store verwandeln das Telefon in eine offene Plattform. Ganze Branchen (Kameras, Navis, MP3-Player) werden verdrängt und neue (App Economy, Gig Economy) entstehen. <a href="smartphone-revolution.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item ca. 2009 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 2009</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="3d-printing-patents.html">Patente & Disruption: Der 3D-Druck</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Das Auslaufen von Schlüsselpatenten demokratisiert den 3D-Druck und revolutioniert das Prototyping für Ingenieure und Designer. <a href="3d-printing-patents.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item ca. 2010 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">ca. 2010</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="cad-cnc-impact.html">Revolution im Engineering: CAD & CNC</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Der erschwingliche 3D-Drucker verändert die Arbeitsweise von Ingenieuren. Die Rolle des CNC-Maschinenbedieners wandelt sich vom Prototypen-Hersteller zum hochspezialisierten Fertigungstechnologen. <a href="cad-cnc-impact.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item Heute -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">Heute</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="digital-supply-chain.html">Die Digitale Lieferkette: On-Demand-Fertigung</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Die Vernetzung von mobiler Kommunikation, 3D-Druck und digitalen Plänen revolutioniert die industrielle Wartung und Logistik, wie das Beispiel der Deutschen Bahn zeigt. <a href="digital-supply-chain.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item Heute -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">Heute</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="smartphone-vs-mainframe.html">Die unsichtbare Supermacht</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Die Rechenleistung, die einst Nationen zum Mond schickte, ist zur alltäglichen Ressource in unseren Taschen geworden. <a href="smartphone-vs-mainframe.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
-                </div>
-                 <!-- Timeline-Item Heute -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400">Heute</time>
-                    <h3 class="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-                        <a href="meta-story.html">Die neue Wissensarbeit: Vom Ausführen zum Anleiten</a>
-                    </h3>
-                    <p class="text-base font-normal text-gray-600 mt-2">Die Kollaboration mit KI verschiebt die entscheidende menschliche Fähigkeit: Weg von der reinen Ausführung, hin zur Fähigkeit, Ziele klar zu definieren, kritisch zu hinterfragen und Gedanken logisch und strukturiert zu formulieren. Die KI wird zum Werkzeug, der Mensch zum Architekten. <a href="meta-story.html" class="text-blue-600 font-medium">Mehr erfahren...</a></p>
+                <h1 class="text-5xl font-extrabold text-center mb-4 text-gray-900">Gesellschaftliche Folgen der Digitalisierung</h1>
+                <p class="text-xl text-gray-600 mb-16 text-center">Wie die digitale Revolution die Arbeitswelt und unseren Alltag für immer verändert hat.</p>
+
+                <!-- Die neue, professionellere Timeline -->
+                <div class="space-y-8">
+                    <!-- Timeline-Item ca. 1985 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-blue"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-blue">ca. 1985</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="dtp-impact.html" class="hover:text-blue-700">Disruption im Druckgewerbe</a></h3>
+                        <p class="text-base text-gray-700">Die Einführung von Desktop-Publishing (DTP) löscht traditionelle Handwerksberufe wie den des Setzers und die Belichtungsstudios aus. Ein ganzer Industriezweig wird durch Software neu definiert.</p>
+                        <a href="dtp-impact.html" class="inline-block mt-3 font-semibold text-blue-600 hover:text-blue-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 1990 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-green"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-green">ca. 1990</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="office-revolution.html" class="hover:text-green-700">Die Revolution im Büro</a></h3>
+                        <p class="text-base text-gray-700">Der Personal Computer und Office-Pakete verdrängen die Schreibmaschine. Das Berufsbild der Sekretärin wandelt sich von einer reinen Schreibkraft zur Informationsmanagerin.</p>
+                        <a href="office-revolution.html" class="inline-block mt-3 font-semibold text-green-600 hover:text-green-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 1991 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-amber"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-amber">ca. 1991</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="laptop-revolution.html" class="hover:text-amber-700">Die Laptop-Revolution: Das Büro wird mobil</a></h3>
+                        <p class="text-base text-gray-700">Der tragbare Computer befreit die Arbeit vom Schreibtisch. Die Entstehung der mobilen Arbeitskraft löst die Grenzen zwischen Büro und Privatleben auf.</p>
+                        <a href="laptop-revolution.html" class="inline-block mt-3 font-semibold text-amber-600 hover:text-amber-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 1995 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-indigo"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-indigo">ca. 1995</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="copyshop-impact.html" class="hover:text-indigo-700">Die Transformation der Copy-Shops</a></h3>
+                        <p class="text-base text-gray-700">Mit dem Aufkommen von Heim- und Bürodruckern bricht das Kerngeschäft der Copy-Shops weg. Die Branche erfindet sich neu als Anbieter für Digitaldruck und spezialisierte Dienstleistungen.</p>
+                        <a href="copyshop-impact.html" class="inline-block mt-3 font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 1996-2006 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-blue"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-blue">ca. 1996 - 2006</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Die Wegbereiter: PDAs & Feature Phones</h3>
+                        <p class="text-base text-gray-700">Geräte wie der <strong>Palm Pilot</strong>, der <strong>Nokia Communicator</strong> und der <strong>Blackberry</strong> etablieren das Konzept des "Computers für die Hosentasche". Sie sind hochspezialisierte Werkzeuge für E-Mail, Kalender und Kontakte, schaffen aber als geschlossene Systeme noch keine offene Plattform.</p>
+                    </div>
+                    <!-- Timeline-Item ca. 2007 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-green"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-green">ca. 2007</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="self-publishing.html" class="hover:text-green-700">Die Self-Publishing-Revolution</a></h3>
+                        <p class="text-base text-gray-700">Das Internet und Plattformen wie Amazon KDP demokratisieren nicht nur die Produktion, sondern auch die Distribution von Büchern. Dies stürzt die traditionelle Verlagsbranche in eine Krise.</p>
+                        <a href="self-publishing.html" class="inline-block mt-3 font-semibold text-green-600 hover:text-green-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 2008 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-amber"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-amber">ca. 2008</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="smartphone-revolution.html" class="hover:text-amber-700">Die Smartphone-Revolution</a></h3>
+                        <p class="text-base text-gray-700">Das iPhone und der App Store verwandeln das Telefon in eine offene Plattform. Ganze Branchen (Kameras, Navis, MP3-Player) werden verdrängt und neue (App Economy, Gig Economy) entstehen.</p>
+                        <a href="smartphone-revolution.html" class="inline-block mt-3 font-semibold text-amber-600 hover:text-amber-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 2009 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-indigo"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-indigo">ca. 2009</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="3d-printing-patents.html" class="hover:text-indigo-700">Patente & Disruption: Der 3D-Druck</a></h3>
+                        <p class="text-base text-gray-700">Das Auslaufen von Schlüsselpatenten demokratisiert den 3D-Druck und revolutioniert das Prototyping für Ingenieure und Designer.</p>
+                        <a href="3d-printing-patents.html" class="inline-block mt-3 font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item ca. 2010 -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-blue"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-blue">ca. 2010</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="cad-cnc-impact.html" class="hover:text-blue-700">Revolution im Engineering: CAD & CNC</a></h3>
+                        <p class="text-base text-gray-700">Der erschwingliche 3D-Drucker verändert die Arbeitsweise von Ingenieuren. Die Rolle des CNC-Maschinenbedieners wandelt sich vom Prototypen-Hersteller zum hochspezialisierten Fertigungstechnologen.</p>
+                        <a href="cad-cnc-impact.html" class="inline-block mt-3 font-semibold text-blue-600 hover:text-blue-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item Heute -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-green"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-green">Heute</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="digital-supply-chain.html" class="hover:text-green-700">Die Digitale Lieferkette: On-Demand-Fertigung</a></h3>
+                        <p class="text-base text-gray-700">Die Vernetzung von mobiler Kommunikation, 3D-Druck und digitalen Plänen revolutioniert die industrielle Wartung und Logistik, wie das Beispiel der Deutschen Bahn zeigt.</p>
+                        <a href="digital-supply-chain.html" class="inline-block mt-3 font-semibold text-green-600 hover:text-green-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item Heute -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-amber"></div>
+                        <time class="mb-2 block text-sm font-semibold uppercase time-amber">Heute</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="smartphone-vs-mainframe.html" class="hover:text-amber-700">Die unsichtbare Supermacht</a></h3>
+                        <p class="text-base text-gray-700">Die Rechenleistung, die einst Nationen zum Mond schickte, ist zur alltäglichen Ressource in unseren Taschen geworden.</p>
+                        <a href="smartphone-vs-mainframe.html" class="inline-block mt-3 font-semibold text-amber-600 hover:text-amber-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
+                    <!-- Timeline-Item Heute -->
+                    <div class="timeline-item-pro">
+                        <div class="timeline-dot-pro dot-indigo"></div>
+                        <time class="mb-1 text-sm font-semibold uppercase time-indigo">Heute</time>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="meta-story.html" class="hover:text-indigo-700">Die neue Wissensarbeit: Vom Ausführen zum Anleiten</a></h3>
+                        <p class="text-base text-gray-700">Die Kollaboration mit KI verschiebt die entscheidende menschliche Fähigkeit: Weg von der reinen Ausführung, hin zur Fähigkeit, Ziele klar zu definieren, kritisch zu hinterfragen und Gedanken logisch und strukturiert zu formulieren.</p>
+                        <a href="meta-story.html" class="inline-block mt-3 font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">→ Mehr erfahren</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,7 +169,7 @@
     <footer class="bg-white mt-16">
         <div class="container mx-auto px-6 py-8 text-center text-gray-600">
             <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
