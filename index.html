@@ -3,118 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovate Solutions - Startseite</title>
+    <title>Jens Fischer - Die Geschichte der Digitalen Revolution</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        /* Aktiver Navigationslink */
+        .nav-link.active {
+            color: #0d9488; /* teal-600 */
+            font-weight: 700;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
 
-    <!-- Header und Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="nav-link active">Startseite</a>
-                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
-                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
-                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
-                <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
-                <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Analyse</a>
-                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
+        <!-- Neuer, zentrierter Wrapper für den gesamten Header-Inhalt -->
+        <div class="container max-w-6xl mx-auto px-6">
+            <!-- Top-Header -->
+            <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
+                <div class="flex items-center space-x-4">
+                    <!-- Social Media Links (Platzhalter) -->
+                    <a href="#" class="text-gray-500 hover:text-teal-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-1.01.03-2.319-1.4-2.319-1.43 0-1.658 1.11-1.658 2.245v4.252H7.93V7.924h2.643v1.21h.037c.368-.698 1.264-1.426 2.604-1.426 2.783 0 3.297 1.824 3.297 4.203v4.825zM5.033 6.71c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.322 9.628H3.71V7.924h2.644v8.414zM18 1H6c-2.76 0-5 2.24-5 5v12c0 2.76 2.24 5 5 5h12c2.76 0 5-2.24 5-5V6c0-2.76-2.24-5-5-5z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-teal-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobiles Menü -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Startseite</a>
-            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über uns</a>
-            <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
-            <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
-            <a href="societal-impact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Gesellschaftliche Folgen</a>
-            <a href="research-analysis.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Analyse</a>
-            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+            <!-- Navigation -->
+            <nav class="border-t border-gray-200">
+                <div class="flex justify-between items-center py-2">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="nav-link active">Startseite</a>
+                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
+                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
+                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
+                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
+                    </div>
+                    <div class="md:hidden">
+                         <button id="mobile-menu-button" class="focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
+     <!-- Mobiles Menü -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <a href="index.html" class="block py-2 px-4 text-sm bg-teal-50 text-teal-700 font-semibold">Startseite</a>
+        <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über mich</a>
+        <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
+        <a href="computer-history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Computer-Geschichte</a>
+        <a href="societal-impact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Gesellschaftliche Folgen</a>
+        <a href="research-analysis.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Analyse</a>
+        <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
+    </div>
 
-    <main class="container mx-auto p-6 md:p-12">
+    <main class="container max-w-6xl mx-auto p-6 md:p-12">
         <!-- INHALT DER STARTSEITE -->
-        <section class="text-center bg-white p-12 rounded-xl shadow-lg">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">Drei Stränge einer Revolution</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Entdecken Sie, wie die parallelen Entwicklungen in KI-Forschung, Computer-Hardware und gesellschaftlichem Wandel sich gegenseitig beflügelten und unsere digitale Welt formten.</p>
-        </section>
-        
-        <!-- NEUER TEASER-ABSCHNITT -->
-        <section class="mt-16 bg-amber-50 p-8 rounded-xl border border-amber-200">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Der unbesungene Held der KI-Revolution</h2>
-                <p class="text-lg text-gray-700 mb-6">Wussten Sie, dass die Fähigkeit, eine Broschüre am Computer zu layouten, die Grundlage für die heutige künstliche Intelligenz schuf? Entdecken Sie die überraschende Geschichte, wie Desktop-Publishing und das PDF-Format das digitale Wissen schufen, von dem die modernsten KI-Systeme heute lernen.</p>
-                <a href="dtp-history.html" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-full hover:bg-amber-600 transition duration-300 text-lg">Die ganze Geschichte lesen &rarr;</a>
-            </div>
-        </section>
-
-        <!-- SÄULEN DER TRANSFORMATION -->
-        <section class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Die Säulen der digitalen Transformation</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- KI-Geschichte -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <a href="history.html" class="flex flex-col items-center text-center">
-                        <div class="text-blue-500 mb-4">
-                            <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-2">Geschichte der KI</h3>
-                        <p class="text-gray-600">Von theoretischen Konzepten wie dem Turing-Test bis zur Transformer-Architektur, die modernen LLMs zugrunde liegt.</p>
-                    </a>
+        <section class="text-center py-12">
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-4 leading-tight">Die Geschichte der Digitalisierung & ihre Folgen</h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">Eine Analyse der technologischen Revolutionen und ihrer tiefgreifenden Auswirkungen auf unsere Gesellschaft und Arbeitswelt.</p>
+            
+            <!-- NEUER ABSCHNITT ZUR STRUKTUR -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-teal-500">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Die Geschichte der Technologie</h2>
+                    <p class="text-base text-gray-700">Entdecken Sie die Meilensteine der KI- und Computer-Entwicklung, die unsere heutige Welt technologisch erst möglich gemacht haben.</p>
+                    <a href="history.html" class="inline-block mt-4 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Zur KI-Geschichte</a><br>
+                    <a href="computer-history.html" class="inline-block mt-2 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Zur Computer-Geschichte</a>
                 </div>
-                <!-- Computer-Geschichte -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <a href="computer-history.html" class="flex flex-col items-center text-center">
-                        <div class="text-blue-500 mb-4">
-                             <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.03 1.125 0 1.131.094 1.976 1.057 1.976 2.192V7.5M8.25 7.5h7.5m-7.5 0l-1 11.25m1-11.25l1 11.25m6.5 0l1-11.25m-1 11.25l-1-11.25M3.75 7.5h16.5c.621 0 1.125-.504 1.125-1.125V6.375c0-.621-.504-1.125-1.125-1.125H3.75c-.621 0-1.125.504-1.125 1.125v.001c0 .621.504 1.125 1.125 1.125z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-2">Geschichte des Computers</h3>
-                        <p class="text-gray-600">Die Hardware-Evolution vom ersten Transistor über den PC bis zur GPU, die die Rechenleistung für die KI bereitstellte.</p>
-                    </a>
-                </div>
-                <!-- Gesellschaftliche Folgen -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <a href="societal-impact.html" class="flex flex-col items-center text-center">
-                        <div class="text-blue-500 mb-4">
-                            <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962A3.375 3.375 0 0112 15.125c1.657 0 3 1.007 3 2.25 0 .852-.474 1.593-1.158 1.962M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-2">Gesellschaftliche Folgen</h3>
-                        <p class="text-gray-600">Wie die digitale Revolution traditionelle Berufe veränderte und neue Arbeits- und Lebensweisen schuf.</p>
-                    </a>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Die Gesellschaftlichen Folgen</h2>
+                    <p class="text-base text-gray-700">Verfolgen Sie, wie diese Technologien traditionelle Berufe verdrängt, neue geschaffen und die Art, wie wir leben und arbeiten, von Grund auf verändert haben.</p>
+                    <a href="societal-impact.html" class="inline-block mt-4 font-semibold text-blue-600 hover:text-blue-800 transition-colors">→ Zu den Gesellschaftlichen Folgen</a>
                 </div>
             </div>
         </section>
 
         <!-- PERSÖNLICHE PERSPEKTIVE -->
-        <section class="mt-16 bg-blue-50 p-8 rounded-xl border border-blue-200">
+        <section class="mt-16 bg-gray-800 text-white p-8 rounded-2xl">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Die Geschichte eines Zeitzeugen</h2>
-                <p class="text-lg text-gray-700 mb-6">Diese Webseite ist mehr als nur eine Sammlung von Fakten. Sie ist die Chronik einer Revolution, erzählt aus der Perspektive von jemandem, der sie miterlebt und mitgestaltet hat – vom ersten Homecomputer über die Disruption im Büro und Druckgewerbe bis hin zur Mitgestaltung der digitalen Infrastruktur.</p>
-                <a href="werdegang.html" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">Lesen Sie die ganze Geschichte &rarr;</a>
+                <h2 class="text-3xl font-bold mb-4">Die Geschichte eines Zeitzeugen</h2>
+                <p class="text-lg text-gray-300 mb-6">Diese Webseite ist mehr als nur eine Sammlung von Fakten. Sie ist die Chronik einer Revolution, erzählt aus der Perspektive von jemandem, der sie miterlebt und mitgestaltet hat – vom ersten Homecomputer über die Disruption im Büro und Druckgewerbe bis hin zur Mitgestaltung der digitalen Infrastruktur.</p>
+                <a href="werdegang.html" class="bg-teal-500 text-white font-bold py-3 px-8 rounded-full hover:bg-teal-600 transition duration-300 text-lg">Lesen Sie die ganze Geschichte &rarr;</a>
             </div>
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="bg-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
             <div class="mb-4">
                 <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
             </div>
-            <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
