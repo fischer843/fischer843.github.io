@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing & Virtualisierung - Innovate Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header und Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
+                <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Die Cloud-Revolution: Supercomputing als Dienstleistung</h1>
+            <p class="text-lg text-gray-500 mb-8">Wie Virtualisierung die Hardware entkoppelte und Cloud Computing die Rechenleistung demokratisierte, die die moderne KI antreibt.</p>
+
+            <div class="prose prose-lg max-w-none">
+                <p>Die letzte große Revolution in der Computer-Infrastruktur war unsichtbar, aber fundamental. Die Entwicklung der Virtualisierung und des darauf aufbauenden Cloud Computing hat die Art und Weise, wie wir auf Rechenleistung zugreifen, von Grund auf verändert und wurde zur entscheidenden Voraussetzung für die heutige KI-Ära.</p>
+
+                <h2 class="mt-10">Virtualisierung: Die Entkopplung von Hard- und Software</h2>
+                <p>Die Kernidee der Virtualisierung, die in den 1960er Jahren auf Großrechnern entstand und in den späten 1990er Jahren mit Firmen wie VMware für x86-Systeme populär wurde, war revolutionär. Eine Softwareschicht, der sogenannte <strong>Hypervisor</strong>, wird zwischen die physische Hardware und das Betriebssystem gelegt. Dies ermöglichte es, einen einzigen physischen Server in viele voneinander isolierte <strong>virtuelle Maschinen (VMs)</strong> aufzuteilen. Die Konsequenzen waren tiefgreifend:</p>
+                <ul class="list-disc pl-5 mt-4 space-y-2">
+                    <li><strong>Effizienz:</strong> Physische Server konnten nun viel besser ausgelastet werden.</li>
+                    <li><strong>Flexibilität:</strong> Ressourcen wie CPU, RAM und Speicher wurden zu einem flexiblen Pool, der dynamisch zugewiesen werden konnte.</li>
+                    <li><strong>Abstraktion:</strong> Die Software war nicht mehr an eine spezifische Hardware gebunden. Eine VM konnte einfach von einem Server auf einen anderen verschoben werden.</li>
+                </ul>
+
+                <h2 class="mt-10">Cloud Computing: Rechenleistung aus der Steckdose</h2>
+                <p>Unternehmen wie Amazon (mit AWS, ab 2006), Microsoft (mit Azure) und Google (mit GCP) erkannten das immense Potenzial dieser Technologie. Sie bauten riesige, global verteilte Rechenzentren und begannen, diese virtualisierte Infrastruktur als Dienstleistung anzubieten – wie Strom aus der Steckdose. Dies wird als <strong>Cloud Computing</strong> bezeichnet.</p>
+                <p>Statt eigene Server zu kaufen und zu warten, konnten Unternehmen und Entwickler nun Rechenleistung, Speicher und Netzwerkdienste nach Bedarf mieten und sekundengenau abrechnen. Dies senkte die Eintrittsbarrieren für die Gründung von Technologieunternehmen drastisch.</p>
+                
+                <h2 class="mt-16">Der Einfluss auf die KI-Entwicklung: Der Motor der Revolution</h2>
+                <p>Für die künstliche Intelligenz war die Cloud-Revolution der entscheidende Katalysator. Ohne sie wären die heutigen großen KI-Modelle undenkbar.</p>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 mt-6">
+                    <div>
+                        <h3 class="font-semibold text-xl">Demokratisierung von Supercomputing</h3>
+                        <p>Vor der Cloud war das Training eines großen KI-Modells nur Organisationen mit eigenen Supercomputern vorbehalten. Heute kann jedes Startup für einige Stunden einen Cluster aus Tausenden von GPUs mieten, der leistungsfähiger ist als jeder Supercomputer von vor einem Jahrzehnt.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Skalierbarkeit für Big Data</h3>
+                        <p>Moderne KI wird auf Datenmengen im Petabyte-Bereich trainiert. Die Cloud bietet nicht nur den Speicherplatz für diese "Big Data", sondern auch die Möglichkeit, das Training auf Tausende von Maschinen zu verteilen und so die Rechenzeit von Jahren auf Wochen zu reduzieren.</p>
+                    </div>
+                </div>
+
+                <h2 class="mt-16">Fazit</h2>
+                <p>Die Virtualisierung und das Cloud Computing haben die physischen Grenzen der Hardware gesprengt. Sie haben die massive Rechenleistung, die für das Training moderner KI-Systeme erforderlich ist, von einer exklusiven Ressource in eine zugängliche Dienstleistung verwandelt. Die Cloud ist das unsichtbare, aber unverzichtbare Fundament, auf dem die gesamte heutige KI-Industrie aufgebaut ist.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Skript für das mobile Menü
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
