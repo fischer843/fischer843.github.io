@@ -44,3 +44,33 @@ body {
     border: 2px solid #2563EB; /* entspricht Tailwind's blue-600 */
     border-radius: 9999px;
 }
+        .timeline-item-pro {
+            position: relative;
+            padding-left: 3rem; /* Mehr Platz für die Linie und den Punkt */
+            padding-bottom: 2.5rem; /* 40px */
+            border-left: 3px solid #E5E7EB; /* gray-200 */
+        }
+        .timeline-item-pro:last-child {
+            border-left-color: transparent;
+            padding-bottom: 0;
+        }
+        .timeline-dot-pro {
+            position: absolute;
+            left: -0.7rem; /* Zentriert den Punkt auf der Linie */
+            top: 0.25rem;
+            height: 1.25rem; /* 20px */
+            width: 1.25rem; /* 20px */
+            background-color: #ffffff; /* white */
+            border: 3px solid #3B82F6; /* blue-500 */
+            border-radius: 9999px; /* full */
+            box-shadow: 0 0 0 4px #ffffff; /* Simuliert einen weißen Rand */
+        }
+        /* Farbvariationen für die Timeline */
+        .dot-blue { border-color: #3B82F6; } /* blue-500 */
+        .time-blue { color: #3B82F6; }
+        .dot-green { border-color: #10B981; } /* green-500 */
+        .time-green { color: #10B981; }
+        .dot-amber { border-color: #F59E0B; } /* amber-500 */
+        .time-amber { color: #F59E0B; }
+        .dot-indigo { border-color: #6366F1; } /* indigo-500 */
+        .time-indigo { color: #6366F1; }
