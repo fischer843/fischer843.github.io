@@ -3,39 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sun, Java & Oracle - Innovate Solutions</title>
+    <title>Sun, Java & Oracle - Jens Fischer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header und Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
-            <div class="hidden md:flex space-x-6">
+    <div class="bg-white sticky top-0 z-50 shadow-sm">
+        <!-- Header -->
+        <div class="container mx-auto px-6 py-3 border-b border-gray-200">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">Jens Fischer</a>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-1.01.03-2.319-1.4-2.319-1.43 0-1.658 1.11-1.658 2.245v4.252H7.93V7.924h2.643v1.21h.037c.368-.698 1.264-1.426 2.604-1.426 2.783 0 3.297 1.824 3.297 4.203v4.825zM5.033 6.71c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.322 9.628H3.71V7.924h2.644v8.414zM18 1H6c-2.76 0-5 2.24-5 5v12c0 2.76 2.24 5 5 5h12c2.76 0 5-2.24 5-5V6c0-2.76-2.24-5-5-5z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="container mx-auto px-6 py-2">
+            <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
-                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
                 <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
                 <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
                 <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
+                <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Analyse</a>
                 <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
         </nav>
-    </header>
+    </div>
 
     <main class="container mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Sun, Java & Oracle: Vom Hardware-Giganten zum Software-Asset</h1>
-            <p class="text-lg text-gray-500 mb-8">Die Geschichte von Sun Microsystems ist eine Lehrstunde über den Wandel von Hardware- zu Software-zentrierten Geschäftsmodellen.</p>
-
+        <section class="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
             <div class="prose prose-lg max-w-none">
-                <h2 class="mt-10">Akt 1: Der Aufstieg von Sun und Java (ca. 1982 - 2000)</h2>
-                <div class="grid md:grid-cols-2 gap-8">
+                <a href="computer-history.html" class="text-blue-600 font-semibold hover:underline">&larr; Zurück zur Computer-Geschichte</a>
+                <h1 class="mt-4 text-4xl font-extrabold text-gray-900">Sun, Java & Oracle: Vom Hardware-Giganten zum Software-Asset</h1>
+                <p class="text-xl text-gray-500 mb-8">Die Geschichte von Sun Microsystems ist eine Lehrstunde über den Wandel von Hardware- zu Software-zentrierten Geschäftsmodellen.</p>
+
+                <h2 class="mt-10 text-3xl font-bold">Akt 1: Der Aufstieg von Sun und Java (ca. 1982 - 2000)</h2>
+                <div class="grid md:grid-cols-2 gap-8 mt-6">
                     <div>
                         <h3 class="font-semibold text-xl mb-2">Sun Microsystems: Der König der Workstation</h3>
                         <p>Während IBM und die PC-Klone den Desktop-Markt eroberten, dominierte Sun Microsystems eine andere, sehr profitable Nische: den Markt für <strong>High-End-Workstations und Server</strong>. Ihre Maschinen, basierend auf der eigenen SPARC-Prozessorarchitektur und dem robusten Solaris-Betriebssystem (eine UNIX-Variante), waren die Arbeitspferde für Ingenieure, Wissenschaftler und vor allem für die Infrastruktur des frühen Internets. Sie waren teuer, leistungsstark und galten als Inbegriff professioneller, zuverlässiger Computertechnik.</p>
@@ -46,22 +58,19 @@
                     </div>
                 </div>
 
-                <h2 class="mt-16">Akt 2: Der Niedergang von Sun und die Kommerzialisierung durch Oracle (ca. 2001 - 2010)</h2>
+                <h2 class="mt-16 text-3xl font-bold">Akt 2: Der Niedergang von Sun und die Kommerzialisierung durch Oracle (ca. 2001 - 2010)</h2>
                 <p>Suns Geschäftsmodell, das auf dem Verkauf teurer, proprietärer Hardware basierte, wurde von zwei Seiten angegriffen:</p>
                  <ul class="list-disc pl-5 mt-4 space-y-2">
                     <li><strong>Das Platzen der Dotcom-Blase (2001):</strong> Viele von Suns Kunden waren Internet-Startups, die über Nacht verschwanden.</li>
                     <li><strong>Der Aufstieg von "Good Enough":</strong> Viel wichtiger war jedoch, dass die günstigen <strong>x86-Prozessoren</strong> (Intel, AMD) immer leistungsfähiger wurden. In Kombination mit dem kostenlosen, robusten Betriebssystem <strong>Linux</strong> konnten Unternehmen plötzlich Server-Systeme bauen, die "gut genug" waren, aber nur einen Bruchteil einer Sun-Workstation kosteten. Der Markt für teure Spezialhardware brach zusammen.</li>
                 </ul>
                 
-                <h3 class="mt-8 font-semibold">Die Übernahme durch Oracle (2010)</h3>
+                <h3 class="mt-8 font-semibold text-xl">Die Übernahme durch Oracle (2010)</h3>
                 <p>Oracle, ein Gigant im Datenbankgeschäft, erkannte die Situation perfekt. Sie wussten, dass Suns Hardware-Geschäft am Ende war, aber sie sahen auch den unschätzbaren Wert von Suns Software-Kronjuwel: <strong>Java</strong>. Fast alle großen Unternehmensanwendungen, die auf Oracle-Datenbanken zugriffen, waren in Java geschrieben. Mit der Übernahme von Sun kaufte sich Oracle die Kontrolle über die wichtigste Unternehmens-Programmiersprache der Welt. Dies sicherte ihr eigenes Kerngeschäft ab und gab ihnen die Möglichkeit, Java strategisch zu nutzen und zu monetarisieren.</p>
 
-                <h2 class="mt-16">Epilog: Der Rechtsstreit und der Aufstieg von Kotlin</h2>
+                <h2 class="mt-16 text-3xl font-bold">Epilog: Der Rechtsstreit und der Aufstieg von Kotlin</h2>
                 <p>Die Kommerzialisierung von Java durch Oracle hatte eine direkte und weitreichende Folge: den jahrelangen, milliardenschweren Rechtsstreit mit Google über die Nutzung von Java-APIs im Android-Betriebssystem. Obwohl Google den Fall letztendlich vor dem Obersten Gerichtshof der USA gewann, schuf der Rechtsstreit eine Dekade der Unsicherheit und ein enormes strategisches Risiko.</p>
                 <p>Als Reaktion darauf suchte Google nach einer Alternative, um seine Abhängigkeit von Oracle zu verringern. Die Lösung fand sich in <strong>Kotlin</strong>, einer modernen, von JetBrains entwickelten Sprache, die zu 100% mit Java interoperabel ist. Kotlin bot nicht nur technische Vorteile wie eine prägnantere Syntax und Nullsicherheit, sondern vor allem strategische Sicherheit. 2017 kündigte Google die offizielle Unterstützung für Kotlin auf Android an und erklärte es 2019 zur bevorzugten Sprache für die Android-Entwicklung. Der Aufstieg von Kotlin ist somit eine direkte Konsequenz aus dem Wandel von Java von einer offenen Plattform unter Sun zu einem kommerzialisierten und juristisch verteidigten Asset unter Oracle.</p>
-
-                <h2 class="mt-16">Fazit</h2>
-                <p>Die Geschichte von Sun und Java ist eine perfekte Illustration dafür, wie die von IBM und den PC-Clones vorangetriebene **Kommerzialisierung und Standardisierung von Hardware (x86)** letztendlich die teuren, proprietären Systeme verdrängte. Gleichzeitig zeigt sie, dass der strategische Wert von einer reinen Hardware- zu einer **Software-Plattform-Dominanz** überging, was Oracle mit dem Kauf von Java meisterhaft erkannte.</p>
             </div>
         </section>
     </main>
@@ -69,7 +78,7 @@
     <footer class="bg-white mt-16">
         <div class="container mx-auto px-6 py-8 text-center text-gray-600">
             <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
