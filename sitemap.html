@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - Innovate Solutions</title>
+    <title>Sitemap - Jens Fischer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header und Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Innovate Solutions</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
-                <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über uns</a>
-                <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
-                <a href="computer-history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Computer-Geschichte</a>
-                <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
-                <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Analyse</a>
-                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+    <div class="bg-white sticky top-0 z-50 shadow-sm">
+        <!-- Header -->
+        <div class="container max-w-6xl mx-auto px-6">
+             <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-    </header>
+            <!-- Navigation -->
+            <nav class="border-t border-gray-200">
+                <div class="flex justify-between items-center py-2">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
+                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
+                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
+                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
+                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 
-    <main class="container mx-auto p-6 md:p-12">
-        <!-- INHALT DER "Sitemap"-SEITE -->
-        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
+    <main class="container max-w-6xl mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
+            <h1 class="text-5xl font-black text-center mb-4 text-gray-900">Sitemap</h1>
+            <p class="text-xl text-gray-600 mb-16 text-center">Eine Übersicht aller Themen und Unterseiten.</p>
 
             <div class="prose prose-lg max-w-none grid md:grid-cols-3 gap-x-8">
                 <!-- Spalte 1: Hauptseiten & Analyse -->
@@ -40,8 +44,9 @@
                     <h2 class="text-2xl font-semibold mb-4">Hauptseiten</h2>
                     <ul class="sitemap-list">
                         <li><a href="index.html" class="sitemap-link">Startseite</a></li>
-                        <li><a href="about.html" class="sitemap-link">Über uns</a></li>
-                        <li><a href="werdegang.html" class="sitemap-link">Mein Werdegang (Die Geschichte hinter der Seite)</a></li>
+                        <li><a href="about.html" class="sitemap-link">Über mich</a></li>
+                        <li><a href="werdegang.html" class="sitemap-link">Mein Werdegang</a></li>
+                        <li><a href="meta-story.html" class="sitemap-link">Die Entstehung dieser Webseite</a></li>
                         <li><a href="contact.html" class="sitemap-link">Kontakt</a></li>
                     </ul>
                     <h2 class="text-2xl font-semibold mb-4 mt-8">Analyse</h2>
@@ -85,6 +90,7 @@
                         </li>
                         <li><a href="internet-history.html" class="sitemap-link">Die Internet-Revolution</a></li>
                         <li><a href="cloud-computing.html" class="sitemap-link">Die Cloud-Revolution</a></li>
+                        <li><a href="microsoft-apple-deal.html" class="sitemap-link">Der Microsoft-Apple-Deal (1997)</a></li>
                     </ul>
                     <h2 class="text-2xl font-semibold mb-4 mt-8"><a href="societal-impact.html" class="sitemap-link">Gesellschaftliche Folgen</a></h2>
                     <ul class="sitemap-list">
@@ -99,8 +105,18 @@
                         <li><a href="laptop-revolution.html" class="sitemap-link">Die Laptop-Revolution</a></li>
                         <li><a href="copyshop-impact.html" class="sitemap-link">Transformation der Copy-Shops</a></li>
                         <li><a href="self-publishing.html" class="sitemap-link">Die Self-Publishing-Revolution</a></li>
-                        <li><a href="smartphone-revolution.html" class="sitemap-link">Die Smartphone-Revolution</a></li>
+                        <li>
+                            <a href="smartphone-revolution.html" class="sitemap-link">Die Smartphone-Revolution</a>
+                             <ul class="sitemap-sublist">
+                                <li><a href="smartphone-in-schools.html" class="sitemap-link">Die Smartphone-Kontroverse in Schulen</a></li>
+                            </ul>
+                        </li>
                         <li><a href="smartphone-vs-mainframe.html" class="sitemap-link">Die unsichtbare Supermacht</a></li>
+                        <li><a href="3d-printing-patents.html" class="sitemap-link">Patente & Disruption: Der 3D-Druck</a></li>
+                        <li><a href="cad-cnc-impact.html" class="sitemap-link">Revolution im Engineering: CAD & CNC</a></li>
+                        <li><a href="digital-supply-chain.html" class="sitemap-link">Die Digitale Lieferkette</a></li>
+                        <li><a href="ki-in-education.html" class="sitemap-link">Die Zukunft der Bildung</a></li>
+                        <li><a href="ki-kluft.html" class="sitemap-link">Die KI-Kluft</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,16 +124,21 @@
     </main>
     
     <footer class="bg-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
-             <p>&copy; 2025 Innovate Solutions. Alle Rechte vorbehalten.</p>
+        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
+             <p>&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
     <script>
         // Skript für das mobile Menü
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     </script>
 </body>
 </html>
