@@ -14,14 +14,20 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* slate-50 */
         }
+        /* Aktiver Navigationslink */
+        .nav-link.active {
+            color: #0d9488; /* teal-600 */
+            font-weight: 700;
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
     <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header -->
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
+        <!-- Neuer, zentrierter Wrapper für den gesamten Header-Inhalt -->
+        <div class="container max-w-6xl mx-auto px-6">
+            <!-- Top-Header -->
+            <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
                 <div class="flex items-center space-x-4">
                     <!-- Social Media Links (Platzhalter) -->
@@ -33,26 +39,26 @@
                     </a>
                 </div>
             </div>
+            <!-- Navigation -->
+            <nav class="border-t border-gray-200">
+                <div class="flex justify-between items-center py-2">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
+                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
+                        <a href="computer-history.html" class="nav-link active">Computer-Geschichte</a>
+                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
+                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
+                    </div>
+                    <div class="md:hidden">
+                         <button id="mobile-menu-button" class="focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <!-- Navigation -->
-        <nav class="container mx-auto px-6 py-2">
-            <div class="flex justify-between items-center">
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
-                    <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
-                    <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
-                    <a href="computer-history.html" class="nav-link active">Computer-Geschichte</a>
-                    <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
-                    <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
-                    <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
-                </div>
-                <div class="md:hidden">
-                     <button id="mobile-menu-button" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
     </div>
      <!-- Mobiles Menü -->
     <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
@@ -65,7 +71,7 @@
         <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
     </div>
 
-    <main class="container mx-auto p-6 md:p-12">
+    <main class="container max-w-6xl mx-auto p-6 md:p-12">
         <section>
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl font-black text-center mb-4 text-gray-900">Vom Relais zum Rechenzentrum</h1>
