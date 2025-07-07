@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geschichte des Computers - Jens Fischer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="text-gray-800">
 
-    <div class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
         <!-- Header -->
-        <div class="container mx-auto px-6 py-3 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold text-gray-900">Jens Fischer</a>
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
                 <div class="flex items-center space-x-4">
-                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                    <!-- Social Media Links (Platzhalter) -->
+                    <a href="#" class="text-gray-500 hover:text-teal-600 transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-1.01.03-2.319-1.4-2.319-1.43 0-1.658 1.11-1.658 2.245v4.252H7.93V7.924h2.643v1.21h.037c.368-.698 1.264-1.426 2.604-1.426 2.783 0 3.297 1.824 3.297 4.203v4.825zM5.033 6.71c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.322 9.628H3.71V7.924h2.644v8.414zM18 1H6c-2.76 0-5 2.24-5 5v12c0 2.76 2.24 5 5 5h12c2.76 0 5-2.24 5-5V6c0-2.76-2.24-5-5-5z" clip-rule="evenodd"></path></svg>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors">
+                    <a href="#" class="text-gray-500 hover:text-teal-600 transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                     </a>
                 </div>
@@ -29,13 +38,13 @@
         <nav class="container mx-auto px-6 py-2">
             <div class="flex justify-between items-center">
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Startseite</a>
-                    <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
-                    <a href="history.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">KI-Geschichte</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                    <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
                     <a href="computer-history.html" class="nav-link active">Computer-Geschichte</a>
-                    <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gesellschaftliche Folgen</a>
-                    <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Analyse</a>
-                    <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+                    <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                    <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
                 </div>
                 <div class="md:hidden">
                      <button id="mobile-menu-button" class="focus:outline-none">
@@ -50,191 +59,95 @@
         <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Startseite</a>
         <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Über mich</a>
         <a href="history.html" class="block py-2 px-4 text-sm hover:bg-gray-100">KI-Geschichte</a>
-        <a href="computer-history.html" class="block py-2 px-4 text-sm bg-blue-50 text-blue-700 font-semibold">Computer-Geschichte</a>
+        <a href="computer-history.html" class="block py-2 px-4 text-sm bg-teal-50 text-teal-700 font-semibold">Computer-Geschichte</a>
         <a href="societal-impact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Gesellschaftliche Folgen</a>
         <a href="research-analysis.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Analyse</a>
         <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Kontakt</a>
     </div>
 
     <main class="container mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
+        <section>
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl font-extrabold text-center mb-4 text-gray-900">Vom Relais zum Rechenzentrum</h1>
+                <h1 class="text-5xl font-black text-center mb-4 text-gray-900">Vom Relais zum Rechenzentrum</h1>
                 <p class="text-xl text-gray-600 mb-16 text-center">Eine Reise durch die Hardware- und Software-Revolutionen, die die künstliche Intelligenz erst möglich machten.</p>
 
-                <div class="space-y-8">
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2 1M4 7l2-1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-blue-600">1941</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Zuse Z3: Der erste Computer</h3>
-                            <p class="text-base text-gray-700">Konrad Zuses Z3 ist der erste funktionsfähige, frei programmierbare, turingmächtige Digitalrechner.</p>
-                        </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1941</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Zuse Z3: Der erste Computer</h3>
+                        <p class="text-base text-gray-700">Konrad Zuses Z3 ist der erste funktionsfähige, frei programmierbare, turingmächtige Digitalrechner.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 19a2 2 0 002 2h2a2 2 0 002-2m-3-5a2 2 0 00-2-2h-2a2 2 0 00-2 2" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-green-600">1947</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Der Transistor: Die Miniaturisierung beginnt</h3>
-                            <p class="text-base text-gray-700">Die Erfindung des Transistors ersetzt die unzuverlässigen Vakuumröhren und macht Computer kleiner, schneller und günstiger.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1947</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Der Transistor: Die Miniaturisierung beginnt</h3>
+                        <p class="text-base text-gray-700">Die Erfindung des Transistors ersetzt die unzuverlässigen Vakuumröhren und macht Computer kleiner, schneller und günstiger.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-amber-600">1958</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Der Integrierte Schaltkreis (IC)</h3>
-                            <p class="text-base text-gray-700">Die Fähigkeit, mehrere Transistoren auf einem Chip zu platzieren, legt die Grundlage für das Mooresche Gesetz.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1958</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Der Integrierte Schaltkreis (IC)</h3>
+                        <p class="text-base text-gray-700">Die Fähigkeit, mehrere Transistoren auf einem Chip zu platzieren, legt die Grundlage für das Mooresche Gesetz.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-indigo-600">1964</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Die Ära der Großrechner: IBM System/360</h3>
-                            <p class="text-base text-gray-700">IBM stellt eine Familie von kompatiblen Großrechnern vor, die die Geschäftswelt dominieren.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1964</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Die Ära der Großrechner: IBM System/360</h3>
+                        <p class="text-base text-gray-700">IBM stellt eine Familie von kompatiblen Großrechnern vor, die die Geschäftswelt dominieren.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-blue-600">1971</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Intel 4004: Der erste Mikroprozessor</h3>
-                            <p class="text-base text-gray-700">Die gesamte CPU eines Computers befindet sich nun auf einem einzigen Chip, was die Ära des Personal Computers einläutet.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1971</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Intel 4004: Der erste Mikroprozessor</h3>
+                        <p class="text-base text-gray-700">Die gesamte CPU eines Computers befindet sich nun auf einem einzigen Chip, was die Ära des Personal Computers einläutet.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-green-600">ca. 1977 - 1985</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="homecomputer.html" class="hover:text-green-700">Die Homecomputer-Revolution</a></h3>
-                            <p class="text-base text-gray-700">Eine Welle von Mikrocomputern wie der Apple II und der C64 erobert die Haushalte. Der IBM PC etabliert einen offenen Standard für den Geschäftsmarkt.</p>
-                            <a href="homecomputer.html" class="inline-block mt-3 font-semibold text-green-600 hover:text-green-800 transition-colors">→ Mehr erfahren</a>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">ca. 1977 - 1985</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><a href="homecomputer.html" class="hover:text-teal-700">Die Homecomputer-Revolution</a></h3>
+                        <p class="text-base text-gray-700">Eine Welle von Mikrocomputern wie der Apple II und der C64 erobert die Haushalte. Der IBM PC etabliert einen offenen Standard für den Geschäftsmarkt.</p>
+                        <a href="homecomputer.html" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Mehr erfahren</a>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-amber-600">ca. 1982 - 1995</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Die x86-Evolution und die modulare Bauweise</h3>
-                            <p class="text-base text-gray-700">Auf Basis des IBM PC entsteht ein De-facto-Standard. Intels Prozessoren (80286, 80386, 80486, Pentium) treiben die Leistung voran. Die offene, modulare Bauweise ermöglicht Firmen wie Compaq und AMD, kompatible "PC-Clones" und Komponenten zu bauen.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">ca. 1982 - 1995</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Die x86-Evolution und die modulare Bauweise</h3>
+                        <p class="text-base text-gray-700">Auf Basis des IBM PC entsteht ein De-facto-Standard. Intels Prozessoren (80286, 80386, 80486, Pentium) treiben die Leistung voran. Die offene, modulare Bauweise ermöglicht Firmen wie Compaq und AMD, kompatible "PC-Clones" und Komponenten zu bauen.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-indigo-600">1985 - 1993</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="dtp-history.html" class="hover:text-indigo-700">Die DTP-Revolution & das digitale Dokument</a></h3>
-                            <p class="text-base text-gray-700">Eine primär softwaregetriebene Revolution, die die Grundlage für das digitale Wissensarchiv der KI schafft.</p>
-                            <a href="dtp-history.html" class="inline-block mt-3 font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">→ Mehr erfahren</a>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1985 - 1993</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><a href="dtp-history.html" class="hover:text-teal-700">Die DTP-Revolution & das digitale Dokument</a></h3>
+                        <p class="text-base text-gray-700">Eine primär softwaregetriebene Revolution, die die Grundlage für das digitale Wissensarchiv der KI schafft.</p>
+                        <a href="dtp-history.html" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Mehr erfahren</a>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M10 14h.01M14 14h.01M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-red-600">1995 - 2010</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="sun-java-story.html" class="hover:text-red-700">Sun, Java und die Macht der Software</a></h3>
-                            <p class="text-base text-gray-700">Sun Microsystems dominiert mit teurer SPARC-Hardware den Server-Markt und erfindet die plattformunabhängige Sprache Java. Doch der Aufstieg günstiger x86/Linux-Systeme führt zum Niedergang der Hardware-Sparte. Oracle kauft Sun 2010, primär um die Kontrolle über das strategisch wichtige Software-Asset Java zu erlangen.</p>
-                            <a href="sun-java-story.html" class="inline-block mt-3 font-semibold text-red-600 hover:text-red-800 transition-colors">→ Mehr erfahren</a>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1995 - 2010</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><a href="sun-java-story.html" class="hover:text-teal-700">Sun, Java und die Macht der Software</a></h3>
+                        <p class="text-base text-gray-700">Sun Microsystems dominiert mit teurer SPARC-Hardware den Server-Markt und erfindet die plattformunabhängige Sprache Java. Doch der Aufstieg günstiger x86/Linux-Systeme führt zum Niedergang der Hardware-Sparte. Oracle kauft Sun 2010, primär um die Kontrolle über das strategisch wichtige Software-Asset Java zu erlangen.</p>
+                        <a href="sun-java-story.html" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Mehr erfahren</a>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-blue-600">1997</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="microsoft-apple-deal.html" class="hover:text-blue-700">Der Pakt der Erzfeinde: Microsoft rettet Apple</a></h3>
-                            <p class="text-base text-gray-700">In einem legendären Deal investiert Microsoft 150 Millionen Dollar in das fast bankrotte Apple und verpflichtet sich, Office für den Mac weiterzuentwickeln.</p>
-                            <a href="microsoft-apple-deal.html" class="inline-block mt-3 font-semibold text-blue-600 hover:text-blue-800 transition-colors">→ Mehr erfahren</a>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1997</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><a href="microsoft-apple-deal.html" class="hover:text-teal-700">Der Pakt der Erzfeinde: Microsoft rettet Apple</a></h3>
+                        <p class="text-base text-gray-700">In einem legendären Deal investiert Microsoft 150 Millionen Dollar in das fast bankrotte Apple und verpflichtet sich, Office für den Mac weiterzuentwickeln.</p>
+                        <a href="microsoft-apple-deal.html" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Mehr erfahren</a>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-green-600">1999</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Die GPU: Der Parallelisierungs-Beschleuniger</h3>
-                            <p class="text-base text-gray-700">NVIDIA prägt mit der GeForce 256 den Begriff "Graphics Processing Unit" (GPU). Ihre massive Parallelverarbeitungsfähigkeit wird zum Motor der Deep-Learning-Revolution.</p>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">1999</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Die GPU: Der Parallelisierungs-Beschleuniger</h3>
+                        <p class="text-base text-gray-700">NVIDIA prägt mit der GeForce 256 den Begriff "Graphics Processing Unit" (GPU). Ihre massive Parallelverarbeitungsfähigkeit wird zum Motor der Deep-Learning-Revolution.</p>
                     </div>
-                    <!-- Timeline-Item -->
-                    <div class="flex">
-                        <div class="flex flex-col items-center mr-6">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
-                            </div>
-                            <div class="w-px h-full bg-gray-300"></div>
-                        </div>
-                        <div class="pb-16">
-                            <time class="mb-2 block text-sm font-semibold uppercase text-amber-600">ca. 2006</time>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2"><a href="cloud-computing.html" class="hover:text-amber-700">Die Cloud-Revolution: Supercomputing als Dienstleistung</a></h3>
-                            <p class="text-base text-gray-700">Virtualisierungstechnologie ermöglicht die Entstehung von Cloud-Plattformen wie AWS. Rechenleistung wird zu einer mietbaren Dienstleistung, was das Training moderner KI-Modelle erst ermöglicht.</p>
-                            <a href="cloud-computing.html" class="inline-block mt-3 font-semibold text-amber-600 hover:text-amber-800 transition-colors">→ Mehr erfahren</a>
-                        </div>
+                    <!-- Card-Item -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-l-4 border-teal-500">
+                        <time class="block text-sm font-medium text-gray-500 mb-2">ca. 2006</time>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><a href="cloud-computing.html" class="hover:text-teal-700">Die Cloud-Revolution: Supercomputing als Dienstleistung</a></h3>
+                        <p class="text-base text-gray-700">Virtualisierungstechnologie ermöglicht die Entstehung von Cloud-Plattformen wie AWS. Rechenleistung wird zu einer mietbaren Dienstleistung, was das Training moderner KI-Modelle erst ermöglicht.</p>
+                        <a href="cloud-computing.html" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-800 transition-colors">→ Mehr erfahren</a>
                     </div>
                 </div>
             </div>
