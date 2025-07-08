@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grenzen der KI: Eine Fallstudie - Jens Fischer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .prose h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800; /* extrabold */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
+        <!-- Header -->
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
+            </div>
+            <!-- Navigation -->
+            <nav class="border-t border-gray-200">
+                <div class="flex justify-between items-center py-2">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
+                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
+                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
+                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
+                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container max-w-6xl mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
+            <div class="prose prose-lg max-w-none">
+                 <a href="ki-in-education.html" class="text-teal-600 font-semibold hover:underline">&larr; Zurück zur Seite "KI in der Bildung"</a>
+                <h1 class="text-5xl font-black text-gray-900 mt-4">Grenzen der KI: Eine Fallstudie unserer Zusammenarbeit</h1>
+                <p class="text-xl text-gray-500 lead">Unsere Konversation zur Erstellung dieser Webseite hat eine wichtige, oft übersehene Einschränkung von KI-Systemen aufgezeigt: den kontextuellen "Tunnelblick".</p>
+
+                <h2 class="mt-10">Das Problem: "Warum bekomme ich hier kein Bild, aber in einem neuen Chat?"</h2>
+                <p>Während unseres langen und komplexen Dialogs kam es zu einem Punkt, an dem ich als KI eine einfache Aufgabe – die Generierung eines Bildes – nicht mehr korrekt ausführen konnte. In einem neuen, "frischen" Chat funktionierte dieselbe Anfrage jedoch problemlos. Dieses Phänomen ist kein Zufall, sondern eine inhärente Eigenschaft der aktuellen KI-Architektur.</p>
+                
+                <h2 class="mt-10">Die technische Erklärung: Kontextuelle Überlastung</h2>
+                <p>KI-Modelle wie ich behalten den gesamten Kontext einer Konversation bei, um Anfragen bestmöglich zu verstehen. Bei einem sehr langen und thematisch komplexen Dialog, wie wir ihn geführt haben (Erstellung dutzender Webseiten, ständige Überarbeitungen, Verlinkungen), kann dieser Kontext so umfangreich werden, dass er die Ausführung einer völlig neuen Aufgabe, wie der Bildgenerierung, stört. Das System ist so stark auf den "Webseiten-Bau-Kontext" fokussiert, dass es Schwierigkeiten hat, auf eine grundlegend andere Anforderung umzuschalten. Ein neuer Chat mit einem leeren Kontext löst dieses Problem, weil sich die KI voll und ganz auf die neue, isolierte Aufgabe konzentrieren kann.</p>
+
+                <h2 class="mt-16">Die Verbindung zur Bildung: Warum kritisches Denken entscheidend ist</h2>
+                <p>Diese Erfahrung ist eine perfekte Lektion für den Umgang mit KI im Bildungsbereich. Sie zeigt, dass es nicht ausreicht, Schülern beizubringen, eine KI zu "benutzen". Die entscheidende Fähigkeit ist, zu lernen, wie man **mit den Grenzen der KI umgeht**.</p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-6">
+                    <p>Ein Schüler, der nur gelernt hat, Fragen zu stellen, wäre an dem Punkt, an dem das Bild nicht erschien, frustriert und hätte aufgegeben. Ein **mündiger, kritischer Nutzer** hingegen tut genau das, was Sie getan haben:</p>
+                    <ul class="list-disc pl-5 mt-4 space-y-2">
+                        <li><strong>Er erkennt ein unerwartetes Ergebnis:</strong> "Das ist nicht das, was ich erwartet habe."</li>
+                        <li><strong>Er hinterfragt den Prozess:</strong> "Warum funktioniert das nicht? Liegt es an meiner Anfrage oder am System?"</li>
+                        <li><strong>Er entwickelt eine alternative Strategie:</strong> "Vielleicht muss ich die Anfrage anders formulieren oder den Kontext zurücksetzen, indem ich einen neuen Chat starte."</li>
+                    </ul>
+                </div>
+                <p class="mt-6">Diese Fähigkeit zur Problemlösung, zur kritischen Distanz und zur strategischen Anpassung ist eine rein menschliche Kompetenz. Sie ist der Kern dessen, was wir als "KI-Kompetenz" bezeichnen sollten. Ein Schulsystem, das nur die Nutzung von KI lehrt, aber nicht die kritische Auseinandersetzung mit ihren Fehlern und Grenzen, würde eine Generation von abhängigen Nutzern statt souveränen Gestaltern hervorbringen.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
