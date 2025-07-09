@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudien - Jens Fischer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
+        <!-- Header -->
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
+            </div>
+            <!-- Navigation -->
+            <nav class="border-t border-gray-200">
+                <div class="flex justify-between items-center py-2">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
+                        <a href="werdegang.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Mein Werdegang</a>
+                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
+                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
+                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
+                        <a href="case-studies.html" class="nav-link active">Fallstudien</a>
+                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container max-w-6xl mx-auto p-6 md:p-12">
+        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl font-black text-center mb-4 text-gray-900">Aus der Theorie in die Praxis</h1>
+                <p class="text-xl text-gray-600 mb-16 text-center">Fallstudien aus über 30 Jahren Erfahrung, die zeigen, wie technologische Prinzipien in der realen Welt angewendet werden und Branchen verändern.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Fallstudie 1: TicTacToe -->
+                    <div class="bg-gray-50 p-8 rounded-xl border hover:shadow-lg transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-3">Frühes Reinforcement Learning</h2>
+                        <p class="text-base text-gray-700 mb-4">Ein selbstlernendes Tic-Tac-Toe auf einem Atari 400XL: Eine Fallstudie über die fundamentalen Prinzipien des maschinellen Lernens, Jahrzehnte vor AlphaGo.</p>
+                        <a href="case-study-tictactoe.html" class="font-semibold text-teal-600 hover:text-teal-800 transition-colors">Zur Fallstudie &rarr;</a>
+                    </div>
+                    <!-- Fallstudie 2: Document AI -->
+                    <div class="bg-gray-50 p-8 rounded-xl border hover:shadow-lg transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-3">Automatisierte Dokumentenverarbeitung</h2>
+                        <p class="text-base text-gray-700 mb-4">Eine Fax-basierte Bestellautomatisierung für die VHS mittels OCR: Ein frühes Beispiel für Document AI und die Digitalisierung von analogen Prozessen.</p>
+                        <a href="#" class="font-semibold text-gray-400 cursor-not-allowed">In Kürze verfügbar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white mt-16">
+        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
+            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
+            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
