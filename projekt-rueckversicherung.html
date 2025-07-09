@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Daten-Transparenz im IT-Support | Jens Fischer</title>
+    <style>
+        /* CSS-Stil, inspiriert von jens-fischer.ch */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        header, footer {
+            /* Platzhalter für Ihre bestehende Kopf- und Fusszeile */
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+        }
+        h1, h2, h3 {
+            font-family: "Georgia", serif; /* Annahme für einen klassischen Look */
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Spezifische Stile für diese Seite (identisch zur anderen Fallstudie) */
+        .project-meta {
+            background-color: #f7f7f7;
+            border-left: 5px solid #007bff;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .project-meta h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .project-meta ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-meta li {
+            margin-bottom: 0.5rem;
+        }
+        .project-meta strong {
+            display: inline-block;
+            width: 120px; /* Für eine saubere Ausrichtung */
+        }
+        .call-to-action {
+            background-color: #eaf4ff;
+            border: 1px solid #b8d9f7;
+            padding: 1.5rem 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .call-to-action p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>Navigation von jens-fischer.ch</p>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Daten-Transparenz zur Optimierung von IT-Support-Prozessen</h1>
+            <p>Wie durch detektivisches Reverse-Engineering ein "blinder Fleck" im Ticket-System aufgedeckt und die Prozessqualität massiv verbessert wurde.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Rückversicherung</li>
+                    <li><strong>Bereich:</strong> IT-Support (First & Second Level)</li>
+                    <li><strong>Herausforderung:</strong> Fehlerhafte Ticket-Reports, mangelnde Datenintegrität</li>
+                    <li><strong>Technologie:</strong> SQL, MS-Access, Reverse Engineering</li>
+                    <li><strong>Ergebnis:</strong> >70% der "verlorenen", aber erledigten Tickets in 4 Wochen geschlossen</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Wenn das eigene System die Arbeit unsichtbar macht</h2>
+            <p>
+                Im IT-Support einer grossen Rückversicherung basierten die wöchentlichen Leistungsberichte auf den Daten einer Support-Anwendung. Mir fiel auf, dass von mir bearbeitete und erfasste Tickets in den offiziellen Auswertungen nicht auffindbar waren. Dies führte nicht nur zu einer ungenauen Erfolgsmessung, sondern verhinderte auch den formellen Abschluss vieler bereits gelöster Fälle. Der Prozess war intransparent und die Datenqualität unzureichend.
+            </p>
+
+            <h2>Meine Lösung: Detektivarbeit an der Datenbasis</h2>
+            <p>
+                Anstatt das Problem nur zu melden, ging ich der Ursache auf den Grund. Ich fand heraus, dass alle Eingaben in einer SQL-Datenbank gespeichert wurden, auf die die Support-Anwendung zugriff. Durch ein gezieltes Reverse-Engineering der Datenbankstruktur konnte ich die Zusammenhänge nachvollziehen.
+            </p>
+            <p>
+                Mit diesem Wissen nutzte ich Microsoft Access, um eine direkte Verbindung zur SQL-Datenbank herzustellen. Ich entwickelte eine massgeschneiderte Abfrage, die einen sauberen, mitarbeiterbezogenen Report generierte. Dieser listete erstmals alle tatsächlich noch offenen Tickets pro Mitarbeiter lückenlos auf und machte die "verlorenen" Fälle wieder sichtbar.
+            </p>
+
+            <h2>Das Ergebnis: Prozessklarheit und messbarer Erfolg</h2>
+            <p>
+                Die neu geschaffene Transparenz hatte eine sofortige Wirkung. Mit Hilfe der von mir erstellten Reports konnte das Team die "Zombie-Tickets" identifizieren und systematisch abarbeiten. Innerhalb von nur vier Wochen wurden über 70% der fälschlicherweise noch offenen, aber bereits erledigten Tickets formell in der Support-Anwendung geschlossen. Dies führte zu einer drastischen Verbesserung der Datenqualität und zu aussagekräftigeren Wochenberichten.
+            </p>
+
+            <h2>Kernkompetenzen im Fokus</h2>
+            <ul>
+                <li><strong>Proaktive Initiative:</strong> Eigenständiges Erkennen und Untersuchen von Prozessschwächen.</li>
+                <li><strong>Analytisches Reverse-Engineering:</strong> Fähigkeit, komplexe Systemlandschaften zu verstehen und "unter die Haube" zu schauen.</li>
+                <li><strong>Pragmatischer Werkzeug-Einsatz:</strong> Intelligente Kombination von vorhandenen Tools (MS-Access, SQL) für eine schnelle und wirksame Lösung.</li>
+                <li><strong>Prozessoptimierung durch Daten:</strong> Schaffung von Datentransparenz als Grundlage für die Verbesserung von Unternehmensabläufen.</li>
+            </ul>
+
+            <div class="call-to-action">
+                <h2>Stehen auch Sie vor einer Herausforderung, für die ein Standard-Werkzeug nicht ausreicht?</h2>
+                <p>Lassen Sie uns darüber sprechen, wie wir durch intelligente Automatisierung und massgeschneiderte Lösungen auch Ihre Prozesse effizienter und sicherer machen können. <a href="mailto:ihre.email@beispiel.ch">Kontaktieren Sie mich für ein unverbindliches Erstgespräch.</a></p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+
+</body>
+</html>
