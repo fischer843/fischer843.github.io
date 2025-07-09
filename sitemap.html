@@ -21,7 +21,7 @@
                 <div class="flex justify-between items-center py-2">
                     <div class="hidden md:flex space-x-8">
                         <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
-                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
+                        <a href="werdegang.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Mein Werdegang</a>
                         <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
                         <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
                         <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
@@ -44,10 +44,10 @@
                     <h2 class="text-2xl font-semibold mb-4">Hauptseiten</h2>
                     <ul class="sitemap-list">
                         <li><a href="index.html" class="sitemap-link">Startseite</a></li>
-                        <li><a href="about.html" class="sitemap-link">Über mich</a></li>
                         <li><a href="werdegang.html" class="sitemap-link">Mein Werdegang</a></li>
                         <li><a href="meta-story.html" class="sitemap-link">Die Entstehung dieser Webseite</a></li>
                         <li><a href="contact.html" class="sitemap-link">Kontakt</a></li>
+                        <li><a href="quellen.html" class="sitemap-link font-bold">Quellenverzeichnis</a></li>
                     </ul>
                     <h2 class="text-2xl font-semibold mb-4 mt-8">Analyse</h2>
                      <ul class="sitemap-list">
@@ -91,6 +91,7 @@
                         <li><a href="internet-history.html" class="sitemap-link">Die Internet-Revolution</a></li>
                         <li><a href="cloud-computing.html" class="sitemap-link">Die Cloud-Revolution</a></li>
                         <li><a href="microsoft-apple-deal.html" class="sitemap-link">Der Microsoft-Apple-Deal (1997)</a></li>
+                        <li><a href="sun-java-story.html" class="sitemap-link">Sun, Java und die Macht der Software</a></li>
                     </ul>
                     <h2 class="text-2xl font-semibold mb-4 mt-8"><a href="societal-impact.html" class="sitemap-link">Gesellschaftliche Folgen</a></h2>
                     <ul class="sitemap-list">
@@ -104,19 +105,33 @@
                         <li><a href="office-revolution.html" class="sitemap-link">Die Büro-Revolution</a></li>
                         <li><a href="laptop-revolution.html" class="sitemap-link">Die Laptop-Revolution</a></li>
                         <li><a href="copyshop-impact.html" class="sitemap-link">Transformation der Copy-Shops</a></li>
+                        <li><a href="travel-agent-impact.html" class="sitemap-link">Transformation des Reisebüros</a></li>
                         <li><a href="self-publishing.html" class="sitemap-link">Die Self-Publishing-Revolution</a></li>
                         <li>
-                            <a href="smartphone-revolution.html" class="sitemap-link">Die Smartphone-Revolution</a>
+                            <a href="smartphone-summary.html" class="sitemap-link">Das Smartphone als Epizentrum</a>
                              <ul class="sitemap-sublist">
+                                <li><a href="smartphone-revolution.html" class="sitemap-link">Die Smartphone-Revolution</a></li>
                                 <li><a href="smartphone-in-schools.html" class="sitemap-link">Die Smartphone-Kontroverse in Schulen</a></li>
+                                <li><a href="smartphone-vs-mainframe.html" class="sitemap-link">Die unsichtbare Supermacht</a></li>
+                                <li><a href="on-device-ai.html" class="sitemap-link">On-Device AI: Die persönliche Revolution</a></li>
                             </ul>
                         </li>
-                        <li><a href="smartphone-vs-mainframe.html" class="sitemap-link">Die unsichtbare Supermacht</a></li>
-                        <li><a href="3d-printing-patents.html" class="sitemap-link">Patente & Disruption: Der 3D-Druck</a></li>
-                        <li><a href="cad-cnc-impact.html" class="sitemap-link">Revolution im Engineering: CAD & CNC</a></li>
+                        <li>
+                            <a href="3d-printing-patents.html" class="sitemap-link">Patente & Disruption: Der 3D-Druck</a>
+                            <ul class="sitemap-sublist">
+                                <li><a href="cad-cnc-impact.html" class="sitemap-link">Revolution im Engineering: CAD & CNC</a></li>
+                            </ul>
+                        </li>
                         <li><a href="digital-supply-chain.html" class="sitemap-link">Die Digitale Lieferkette</a></li>
-                        <li><a href="ki-in-education.html" class="sitemap-link">Die Zukunft der Bildung</a></li>
+                        <li>
+                            <a href="ki-in-education.html" class="sitemap-link">Die Zukunft der Bildung</a>
+                            <ul class="sitemap-sublist">
+                                <li><a href="ai-collaboration-limits.html" class="sitemap-link">Grenzen der KI-Kollaboration</a></li>
+                            </ul>
+                        </li>
                         <li><a href="ki-kluft.html" class="sitemap-link">Die KI-Kluft</a></li>
+                        <li><a href="paywall-problem.html" class="sitemap-link">Die Paywall-Falle & die Krise der Bibliothek</a></li>
+                        <li><a href="professional-transformation.html" class="sitemap-link">Vom Ausführenden zum Berater</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,16 +144,5 @@
         </div>
     </footer>
 
-    <script>
-        // Skript für das mobile Menü
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    </script>
 </body>
 </html>
