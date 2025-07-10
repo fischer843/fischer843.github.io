@@ -3,81 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jens Fischer - Die Geschichte der Digitalen Revolution</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-gray-100 text-gray-800">
+    <title>Jens Fischer | Boutique-Beratung für Prozessoptimierung & Digitale Transformation</title>
+    <style>
+        /* Globaler Stil */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        .center-text {
+            text-align: center;
+        }
 
-    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header und Navigation -->
-        <nav class="container max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-3">
-                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
-            </div>
-            <div class="border-t border-gray-200">
-                <div class="hidden md:flex space-x-8 py-2">
-                    <a href="index.html" class="nav-link active">Startseite</a>
-                    <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600">KI-Geschichte</a>
-                    <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600">Computer-Geschichte</a>
-                    <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600">Gesellschaftliche Folgen</a>
-                    <a href="case-studies.html" class="nav-link text-gray-600 hover:text-teal-600">Fallstudien</a>
-                    <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600">Kontakt</a>
-                </div>
-            </div>
-        </nav>
+        /* Header / Hero-Bereich */
+        .hero {
+            background-color: #f0f0f0;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: "Georgia", serif;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            margin: 0;
+        }
+        .hero .subtitle {
+            font-family: "Georgia", serif;
+            font-size: 1.5rem;
+            color: #0056b3;
+            margin: 0.5rem 0 0 0;
+        }
+        .hero .pitch {
+            font-size: 1.2rem;
+            color: #444;
+            max-width: 650px;
+            margin: 1.5rem auto 0 auto;
+        }
+        
+        /* Allgemeine Sektions-Stile */
+        .section {
+            padding: 4rem 0;
+        }
+        .section-title {
+            font-family: "Georgia", serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Button-Stil */
+        .button-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .button-link:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Kachel-Layout für Fallstudien-Teaser */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            width: 350px;
+            padding: 1.5rem;
+            text-align: left;
+        }
+        .card h3 {
+            font-family: "Georgia", serif;
+            font-size: 1.5rem;
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        .card .tag {
+            display: inline-block;
+            background-color: #eaf4ff;
+            color: #0056b3;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Kernkompetenzen */
+        .competencies {
+             display: flex;
+             justify-content: space-around;
+             flex-wrap: wrap;
+             gap: 2rem;
+             text-align: center;
+        }
+        .competency {
+             flex-basis: 300px;
+        }
+        .competency h3 {
+             font-size: 1.4rem;
+        }
+
+        /* Call-to-Action am Ende */
+        .final-cta {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-family: "Georgia", serif;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-top: 0;
+        }
+        .final-cta p {
+            max-width: 600px;
+            margin: 1rem auto;
+            font-size: 1.1rem;
+        }
+        .final-cta .button-link {
+             background-color: #fff;
+             color: #0056b3;
+        }
+         .final-cta .button-link:hover {
+              background-color: #e0e0e0;
+         }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #f0f0f0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Jens Fischer</h1>
+            <p class="subtitle">Boutique-Beratung für Prozessoptimierung & Digitale Transformation</p>
+            <p class="pitch">Ich löse die digitalen Probleme, an denen Standard-Software und klassische Berater scheitern.</p>
+        </div>
     </div>
 
-    <main class="container max-w-6xl mx-auto p-6 md:p-12">
-        <section class="text-center py-12">
-            <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-4 leading-tight">Die Stränge der Revolution</h1>
-            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">Entdecken Sie, wie sich KI-Forschung, Computer-Hardware und gesellschaftlicher Wandel gegenseitig beflügelten.</p>
-        </section>
-        
-        <section class="mt-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- KI-Geschichte -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2">Geschichte der KI</h3>
-                    <p class="text-gray-600 mb-4">Von theoretischen Konzepten bis zu den heutigen LLMs.</p>
-                    <a href="history.html" class="font-semibold text-teal-600 hover:text-teal-800">Entdecken &rarr;</a>
-                </div>
-                <!-- Computer-Geschichte -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2">Geschichte des Computers</h3>
-                    <p class="text-gray-600 mb-4">Die Hardware-Evolution, die die Rechenleistung für KI bereitstellte.</p>
-                    <a href="computer-history.html" class="font-semibold text-teal-600 hover:text-teal-800">Entdecken &rarr;</a>
-                </div>
-                <!-- Gesellschaftliche Folgen -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2">Gesellschaftliche Folgen</h3>
-                    <p class="text-gray-600 mb-4">Wie die digitale Revolution traditionelle Berufe veränderte.</p>
-                    <a href="societal-impact.html" class="font-semibold text-teal-600 hover:text-teal-800">Entdecken &rarr;</a>
-                </div>
-                <!-- Fallstudien -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2">Fallstudien aus der Praxis</h3>
-                    <p class="text-gray-600 mb-4">Wie technologische Prinzipien in realen Projekten angewendet wurden.</p>
-                    <a href="case-studies.html" class="font-semibold text-teal-600 hover:text-teal-800">Entdecken &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-16 bg-blue-50 p-8 rounded-2xl border border-blue-200">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Die Geschichte eines Zeitzeugen</h2>
-                <p class="text-lg text-gray-700 mb-6">Diese Webseite ist mehr als nur eine Sammlung von Fakten. Sie ist die Chronik einer Revolution, erzählt aus der Perspektive von jemandem, der sie miterlebt und mitgestaltet hat.</p>
-                <a href="werdegang.html" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">Lesen Sie die ganze Geschichte &rarr;</a>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-white mt-16">
-        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
-            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
+    <section id="about-teaser" class="section">
+        <div class="container center-text">
+            <h2 class="section-title">Einzigartige Perspektive</h2>
+            <p style="max-width: 700px; margin: 0 auto;">Ich verbinde jahrzehntelange, praxiserprobte Erfahrung in der Lösung fundamentaler IT-Herausforderungen mit der strategischen Weitsicht eines Architekten und der zertifizierten Kompetenz in modernen Cloud-Technologien. Mein Ziel ist es, robuste, pragmatische und nachhaltige Lösungen für Ihre komplexesten Probleme zu schaffen.</p>
+            <a href="ueber-mich.html" class="button-link">Meine Geschichte & Philosophie</a>
         </div>
+    </section>
+
+    <section id="cases-teaser" class="section" style="background-color: #f9f9f9;">
+        <div class="container center-text">
+            <h2 class="section-title">Ausgewählte Fallstudien</h2>
+            <div class="card-container">
+                <div class="card">
+                    <span class="tag">Automatisierung</span>
+                    <h3>Revolution der Software-Entwicklung</h3>
+                    <p>In einem Gross-Projekt wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte und das Projekt vor Termin ins Ziel brachte.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Risiko-Analyse</span>
+                    <h3>Automatisierte Impact-Analyse</h3>
+                    <p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">KI-Validierung</span>
+                    <h3>Qualitätssicherung für KI-Systeme</h3>
+                    <p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p>
+                </div>
+            </div>
+            <a href="case-studies.html" class="button-link">Alle Fallstudien ansehen</a>
+        </div>
+    </section>
+
+    <section id="competencies" class="section">
+        <div class="container center-text">
+            <h2 class="section-title">Kernkompetenzen</h2>
+            <div class="competencies">
+                <div class="competency">
+                    <h3>Prozessoptimierung & Automatisierung</h3>
+                    <p>Analyse und Heilung ineffizienter, manueller Arbeitsabläufe durch intelligente, massgeschneiderte Werkzeuge.</p>
+                </div>
+                <div class="competency">
+                    <h3>Software-Architektur & Risiko-Analyse</h3>
+                    <p>Bewertung komplexer Systemlandschaften zur Aufdeckung von versteckten Abhängigkeiten und architektonischen Schwachstellen.</p>
+                </div>
+                <div class="competency">
+                    <h3>Qualitätssicherung für KI & Black-Box-Systeme</h3>
+                    <p>Entwicklung von validen Messsystemen zur Überprüfung der Zuverlässigkeit und des Reifegrads von KI-Komponenten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="final-cta">
+        <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
+        <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
+        <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
+
 </body>
 </html>
