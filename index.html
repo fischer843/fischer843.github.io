@@ -143,6 +143,10 @@
             justify-content: center;
             margin-top: 2rem;
         }
+        .card-link-wrapper {
+            text-decoration: none;
+            color: inherit;
+        }
         .card {
             background-color: #fff;
             border: 1px solid #e0e0e0;
@@ -151,11 +155,11 @@
             width: 350px;
             padding: 1.5rem;
             text-align: left;
-            display: flex;
-            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .card-content {
-            flex-grow: 1;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
         }
         .card h3 {
             font-family: "Georgia", serif;
@@ -173,33 +177,6 @@
             border-radius: 12px;
             margin-bottom: 1rem;
             font-weight: 500;
-        }
-        
-        /* === NEU: Stile für den KI-Abschnitt === */
-        .ai-section {
-            background-color: #2c3e50; /* Dunkler Hintergrund */
-            color: #ecf0f1;
-        }
-        .ai-section .section-title {
-            color: #fff;
-            border-bottom-color: #3498db;
-        }
-        .ai-section p {
-            color: #bdc3c7;
-        }
-        .ai-section .card {
-            background-color: #34495e;
-            border-color: #5d6d7e;
-        }
-        .ai-section .card h3 {
-            color: #3498db;
-        }
-        .ai-section .card p {
-            color: #ecf0f1;
-        }
-        .ai-section .card a {
-            color: #fff;
-            font-weight: bold;
         }
         
         /* Kernkompetenzen */
@@ -273,7 +250,7 @@
         <div class="container">
             <h1>Jens Fischer</h1>
             <p class="subtitle">Boutique-Beratung für Prozessoptimierung & Digitale Transformation</p>
-            <p class="pitch">Ich löse die digitalen Probleme, an denen Standard-Software und klassische Berater scheitern.</p>
+            <p class="pitch">Ich löse Ihre unternehmerischen Herausforderungen dort, wo Standard-Software an ihre Grenzen stösst und klassische IT-Beratung nicht tief genug geht.</p>
         </div>
     </div>
 
@@ -289,59 +266,29 @@
         <div class="container center-text">
             <h2 class="section-title">Ausgewählte Fallstudien</h2>
             <div class="card-container">
-                <div class="card">
-                    <div class="card-content">
+                <a href="projekt-sparkasse.html" class="card-link-wrapper">
+                    <div class="card">
                         <span class="tag">Automatisierung</span>
                         <h3>Revolution der Software-Entwicklung</h3>
                         <p>In einem Gross-Projekt wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte und das Projekt vor Termin ins Ziel brachte.</p>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
+                </a>
+                <a href="projekt-bank.html" class="card-link-wrapper">
+                    <div class="card">
                         <span class="tag">Risiko-Analyse</span>
                         <h3>Automatisierte Impact-Analyse</h3>
                         <p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
+                </a>
+                <a href="projekt-ki-qualitaet.html" class="card-link-wrapper">
+                    <div class="card">
                         <span class="tag">KI-Validierung</span>
                         <h3>Qualitätssicherung für KI-Systeme</h3>
                         <p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <a href="case-studies.html" class="button-link">Alle Fallstudien ansehen</a>
-        </div>
-    </section>
-
-    <section id="ai-history" class="section ai-section">
-        <div class="container center-text">
-            <h2 class="section-title">Die Geschichte der KI & Ihre Zukunft</h2>
-            <p style="max-width: 700px; margin: 0 auto 3rem auto;">Die heutige KI-Revolution ist das Ergebnis einer langen Evolution. Mein Werdegang spiegelt diese Entwicklung wider: von den ersten regelbasierten Systemen bis zu den komplexen neuronalen Netzen von heute. Dieses historische Verständnis ist entscheidend, um den Hype von der Realität zu trennen und den wahren Wert von KI für Ihr Unternehmen zu erschliessen.</p>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Der Mensch dahinter</h3>
-                        <p>Erfahren Sie mehr über die persönliche Reise und die Philosophie, die meine Arbeit prägen und wie Lebenserfahrung zu besserer Beratung führt.</p>
-                        <a href="ueber-mich.html">Meine Geschichte &rarr;</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Erfahrung in der Praxis</h3>
-                        <p>Sehen Sie anhand konkreter Beispiele, wie theoretisches Wissen in der Praxis angewendet wurde, um reale Probleme zu lösen und messbare Ergebnisse zu erzielen.</p>
-                        <a href="case-studies.html">Alle Fallstudien &rarr;</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Blick nach vorn</h3>
-                        <p>Lassen Sie uns darüber sprechen, wie wir diese Erkenntnisse nutzen können, um Ihre spezifischen Herausforderungen zu meistern und Ihr Unternehmen zukunftssicher zu machen.</p>
-                        <a href="mailto:ihre.email@beispiel.ch">Gespräch vereinbaren &rarr;</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
