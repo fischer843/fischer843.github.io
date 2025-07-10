@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress & Datenbank-Sicherheit: Passwort vs. Zertifikat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .accent-color {
+            color: #007bff;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        blockquote {
+            border-left: 4px solid #007bff;
+            background-color: #f1f3f5;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto max-w-5xl px-4 py-8 sm:py-12">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight">WordPress & Datenbank-Sicherheit</h1>
+            <p class="mt-4 text-lg text-gray-600">Das Passwort-Dilemma vs. die Zertifikats-Festung</p>
+        </header>
+
+        <!-- Einleitung -->
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <p class="text-lg">
+                Im Herzen jeder WordPress-Installation liegt eine kritische Schwachstelle: die Datei <code class="bg-gray-200 text-sm p-1 rounded">wp-config.php</code>. Sie enthält die Zugangsdaten zur Datenbank im Klartext. Ein Angreifer, der diese Datei liest, hat die volle Kontrolle. Diese Analyse beleuchtet den Konflikt zwischen dem etablierten, aber riskanten Passwort-Modell und der hochsicheren, aber komplexen Zertifikats-Authentifizierung.
+            </p>
+        </div>
+
+        <!-- Hauptinhalt: Pro & Contra Spalten -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+            <!-- Kolumne 1: Standard-Modell -->
+            <section id="standard-modell">
+                <div class="card p-6 md:p-8 h-full">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 border-b pb-4">Das Standard-Modell: <span class="text-gray-500">User & Passwort</span></h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 accent-color">Pro: Die Argumente der Hoster</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><strong>Universelle Kompatibilität:</strong> Funktioniert auf jedem noch so günstigen Hosting-Paket. Der kleinste gemeinsame Nenner.</li>
+                                <li><strong>Maximale Einfachheit:</strong> Jeder versteht das Konzept von Benutzername und Passwort. Der Support-Aufwand ist minimal.</li>
+                                <li><strong>Ökosystem-Konformität:</strong> Alle Plugins, Themes und Tools sind auf dieses Modell ausgelegt und funktionieren reibungslos.</li>
+                                <li><strong>Pragmatische Sicherheit:</strong> Hoster argumentieren, dass durch Server-Härtung (Isolation, WAFs) der Zugriff auf die Datei bereits verhindert wird.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-red-600">Contra: Die harte Realität für Betreiber</h3>
+                             <blockquote class="p-4 my-4 italic">
+                                <p>"Gerade diese Sichtweise hat mich meine Webseite, auf der ich meine Dienstleistungen angeboten habe, gekostet. Und danach dem Provider einen verärgerten Kunden beschert und noch einen, der auf einer neuen Website dies öffentlich gemacht hat."</p>
+                                <cite class="block text-right mt-2 not-italic text-sm text-gray-600">– Ein betroffener Webseitenbetreiber</cite>
+                            </blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><strong>Single Point of Failure:</strong> Die <code class="bg-gray-200 text-sm p-1 rounded">wp-config.php</code> ist der Generalschlüssel. Ist sie kompromittiert, ist alles verloren.</li>
+                                <li><strong>Das "Zulieferer-Risiko":</strong> Jedes installierte Plugin ist ein potenzieller Vektor, um die Datei auszulesen. Der Datenbank-User hat standardmässig Admin-Rechte.</li>
+                                <li><strong>Falsches Sicherheitsgefühl:</strong> Das "Defense in Depth"-Modell der Hoster ist nur so stark wie sein schwächstes Glied – oft ein veraltetes Plugin.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kolumne 2: Zertifikats-Festung -->
+            <section id="zertifikats-festung">
+                <div class="card p-6 md:p-8 h-full">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 border-b pb-4">Die Zertifikats-Festung: <span class="text-gray-500">SSH/TLS</span></h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 accent-color">Pro: Der Weg der maximalen Sicherheit</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><strong>Kein Passwort in der Konfiguration:</strong> Die kritischste Information wird eliminiert.</li>
+                                <li><strong>Kryptografischer Beweis:</strong> Die Authentifizierung erfolgt über einen privaten Schlüssel, der den Server nie verlässt. Sicherer geht es nicht.</li>
+                                <li><strong>Resilienz:</strong> Ein reiner Lesezugriff auf die Konfigurationsdatei ist für einen Angreifer nutzlos.</li>
+                                <li><strong>Industriestandard für Hochsicherheit:</strong> Dieses Verfahren ist im Finanzsektor und in kritischen Infrastrukturen etabliert – weil es funktioniert.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-red-600">Contra: Die Hürden der Praxis</h3>
+                            <blockquote class="p-4 my-4 italic">
+                                <p>"Anstatt die gepanzerten Reifen als Extra zu verkaufen, verkaufen die Anbieter lieber gleich das ganze gepanzerte Auto, weil die Zielgruppe dafür dieselbe ist."</p>
+                                <cite class="block text-right mt-2 not-italic text-sm text-gray-600">– Analyse der Marktmechanismen</cite>
+                            </blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><strong>Extreme Komplexität:</strong> Die Erstellung, Verwaltung und Erneuerung von Zertifikaten ist für Laien (und viele Admins) eine enorme Hürde.</li>
+                                <li><strong>Hoher administrativer Aufwand:</strong> Erfordert eine komplette Public-Key-Infrastruktur (PKI), was für Hoster im Massenmarkt unrentabel ist.</li>
+                                <li><strong>Kompatibilitätsprobleme:</strong> Viele Standard-Tools und Billig-Hostings unterstützen diesen Weg nicht oder nur mit manuellen Eingriffen.</li>
+                                <li><strong>Kosten:</strong> Die Implementierung und der spezialisierte Support sind teuer und würden den Preis für Standard-Hosting sprengen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mt-16 card p-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Fazit: Pragmatismus vs. Prinzipien – Ein "Lemming-Effekt"?</h2>
+            <div class="max-w-4xl mx-auto text-lg space-y-4 text-gray-800">
+                <p>
+                    Die Diskussion zeigt einen tiefen Graben im WordPress-Ökosystem. Auf der einen Seite steht der Pragmatismus der Hoster, die für Millionen von Kunden eine funktionierende, kompatible und profitable Lösung anbieten müssen. Das User/Passwort-Modell ist hier der unumgängliche, kleinste gemeinsame Nenner.
+                </p>
+                <p>
+                    Auf der anderen Seite stehen die Prinzipien der IT-Sicherheit, die von jedem sicherheitsbewussten Betreiber – und insbesondere von denen, die bereits Schaden erlitten haben – zu Recht eingefordert werden. Das Argument, dass die Branche einem "Lemming-Verhalten" folgt und an einem veralteten Standard festhält, anstatt den Wandel zu erzwingen, ist stichhaltig.
+                </p>
+                <p class="font-bold">
+                    Letztendlich ist die Wahl der Methode eine Frage der Verhältnismässigkeit: Wie wertvoll sind die Daten und die Webseite, die geschützt werden sollen? Für einen persönlichen Blog mag das Standard-Modell ausreichen. Für ein Unternehmen, dessen Existenz von seiner Webseite abhängt, ist es eine fahrlässige Risikobereitschaft.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Struktur und Stil inspiriert durch den klaren Ansatz von jens-fischer.ch.</p>
+            <p>Erstellt im Juli 2025.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
