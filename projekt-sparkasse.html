@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Revolutionierung der Software-Entwicklung durch Automatisierung | Jens Fischer</title>
+    <style>
+        /* CSS-Stil, inspiriert von jens-fischer.ch */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        header, footer {
+            /* Platzhalter für Ihre bestehende Kopf- und Fusszeile */
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+        }
+        h1, h2, h3 {
+            font-family: "Georgia", serif; /* Annahme für einen klassischen Look */
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        p, ul, ol {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Spezifische Stile für diese Seite (identisch zur anderen Fallstudie) */
+        .project-meta {
+            background-color: #f7f7f7;
+            border-left: 5px solid #007bff;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .project-meta h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .project-meta ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-meta li {
+            margin-bottom: 0.5rem;
+        }
+        .project-meta strong {
+            display: inline-block;
+            width: 140px; /* Etwas breiter für Lesbarkeit */
+        }
+        .call-to-action {
+            background-color: #eaf4ff;
+            border: 1px solid #b8d9f7;
+            padding: 1.5rem 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .call-to-action p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>Navigation von jens-fischer.ch</p>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Revolutionierung der Software-Entwicklung durch modellgetriebene Automatisierung</h1>
+            <p>Wie die Initiative zur Automatisierung eines manuellen Prozesses zu einer unerwarteten Produktivitätssteigerung in einem Gross-Projekt der Finanzindustrie führte.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Finanzsektor (Sparkassen-Gruppe)</li>
+                    <li><strong>Projekt:</strong> Entwicklung einer neuen Multi-Channel Digital-Banking-Plattform</li>
+                    <li><strong>Herausforderung:</strong> Extrem zeitaufwendige, fehleranfällige und manuelle Übertragung von UML-Spezifikationen in den Source-Code.</li>
+                    <li><strong>Technologie:</strong> Rational Rose, UML, VBA, Compiler-Entwicklung.</li>
+                    <li><strong>Ergebnis:</strong> Massive Beschleunigung des Entwicklungsprozesses, Lieferung vor Termin und anschliessendes, bezahltes Beratungsprojekt zur Schulung der Methode.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Ein manueller Flaschenhals im Gross-Projekt</h2>
+            <p>
+                In einem wegweisenden Projekt zur Schaffung der neuen Digital-Banking-Plattform der Sparkassen-Gruppe war unser Team für die Programmierung zuständig. Die Vorgaben erhielten wir in Form von UML-Diagrammen, die zentral im Rechenzentrum der Sparkassen mit der Software "Rational Rose" erstellt wurden. Der etablierte Prozess sah vor, dass wir die Informationen aus diesen Diagrammen manuell in den Source-Code übertrugen. Jede Änderung an den UML-Modellen zog eine aufwendige und fehleranfällige manuelle Anpassung im Code nach sich – ein enormer Bremsklotz für die Produktivität.
+            </p>
+
+            <h2>Meine Lösung: Von der Idee zum Code-Generator</h2>
+            <p>
+                Ich war überzeugt, dass dieser Prozess optimiert werden konnte. Bei einer intensiven Auseinandersetzung mit "Rational Rose" entdeckte ich, dass die Software über eine lizenzierte VBA-Schnittstelle verfügte. Mir wurde klar, dass wir die UML-Modelle programmatisch auslesen konnten.
+            </p>
+            <p>
+                Ich entwickelte einen Prototyp in VBA, der die relevanten Informationen aus den Modellen extrahierte und automatisiert in eine strukturierte Textdatei schrieb. Als ich diesen Prototyp einem Teamkollegen zeigte, erkannte er sofort das Potenzial: Er entwickelte darauf aufbauend einen Compiler, der diese Textdatei einlas und daraus direkt die grundlegenden Software-Elemente und -Strukturen für unser Projekt generierte. Wir hatten eine zweistufige Automatisierungskette geschaffen.
+            </p>
+
+            <h2>Die kritische Phase: Vertrauen in die Innovation unter Druck</h2>
+            <p>
+                Während wir dieses Automatisierungs-Framework entwickelten, produzierten wir nach aussen hin kaum sichtbaren Fortschritt bei den eigentlichen Anwendungs-Features. Das Management wurde nervös und befürchtete, wir würden unsere Termine nicht einhalten können. Wir aber waren von der Effizienz unseres neuen Ansatzes überzeugt und hielten an unserem Plan fest.
+            </p>
+
+            <h2>Das Ergebnis: Ein Quantensprung in der Produktivität</h2>
+            <p>
+                Die anfängliche Sorge des Managements erwies sich als unbegründet. Unser Automatisierungs-Framework war so leistungsfähig, dass wir Änderungen aus den UML-Diagrammen beinahe in Echtzeit im Code nachführen konnten. Die zuvor tagelange manuelle Arbeit war nun eine Sache von Minuten. Wir waren nicht nur in der Lage, alle Termine zu halten, sondern konnten unsere Lieferungen sogar **massgeblich vor den gesetzten Fristen** abschliessen.
+            </p>
+            <p>
+                Der Erfolg war so durchschlagend, dass wir in einem **separaten, bezahlten Folgeprojekt** beauftragt wurden, unseren Ansatz den Entwicklern im zentralen Rechenzentrum der Sparkassen zu vermitteln, um dort die Produktivität im gesamten Entwicklungsprozess zu steigern.
+            </p>
+
+            <h2>Kernkompetenzen im Fokus</h2>
+            <ul>
+                <li><strong>Metaprogrammierung:</strong> Fähigkeit, Werkzeuge zu entwickeln, die wiederum Software generieren.</li>
+                <li><strong>Modellgetriebene Entwicklung:</strong> Praktische Anwendung eines hochentwickelten Architektur-Konzepts zur Effizienzsteigerung.</li>
+                <li><strong>Prozess-Automatisierung:</strong> Identifikation und Eliminierung manueller, fehleranfälliger Arbeitsschritte.</li>
+                <li><strong>Überzeugungskraft und Durchhaltevermögen:</strong> Festhalten an einer innovativen Vision trotz externen Drucks und anfänglicher Unsicherheiten.</li>
+            '</ul>
+
+            <div class="call-to-action">
+                <h2>Stehen auch Sie vor einer Herausforderung, für die ein Standard-Werkzeug nicht ausreicht?</h2>
+                <p>Lassen Sie uns darüber sprechen, wie wir durch intelligente Automatisierung und massgeschneiderte Lösungen auch Ihre Prozesse effizienter und sicherer machen können. <a href="mailto:ihre.email@beispiel.ch">Kontaktieren Sie mich für ein unverbindliches Erstgespräch.</a></p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+
+</body>
+</html>
