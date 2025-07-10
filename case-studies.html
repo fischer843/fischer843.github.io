@@ -3,69 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über Mich | Jens Fischer</title>
+    <title>Fallstudien | Jens Fischer</title>
     <style>
         /* CSS-Stil, inspiriert von jens-fischer.ch */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fdfdfd;
+            background-color: #f9f9f9; /* Leichter Hintergrund für die ganze Seite */
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Breiteres Layout für Kacheln */
             margin: 2rem auto;
             padding: 0 2rem;
         }
         header, footer {
-            /* Platzhalter für Ihre bestehende Kopf- und Fusszeile */
             text-align: center;
             padding: 1rem 0;
             background-color: #f0f0f0;
         }
-        h1, h2, h3 {
-            font-family: "Georgia", serif; /* Annahme für einen klassischen Look */
-            color: #1a1a1a;
-            line-height: 1.3;
-        }
-        h1 {
+        .page-title {
+            font-family: "Georgia", serif;
             font-size: 2.8rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             border-bottom: 3px solid #007bff;
             display: inline-block;
             padding-bottom: 0.5rem;
         }
-        h2 {
-            font-size: 1.8rem;
-            color: #0056b3;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 0.5rem;
-            margin-top: 2.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
+        .page-intro {
+            text-align: center;
             font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            color: #555;
         }
         .center-heading {
              text-align: center;
         }
-        .highlight {
+        
+        /* Kachel-Layout Stile */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem; /* Abstand zwischen den Kacheln */
+            justify-content: center;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            width: 350px; /* Feste Breite pro Kachel */
+            display: flex;
+            flex-direction: column; /* Stellt sicher, dass der Button unten ist */
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+        .card-content {
+            flex-grow: 1; /* Sorgt dafür, dass der Inhalt den Platz füllt */
+        }
+        .card h3 {
+            font-family: "Georgia", serif;
+            font-size: 1.5rem;
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #444;
+        }
+        .card-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem; /* Abstand nach oben */
+            align-self: flex-start; /* Am Anfang der Flexbox ausrichten */
+            transition: background-color 0.2s ease;
+        }
+        .card-link:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+        
+        /* Tags zur Kategorisierung */
+        .card-tags {
+            margin-bottom: 1rem;
+        }
+        .tag {
+            display: inline-block;
             background-color: #eaf4ff;
-            padding: 2px 6px;
-            border-radius: 4px;
+            color: #0056b3;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            margin-right: 0.5rem;
+            font-weight: 500;
         }
-        blockquote {
-            border-left: 5px solid #007bff;
-            margin: 2rem 0;
-            padding: 1rem 2rem;
-            background-color: #f7f7f7;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #555;
-        }
+        .tag.risk { background-color: #fffbeb; color: #856404; }
+        .tag.security { background-color: #f8d7da; color: #721c24; }
     </style>
 </head>
 <body>
@@ -76,50 +123,86 @@
 
     <div class="container">
         <div class="center-heading">
-            <h1>Über Jens Fischer</h1>
+            <h1 class="page-title">Fallstudien: Aus der Praxis</h1>
         </div>
+        <p class="page-intro">
+            Die folgenden Beispiele illustrieren meinen Ansatz: Ich analysiere komplexe Probleme, entwickle pragmatische Lösungen und schaffe messbaren Mehrwert, wo Standard-Werkzeuge an ihre Grenzen stossen.
+        </p>
 
-        <article>
-            <h2>Der Architekt und Problemlöser</h2>
-            <p>
-                Seit über zwei Jahrzehnten ist meine professionelle Leidenschaft das Herzstück komplexer IT-Systeme. Ich bin ein <strong>System-Denker</strong> und pragmatischer Architekt, der angetrieben wird von der Faszination, nicht nur zu sehen, *dass* etwas funktioniert oder nicht, sondern *warum*. Meine Karriere ist geprägt von Momenten, in denen ich festgefahrene Prozesse, "blinde Flecken" in der Datenanalyse oder fundamentale architektonische Schwachstellen identifiziert habe.
-            </p>
-            <p>
-                Meine Überzeugung war und ist es, dass man für echte Probleme selten eine Standardlösung findet. Das hat mich immer wieder dazu motiviert, die Grenzen von Werkzeugen auszuloten und bei Bedarf eigene, massgeschneiderte Lösungen zu entwickeln – von intelligenten Analyse-Frameworks bis hin zu ganzen Compilern, die Entwicklungsprozesse revolutionierten.
-            </p>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag">Automatisierung</span><span class="tag">Architektur</span></div>
+                    <h3>Revolution der Software-Entwicklung</h3>
+                    <p>In einem Gross-Projekt der Finanzindustrie wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte und das Projekt vor Termin ins Ziel brachte.</p>
+                </div>
+                <a href="projekt-sparkasse.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag risk">Risiko-Analyse</span><span class="tag">Tool-Entwicklung</span></div>
+                    <h3>Automatisierte Impact-Analyse</h3>
+                    <p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p>
+                </div>
+                <a href="projekt-bank.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
 
-            <h2>Die bewusste Zäsur: Eine Lektion in Resilienz und Krisenmanagement</h2>
-            <p>
-                Nach vielen Jahren an vorderster Front der digitalen Transformation traf ich die bewusste Entscheidung, mich für eine Dekade voll und ganz einer anderen, sehr persönlichen und dringenden Herausforderung zu widmen: der intensiven Begleitung meines Sohnes durch eine schwere, durch Schulmobbing ausgelöste Krise.
-            </p>
-            <blockquote>
-                Diese Zeit war mein intensivstes und lehrreichstes "Projekt". Es ging um strategische Planung, Resilienz und die Fähigkeit, sich für die bestmögliche Lösung gegen alle Widerstände durchzusetzen.
-            </blockquote>
-            <p>
-                Die Aufgabe bestand nicht nur darin, meinem Sohn Halt zu geben. Es bedeutete auch, passende Bildungs- und Förderlösungen für seine Genesung zu finden und deren staatliche Finanzierung durchzusetzen. Um dies zu erreichen, musste ich mich tief in das komplexe **Schweizer Bildungsrecht einarbeiten** und unsere Ansprüche wie ein Anwalt vertreten. Diese Erfahrung hat meine Fähigkeiten in den Bereichen Krisenmanagement, strategische Interessenvertretung und unnachgiebiger Problemlösung auf eine Ebene gehoben, die das Berufsleben allein niemals hätte lehren können.
-            </p>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag risk">Risiko-Management</span><span class="tag">Best Practice</span></div>
+                    <h3>Vorausschauendes Dependency-Management</h3>
+                    <p>Eine frühzeitige Warnung vor instabilen Software-Abhängigkeiten wurde ignoriert – mit der Folge eines viertägigen Stillstands für ein 10-köpfiges Entwicklerteam.</p>
+                </div>
+                <a href="projekt-dependencymanagement.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag">KI-Validierung</span><span class="tag">Qualitätssicherung</span></div>
+                    <h3>Qualitätssicherung für KI-Systeme</h3>
+                    <p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p>
+                </div>
+                <a href="projekt-ki-qualitaet.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
 
-            <h2>Die Brücke in die Gegenwart: Erfahrung trifft auf moderne Technologie</h2>
-            <p>
-                Nachdem mein Sohn seinen Weg gefunden hat und stabil ist, habe ich diese gestärkte Resilienz wieder mit meiner technologischen Leidenschaft verbunden. Ich habe mein tiefes, über Jahrzehnte gewachsenes Verständnis für System-Architektur gezielt mit den modernsten Werkzeugen von heute verknüpft.
-            </p>
-            <p>
-                Durch intensive Weiterbildung und die offizielle **Zertifizierung im Bereich der Google Cloud Infrastruktur** habe ich die Brücke geschlagen. Heute kann ich meine Fähigkeit, fundamentale Probleme zu erkennen, mit der Kompetenz verbinden, sie mit den skalierbaren, sicheren und zukunftsfähigen Technologien der Cloud zu lösen.
-            </p>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag security">Sicherheitsanalyse</span><span class="tag">Architektur</span></div>
+                    <h3>Das WordPress-Sicherheitsdilemma</h3>
+                    <p>Nach einem Totalverlust durch einen Hacker-Angriff deckte eine Tiefenanalyse eine fundamentale architektonische Schwachstelle in WordPress auf.</p>
+                </div>
+                <a href="projekt-wordpress-sicherheit.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag">Prozessoptimierung</span><span class="tag">Tool-Entwicklung</span></div>
+                    <h3>Reporting-Framework für die Chemie-Industrie</h3>
+                    <p>Für einen kritischen Qualitätsnachweis wurde ein massgeschneidertes Framework in Excel/VBA entwickelt, das den gesamten Prozess von den Rohdaten bis zum finalen Report automatisierte.</p>
+                </div>
+                <a href="projekt-chemie.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag">Daten-Transparenz</span><span class="tag">Reverse Engineering</span></div>
+                    <h3>Optimierung von IT-Support-Prozessen</h3>
+                    <p>Durch Reverse-Engineering einer SQL-Datenbank wurde ein "blinder Fleck" im Ticket-System aufgedeckt, was zur Schliessung von über 70% der "verlorenen" Tickets führte.</p>
+                </div>
+                <a href="projekt-rueckversicherung.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
 
-            <h2>Meine Philosophie</h2>
-            <p>
-                Ich glaube nicht an kurzlebige Hypes, sondern an robuste, durchdachte und nachhaltige Lösungen. Mein Wert für Sie als Kunde liegt in der einzigartigen Kombination aus:
-            </p>
-            <ul>
-                <li><strong>Jahrzehntelanger Erfahrung</strong> im Lösen fundamentaler IT-Probleme.</li>
-                <li><strong>Menschlicher Reife und Resilienz</strong>, geschmiedet in einer echten Lebenskrise.</li>
-                <li><strong>Nachweisbarer, aktueller Kompetenz</strong> in den Technologien, die die Zukunft gestalten.</li>
-            </ul>
-            <p>
-                Wenn Sie einen Partner suchen, der nicht nur über Technik spricht, sondern Ihre Herausforderung mit strategischem Weitblick, technischer Brillanz und menschlicher Integrität angeht, dann freue ich mich auf ein Gespräch mit Ihnen.
-            </p>
-        </article>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-tags"><span class="tag">Automatisierung</span><span class="tag">Effizienz</span></div>
+                    <h3>Effizienzsteigerung im IT-Betrieb</h3>
+                    <p>Ein proaktiver Hinweis auf eine Automatisierungsmöglichkeit führte zur Reduktion eines täglichen, manuellen Arbeitsaufwands von ca. 5 Personenstunden auf nur noch eine.</p>
+                </div>
+                <a href="projekt-logistik.html" class="card-link">Mehr erfahren &rarr;</a>
+            </div>
+
+        </div>
     </div>
 
     <footer>
