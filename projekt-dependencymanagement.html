@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Vorausschauendes Risiko-Management im Software-Engineering | Jens Fischer</title>
+    <style>
+        /* CSS-Stil, inspiriert von jens-fischer.ch (identisch zu vorherigen Beispielen) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        header, footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+        }
+        h1, h2, h3 {
+            font-family: "Georgia", serif;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        p, ul, ol {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .project-meta {
+            background-color: #f7f7f7;
+            border-left: 5px solid #ffc107; /* Gelbe Akzentfarbe für Warnung/Risiko */
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .project-meta h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .project-meta ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-meta li {
+            margin-bottom: 0.5rem;
+        }
+        .project-meta strong {
+            display: inline-block;
+            width: 140px;
+        }
+        .call-to-action {
+            background-color: #eaf4ff;
+            border: 1px solid #b8d9f7;
+            padding: 1.5rem 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .call-to-action p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>Navigation von jens-fischer.ch</p>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Vorausschauendes Risiko-Management im Software-Engineering</h1>
+            <p>Wie die Missachtung etablierter Best Practices im Dependency-Management zu einem vorhersehbaren, viertägigen Stillstand eines 10-köpfigen Entwicklerteams führte.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Bankwesen (Grosse Schweizer Bank)</li>
+                    <li><strong>Projekt:</strong> Neue interne Web-Plattform (Portal & Portlets)</li>
+                    <li><strong>Herausforderung:</strong> Instabiler Entwicklungsprozess durch unkontrolliertes Dependency-Management.</li>
+                    <li><strong>Technologie:</strong> CVS, Java-basierte Portlets, Konfigurations-Management.</li>
+                    <li><strong>Ergebnis:</strong> Nachweis der Notwendigkeit von stabilem Versioning, nachdem die vorhergesagte Krise eintrat und 40 Manntage an Entwicklungszeit kostete.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Bauen auf schwankendem Fundament</h2>
+            <p>
+                In einem Projekt zur Entwicklung einer neuen, portalbasierten Webseite für eine Grossbank, war ich Teil des Entwicklerteams. Die Software-Komponenten wurden in verschiedenen CVS-Repositories versioniert. Ich stellte fest, dass die Konfigurationsdateien für die Kompilierung stets die **allerneueste Version** der benötigten Abhängigkeiten ("Dependencies") anforderten. Viele dieser abhängigen Komponenten befanden sich jedoch selbst noch in aktiver Entwicklung.
+            </p>
+
+            <h2>Mein Einwand: Ein Plädoyer für Stabilität</h2>
+            <p>
+                Ich wies das Team und die Lead-Engineers auf die immense Gefahr dieses Vorgehens hin. Ein stabiler Entwicklungsprozess ist unmöglich, wenn man nicht nachvollziehen kann, welche Versionen der Bausteine man verwendet. Eine unkontrollierte Änderung in einer einzigen Abhängigkeit konnte jederzeit unsere gesamte Arbeit lahmlegen.
+            </p>
+            <p>
+                Mein Vorschlag war einfach und entsprach etablierten Best Practices: Wir sollten uns auf **fest definierte, stabile Versionen** der Abhängigkeiten festlegen ("Version Pinning"). Eine Migration auf neuere Versionen sollte ein geplanter, bewusster und kontrollierter Schritt sein, keine zufällige tägliche Überraschung. Mein Einwand wurde jedoch als überflüssig und "blödsinnig" abgetan.
+            </p>
+
+            <h2>Die Konsequenz: Der vorhergesagte Stillstand</h2>
+            <p>
+                Zwei Monate später trat genau das Szenario ein, vor dem ich gewarnt hatte. Über Nacht hatten sich nicht nur eine, sondern gleich mehrere abhängige Kernkomponenten geändert. Die Folge: Keine einzige unserer eigenen Komponenten liess sich mehr kompilieren. Das gesamte, 10-köpfige Entwicklerteam war arbeitsunfähig.
+            </p>
+            <p>
+                Es dauerte vier volle Tage fieberhafter und frustrierender Detektivarbeit, um die exakte Kombination von Komponentenversionen zu finden, mit der das System zuletzt lauffähig war. Ein Verlust von rund **40 Manntagen** an produktiver Entwicklungszeit, der durch die Befolgung eines simplen Prinzips der Software-Hygiene vollständig hätte vermieden werden können.
+            </p>
+            
+            <h2>Kernkompetenzen und die strategische Lektion</h2>
+            <ul>
+                <li><strong>Risiko-Analyse im SDLC:</strong> Fähigkeit, Schwachstellen im Software Development Life Cycle zu identifizieren, lange bevor sie zu teuren Problemen werden.</li>
+                <li><strong>Dependency-Management:</strong> Tiefes Verständnis für die fundamentalen Prinzipien von stabilem und reproduzierbarem Software-Engineering.</li>
+                <li><strong>Überzeugungskraft & Standhaftigkeit:</strong> Mut, auch gegen Widerstände von Vorgesetzten für professionelle Standards einzustehen.</li>
+                <li><strong>Die Lektion für das Management:</strong> Diese Fallstudie demonstriert eindrücklich, dass die Missachtung von etablierten "Best Practices" keine Abkürzung, sondern ein sicherer Weg zu unkalkulierbaren Risiken, Kosten und Projektverzögerungen ist.</li>
+            </ul>
+
+            <div class="call-to-action">
+                <h2>Bauen auch Sie auf einem stabilen Fundament?</h2>
+                <p>Lassen Sie uns Ihre Entwicklungsprozesse analysieren, um versteckte Risiken im Bereich des Konfigurations- und Dependency-Managements aufzudecken, bevor sie Ihr nächstes Projekt zum Stillstand bringen. <a href="mailto:ihre.email@beispiel.ch">Kontaktieren Sie mich für eine unverbindliche Erst-Einschätzung.</a></p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+
+</body>
+</html>
