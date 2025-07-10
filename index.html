@@ -3,347 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jens Fischer | Boutique-Beratung für Prozessoptimierung & Digitale Transformation</title>
+    <title>Fallstudien | Jens Fischer</title>
     <style>
-        /* Globaler Stil */
-        html {
-            scroll-behavior: smooth; /* Sorgt für sanftes Scrollen bei Klick auf die Ankerlinks */
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fdfdfd;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-        .center-text {
-            text-align: center;
-        }
-
-        /* === Navigation & Header Stile === */
-        header {
-            background-color: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 0 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 70px;
-        }
-        .logo a {
-            font-family: "Georgia", serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            gap: 1.5rem;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease, color 0.2s ease;
-        }
-        nav a:hover {
-            color: #007bff;
-            border-bottom-color: #007bff;
-        }
-
-        /* Hero-Bereich */
-        .hero {
-            background-color: #f0f0f0;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h1 {
-            font-family: "Georgia", serif;
-            font-size: 3.5rem;
-            color: #1a1a1a;
-            margin: 0;
-        }
-        .hero .subtitle {
-            font-family: "Georgia", serif;
-            font-size: 1.5rem;
-            color: #0056b3;
-            margin: 0.5rem 0 0 0;
-        }
-        .hero .pitch {
-            font-size: 1.2rem;
-            color: #444;
-            max-width: 650px;
-            margin: 1.5rem auto 0 auto;
-        }
-        
-        /* Allgemeine Sektions-Stile */
-        .section {
-            padding: 5rem 0; /* Etwas mehr Abstand für die Sprungmarken */
-        }
-        .section-title {
-            font-family: "Georgia", serif;
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            border-bottom: 3px solid #007bff;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-        
-        /* Kachel-Layout für Fallstudien */
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        .card {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-            width: 350px;
-            padding: 1.5rem;
-            text-align: left;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-        }
-        .card h3 {
-            font-family: "Georgia", serif;
-            font-size: 1.5rem;
-            color: #0056b3;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-        }
-        .card .tag {
-            display: inline-block;
-            background-color: #eaf4ff;
-            color: #0056b3;
-            font-size: 0.8rem;
-            padding: 0.25rem 0.6rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        .card .tag.risk { background-color: #fffbeb; color: #856404; }
-        .card .tag.security { background-color: #f8d7da; color: #721c24; }
-        
-        /* Kernkompetenzen */
-        .competencies {
-             display: flex;
-             justify-content: space-around;
-             flex-wrap: wrap;
-             gap: 2rem;
-             text-align: center;
-        }
-        .competency {
-             flex-basis: 300px;
-        }
-        .competency h3 {
-             font-size: 1.4rem;
-        }
-
-        /* Call-to-Action am Ende */
-        #contact { /* ID für den Sprunglink */
-            background-color: #0056b3;
-            color: #fff;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        #contact h2 {
-            font-family: "Georgia", serif;
-            font-size: 2.5rem;
-            color: #fff;
-            margin-top: 0;
-        }
-        #contact p {
-            max-width: 600px;
-            margin: 1rem auto;
-            font-size: 1.1rem;
-        }
-        #contact .button-link {
-             background-color: #fff;
-             color: #0056b3;
-        }
-         #contact .button-link:hover {
-              background-color: #e0e0e0;
-         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: #f0f0f0;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        /* "Nach oben"-Link Stil */
-        .back-to-top {
-            display: block;
-            text-align: right;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
+        /* (Hier ist derselbe CSS-Code wie oben, für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
+        .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
+        .center-heading { text-align: center; }
+        .card-container { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); width: 350px; display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
+        .card-content { flex-grow: 1; }
+        .card h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: #0056b3; margin-top: 0; margin-bottom: 0.75rem; }
+        .card p { font-size: 1rem; color: #444; }
+        .card-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; align-self: flex-start; transition: background-color 0.2s ease; }
+        .card-link:hover { background-color: #0056b3; text-decoration: none; }
+        .card-tags { margin-bottom: 1rem; }
+        .tag { display: inline-block; background-color: #eaf4ff; color: #0056b3; font-size: 0.8rem; padding: 0.25rem 0.6rem; border-radius: 12px; margin-right: 0.5rem; font-weight: 500; }
+        .tag.risk { background-color: #fffbeb; color: #856404; }
+        .tag.security { background-color: #f8d7da; color: #721c24; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
     </style>
 </head>
-<body id="top"> <header>
+<body>
+    <header>
         <div class="nav-container">
-            <div class="logo"><a href="#top">Jens Fischer</a></div>
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
             <nav>
                 <ul>
-                    <li><a href="#about">Über Mich</a></li>
-                    <li><a href="#cases">Fallstudien</a></li>
-                    <li><a href="#competencies">Kompetenzen</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <div class="hero">
-        <div class="container">
-            <h1>Jens Fischer</h1>
-            <p class="subtitle">Boutique-Beratung für Prozessoptimierung & Digitale Transformation</p>
-            <p class="pitch">Ich löse die digitalen Probleme, an denen Standard-Software und klassische Berater scheitern.</p>
+    <div class="container">
+        <div class="center-heading">
+            <h1 class="page-title">Fallstudien: Aus der Praxis</h1>
+        </div>
+        <p class="page-intro">
+            Die folgenden Beispiele illustrieren meinen Ansatz: Ich analysiere komplexe Probleme, entwickle pragmatische Lösungen und schaffe messbaren Mehrwert, wo Standard-Werkzeuge an ihre Grenzen stossen.
+        </p>
+        <div class="card-container">
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Automatisierung</span><span class="tag">Architektur</span></div><h3>Revolution der Software-Entwicklung</h3><p>In einem Gross-Projekt der Finanzindustrie wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte und das Projekt vor Termin ins Ziel brachte.</p></div><a href="projekt-sparkasse.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag risk">Risiko-Analyse</span><span class="tag">Tool-Entwicklung</span></div><h3>Automatisierte Impact-Analyse</h3><p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p></div><a href="projekt-bank.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag risk">Risiko-Management</span><span class="tag">Best Practice</span></div><h3>Vorausschauendes Dependency-Management</h3><p>Eine frühzeitige Warnung vor instabilen Software-Abhängigkeiten wurde ignoriert – mit der Folge eines viertägigen Stillstands für ein 10-köpfiges Entwicklerteam.</p></div><a href="projekt-dependencymanagement.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag">KI-Validierung</span><span class="tag">Qualitätssicherung</span></div><h3>Qualitätssicherung für KI-Systeme</h3><p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p></div><a href="projekt-ki-qualitaet.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag security">Sicherheitsanalyse</span><span class="tag">Architektur</span></div><h3>Das WordPress-Sicherheitsdilemma</h3><p>Nach einem Totalverlust durch einen Hacker-Angriff deckte eine Tiefenanalyse eine fundamentale architektonische Schwachstelle in WordPress auf.</p></div><a href="projekt-wordpress-sicherheit.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Prozessoptimierung</span><span class="tag">Tool-Entwicklung</span></div><h3>Reporting-Framework für die Chemie-Industrie</h3><p>Für einen kritischen Qualitätsnachweis wurde ein massgeschneidertes Framework in Excel/VBA entwickelt, das den gesamten Prozess von den Rohdaten bis zum finalen Report automatisierte.</p></div><a href="projekt-chemie.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Daten-Transparenz</span><span class="tag">Reverse Engineering</span></div><h3>Optimierung von IT-Support-Prozessen</h3><p>Durch Reverse-Engineering einer SQL-Datenbank wurde ein "blinder Fleck" im Ticket-System aufgedeckt, was zur Schliessung von über 70% der "verlorenen" Tickets führte.</p></div><a href="projekt-rueckversicherung.html" class="card-link">Details ansehen &rarr;</a></div>
+            <div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Effizienz</span></div><h3>Effizienzsteigerung im IT-Betrieb</h3><p>Ein proaktiver Hinweis auf eine Automatisierungsmöglichkeit führte zur Reduktion eines täglichen, manuellen Arbeitsaufwands von ca. 5 Personenstunden auf nur noch eine.</p></div><a href="projekt-logistik.html" class="card-link">Details ansehen &rarr;</a></div>
         </div>
     </div>
-
-    <section id="about" class="section">
-        <div class="container center-text">
-            <h2 class="section-title">Einzigartige Perspektive</h2>
-            <p style="max-width: 700px; margin: 0 auto;">Ich verbinde jahrzehntelange, praxiserprobte Erfahrung in der Lösung fundamentaler IT-Herausforderungen mit der strategischen Weitsicht eines Architekten und der zertifizierten Kompetenz in modernen Cloud-Technologien. Mein Ziel ist es, robuste, pragmatische und nachhaltige Lösungen für Ihre komplexesten Probleme zu schaffen.</p>
-            <p style="max-width: 700px; margin: 1rem auto 0 auto;">Diese einzigartige Kombination aus technischem Tiefgang und menschlicher Reife ermöglicht es mir, nicht nur Systeme zu verstehen, sondern auch die Menschen, die mit ihnen arbeiten.</p>
-            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
-        </div>
-    </section>
-
-    <section id="cases" class="section" style="background-color: #f9f9f9;">
-        <div class="container center-text">
-            <h2 class="section-title">Fallstudien: Aus der Praxis</h2>
-            <div class="card-container">
-
-                <div class="card">
-                    <span class="tag">Automatisierung</span>
-                    <h3>Revolution der Software-Entwicklung</h3>
-                    <p>In einem Gross-Projekt wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte und das Projekt vor Termin ins Ziel brachte.</p>
-                </div>
-                
-                <div class="card">
-                    <span class="tag">Risiko-Analyse</span>
-                    <h3>Automatisierte Impact-Analyse</h3>
-                    <p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p>
-                </div>
-
-                <div class="card">
-                    <span class="tag">Risiko-Management</span>
-                    <h3>Vorausschauendes Dependency-Management</h3>
-                    <p>Eine frühzeitige Warnung vor instabilen Software-Abhängigkeiten wurde ignoriert – mit der Folge eines viertägigen Stillstands für ein 10-köpfiges Entwicklerteam.</p>
-                </div>
-                
-                <div class="card">
-                    <span class="tag">KI-Validierung</span>
-                    <h3>Qualitätssicherung für KI-Systeme</h3>
-                    <p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p>
-                </div>
-
-                <div class="card">
-                    <span class="tag security">Sicherheitsanalyse</span>
-                    <h3>Das WordPress-Sicherheitsdilemma</h3>
-                    <p>Nach einem Totalverlust durch einen Hacker-Angriff deckte eine Tiefenanalyse eine fundamentale architektonische Schwachstelle in WordPress auf.</p>
-                </div>
-                
-                <div class="card">
-                    <span class="tag">Prozessoptimierung</span>
-                    <h3>Reporting-Framework für die Chemie-Industrie</h3>
-                    <p>Für einen kritischen Qualitätsnachweis wurde ein massgeschneidertes Framework in Excel/VBA entwickelt, das den gesamten Prozess von den Rohdaten bis zum finalen Report automatisierte.</p>
-                </div>
-                
-                <div class="card">
-                    <span class="tag">Daten-Transparenz</span>
-                    <h3>Optimierung von IT-Support-Prozessen</h3>
-                    <p>Durch Reverse-Engineering einer SQL-Datenbank wurde ein "blinder Fleck" im Ticket-System aufgedeckt, was zur Schliessung von über 70% der "verlorenen" Tickets führte.</p>
-                </div>
-
-                <div class="card">
-                    <span class="tag">Effizienz</span>
-                    <h3>Effizienzsteigerung im IT-Betrieb</h3>
-                    <p>Ein proaktiver Hinweis auf eine Automatisierungsmöglichkeit führte zur Reduktion eines täglichen, manuellen Arbeitsaufwands von ca. 5 Personenstunden auf nur noch eine.</p>
-                </div>
-                
-            </div>
-            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
-        </div>
-    </section>
-
-    <section id="competencies" class="section">
-        <div class="container center-text">
-            <h2 class="section-title">Kernkompetenzen</h2>
-            <div class="competencies">
-                <div class="competency">
-                    <h3>Prozessoptimierung & Automatisierung</h3>
-                    <p>Analyse und Heilung ineffizienter, manueller Arbeitsabläufe durch intelligente, massgeschneiderte Werkzeuge.</p>
-                </div>
-                <div class="competency">
-                    <h3>Software-Architektur & Risiko-Analyse</h3>
-                    <p>Bewertung komplexer Systemlandschaften zur Aufdeckung von versteckten Abhängigkeiten und architektonischen Schwachstellen.</p>
-                </div>
-                <div class="competency">
-                    <h3>Qualitätssicherung für KI & Black-Box-Systeme</h3>
-                    <p>Entwicklung von validen Messsystemen zur Überprüfung der Zuverlässigkeit und des Reifegrads von KI-Komponenten.</p>
-                </div>
-            </div>
-            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container center-text">
-            <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
-            <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
-            <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
-            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
-        </div>
-    </section>
-
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
-
 </body>
 </html>
