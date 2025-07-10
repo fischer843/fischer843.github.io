@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Über Mich | Jens Fischer</title>
     <style>
-        /* CSS-Stil, inspiriert von jens-fischer.ch */
+        /* Globaler Stil */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -20,128 +19,198 @@
             margin: 2rem auto;
             padding: 0 2rem;
         }
-        header, footer {
-            /* Platzhalter für Ihre bestehende Kopf- und Fusszeile */
+        a {
+            color: #007bff;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        .center-heading {
             text-align: center;
-            padding: 1rem 0;
-            background-color: #f0f0f0;
         }
-        h1, h2, h3 {
-            font-family: "Georgia", serif; /* Annahme für einen klassischen Look */
-            color: #1a1a1a;
-            line-height: 1.3;
-        }
-        h1 {
+        h1.page-title {
+            font-family: "Georgia", serif;
             font-size: 2.8rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             border-bottom: 3px solid #007bff;
             display: inline-block;
             padding-bottom: 0.5rem;
         }
         h2 {
+            font-family: "Georgia", serif;
             font-size: 1.8rem;
             color: #0056b3;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 0.5rem;
             margin-top: 2.5rem;
         }
-        p {
+        p, ul {
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
-        .center-heading {
-             text-align: center;
+
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .highlight {
-            background-color: #eaf4ff;
-            padding: 2px 6px;
-            border-radius: 4px;
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 70px;
         }
-        blockquote {
-            border-left: 5px solid #007bff;
-            margin: 2rem 0;
-            padding: 1rem 2rem;
+        .logo a {
+            font-family: "Georgia", serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        
+        /* === NEU: Optimierte "Über Mich" Stile === */
+        .intro-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .profile-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .intro-text h2 {
+            margin-top: 0;
+            border-top: none;
+        }
+        
+        .philosophy-box {
             background-color: #f7f7f7;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #555;
+            border-left: 5px solid #007bff;
+            padding: 1.5rem 2rem;
+            margin: 3rem 0;
+            border-radius: 5px;
         }
+        .philosophy-box h3 {
+            font-family: "Georgia", serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #1a1a1a;
+        }
+        .philosophy-box ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+        .philosophy-box li {
+            margin-bottom: 1rem;
+        }
+        .philosophy-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item { margin-bottom: 1.5rem; }
+        .education-item h3 { font-size: 1.3rem; color: #1a1a1a; border: none; margin-bottom: 0.25rem; }
+        .education-item p { margin-bottom: 0.5rem; font-size: 1rem; }
+        .education-logos { display: flex; gap: 1rem; align-items: center; }
+        .education-logos img { height: 40px; }
+
+        /* Footer */
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
     </style>
- <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header und Navigation -->
-        <nav class="container max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-3">
-                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
-            </div>
-            <div class="border-t border-gray-200">
-                <div class="hidden md:flex space-x-8 py-2">
-                    <a href="index.html" class="nav-link active">Startseite</a>
-                    <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600">KI-Geschichte</a>
-                    <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600">Computer-Geschichte</a>
-                    <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600">Gesellschaftliche Folgen</a>
-                    <a href="case-studies.html" class="nav-link text-gray-600 hover:text-teal-600">Fallstudien</a>
-                    <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600">Kontakt</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container">
-        <div class="center-heading">
-            <h1>Über Jens Fischer</h1>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html" class="active">Über Mich</a></li>
+                    <li><a href="case-studies.html">Fallstudien</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+    <div class="container">
+        <div class="center-heading"><h1 class="page-title">Über Mich</h1></div>
 
         <article>
-            <h2>Der Architekt und Problemlöser</h2>
-            <p>
-                Seit über zwei Jahrzehnten ist meine professionelle Leidenschaft das Herzstück komplexer IT-Systeme. Ich bin ein <strong>System-Denker</strong> und pragmatischer Architekt, der angetrieben wird von der Faszination, nicht nur zu sehen, *dass* etwas funktioniert oder nicht, sondern *warum*. Meine Karriere ist geprägt von Momenten, in denen ich festgefahrene Prozesse, "blinde Flecken" in der Datenanalyse oder fundamentale architektonische Schwachstellen identifiziert habe.
-            </p>
-            <p>
-                Meine Überzeugung war und ist es, dass man für echte Probleme selten eine Standardlösung findet. Das hat mich immer wieder dazu motiviert, die Grenzen von Werkzeugen auszuloten und bei Bedarf eigene, massgeschneiderte Lösungen zu entwickeln – von intelligenten Analyse-Frameworks bis hin zu ganzen Compilern, die Entwicklungsprozesse revolutionierten.
-            </p>
+            <section class="intro-section">
+                <img src="https://via.placeholder.com/200" alt="Porträt von Jens Fischer" class="profile-image">
+                <div class="intro-text">
+                    <h2>Der Architekt und Problemlöser</h2>
+                    <p>
+                        Seit über zwei Jahrzehnten ist meine professionelle Leidenschaft das Herzstück komplexer IT-Systeme. Ich bin ein <strong>System-Denker</strong> und pragmatischer Architekt, angetrieben von der Faszination, nicht nur zu sehen, *dass* etwas funktioniert oder nicht, sondern *warum*. 
+                    </p>
+                    <p>
+                        Meine Karriere ist geprägt von Momenten, in denen ich festgefahrene Prozesse, "blinde Flecken" in der Datenanalyse oder <a href="projekt-dependencymanagement.html">fundamentale architektonische Schwachstellen</a> identifiziert habe.
+                    </p>
+                </div>
+            </section>
 
-            <h2>Die bewusste Zäsur: Eine Lektion in Resilienz und Krisenmanagement</h2>
-            <p>
-                Nach vielen Jahren an vorderster Front der digitalen Transformation traf ich die bewusste Entscheidung, mich für eine Dekade voll und ganz einer anderen, sehr persönlichen und dringenden Herausforderung zu widmen: der intensiven Begleitung meines Sohnes durch eine schwere, durch Schulmobbing ausgelöste Krise.
-            </p>
-            <blockquote>
-                Diese Zeit war mein intensivstes und lehrreichstes "Projekt". Es ging um strategische Planung, Resilienz und die Fähigkeit, sich für die bestmögliche Lösung gegen alle Widerstände durchzusetzen.
-            </blockquote>
-            <p>
-                Die Aufgabe bestand nicht nur darin, meinem Sohn Halt zu geben. Es bedeutete auch, passende Bildungs- und Förderlösungen für seine Genesung zu finden und deren staatliche Finanzierung durchzusetzen. Um dies zu erreichen, musste ich mich tief in das komplexe **Schweizer Bildungsrecht einarbeiten** und unsere Ansprüche wie ein Anwalt vertreten. Diese Erfahrung hat meine Fähigkeiten in den Bereichen Krisenmanagement, strategische Interessenvertretung und unnachgiebiger Problemlösung auf eine Ebene gehoben, die das Berufsleben allein niemals hätte lehren können.
-            </p>
+            <div class="philosophy-box">
+                <h3>Meine Beratungs-Philosophie</h3>
+                <ul>
+                    <li><strong>Tiefgang statt Oberfläche:</strong> Ich gebe mich nicht mit der ersten Antwort zufrieden, sondern analysiere die grundlegende Architektur und die wahren Ursachen eines Problems.</li>
+                    <li><strong>Massgeschneiderte Werkzeuge statt Standard-Lösungen:</strong> Wo Standard-Software versagt, entwickle ich pragmatische und robuste Werkzeuge, die exakt auf Ihre Herausforderung zugeschnitten sind.</li>
+                    <li><strong>Integrität und Partnerschaft:</strong> Meine Arbeit basiert auf absoluter Transparenz, Vertrauen und dem gemeinsamen Ziel, die bestmögliche, nachhaltige Lösung für Ihr Unternehmen zu finden.</li>
+                </ul>
+            </div>
 
+            <h2>Die bewusste Zäsur: Eine Lektion in Resilienz</h2>
+            <p>
+                Nach vielen Jahren an vorderster Front der digitalen Transformation traf ich die bewusste Entscheidung, mich für 10 Jahre voll und ganz einer persönlichen und dringenden Herausforderung zu widmen: der Begleitung meines Sohnes durch eine schwere, durch Schulmobbing ausgelöste Krise.
+            </p>
+            <p>
+                Diese Zeit war mein intensivstes und lehrreichstes "Projekt". Um die notwendigen Bildungs- und Förderlösungen für seine Genesung zu sichern, musste ich mich tief in das komplexe <strong>Schweizer Bildungsrecht einarbeiten</strong> und unsere Ansprüche wie ein Anwalt vertreten. Diese Erfahrung hat meine Fähigkeiten in den Bereichen Krisenmanagement und strategische Interessenvertretung auf eine Ebene gehoben, die das Berufsleben allein niemals hätte lehren können.
+            </p>
+            
             <h2>Die Brücke in die Gegenwart: Erfahrung trifft auf moderne Technologie</h2>
             <p>
-                Nachdem mein Sohn seinen Weg gefunden hat und stabil ist, habe ich diese gestärkte Resilienz wieder mit meiner technologischen Leidenschaft verbunden. Ich habe mein tiefes, über Jahrzehnte gewachsenes Verständnis für System-Architektur gezielt mit den modernsten Werkzeugen von heute verknüpft.
+                Nachdem mein Sohn seinen Weg gefunden hat, habe ich diese gestärkte Resilienz wieder mit meiner technologischen Leidenschaft verbunden. Ich habe mein tiefes, über Jahrzehnte gewachsenes Verständnis für System-Architektur – von der <a href="projekt-sparkasse.html">Revolutionierung von Entwicklungsprozessen</a> bis zur <a href="projekt-ki-qualitaet.html">Validierung von KI-Systemen</a> – gezielt mit den modernsten Werkzeugen von heute verknüpft.
             </p>
-            <p>
-                Durch intensive Weiterbildung und die offizielle **Zertifizierung im Bereich der Google Cloud Infrastruktur** habe ich die Brücke geschlagen. Heute kann ich meine Fähigkeit, fundamentale Probleme zu erkennen, mit der Kompetenz verbinden, sie mit den skalierbaren, sicheren und zukunftsfähigen Technologien der Cloud zu lösen.
-            </p>
-
-            <h2>Meine Philosophie</h2>
-            <p>
-                Ich glaube nicht an kurzlebige Hypes, sondern an robuste, durchdachte und nachhaltige Lösungen. Mein Wert für Sie als Kunde liegt in der einzigartigen Kombination aus:
-            </p>
-            <ul>
-                <li><strong>Jahrzehntelanger Erfahrung</strong> im Lösen fundamentaler IT-Probleme.</li>
-                <li><strong>Menschlicher Reife und Resilienz</strong>, geschmiedet in einer echten Lebenskrise.</li>
-                <li><strong>Nachweisbarer, aktueller Kompetenz</strong> in den Technologien, die die Zukunft gestalten.</li>
-            </ul>
-            <p>
-                Wenn Sie einen Partner suchen, der nicht nur über Technik spricht, sondern Ihre Herausforderung mit strategischem Weitblick, technischer Brillanz und menschlicher Integrität angeht, dann freue ich mich auf ein Gespräch mit Ihnen.
-            </p>
+            
+            <h2>Engagement für lebenslanges Lernen</h2>
+            <p>Um meine praktische Erfahrung mit formalen, anerkannten Methoden zu untermauern, setze ich auf kontinuierliche Weiterbildung in strategisch relevanten Bereichen:</p>
+            <div class="education-item">
+                <h3>1. Strategische KI-Kompetenz & Cloud-Architektur</h3>
+                <p>Ich verbinde meine Erfahrung in der Bewertung von KI-Systemen mit zertifizierter Kompetenz in modernen Cloud-Infrastrukturen, um Unternehmen bei der strategischen Planung und Risikobewertung zu beraten.</p>
+                <div class="education-logos">
+                    <img src="https://via.placeholder.com/150x40?text=Google+Cloud+Logo" alt="Google Cloud Zertifizierung">
+                    <img src="https://via.placeholder.com/150x40?text=DeepLearning.AI+Logo" alt="DeepLearning.AI">
+                </div>
+            </div>
+            <div class="education-item">
+                <h3>2. Prozessoptimierung 2.0 (Process Mining)</h3>
+                <p>Ich ergänze meine intuitive Fähigkeit zur Aufdeckung von Prozess-Ineffizienzen mit den modernen, datenbasierten Methoden des Process Mining zur objektiven Analyse von Geschäftsabläufen.</p>
+                <div class="education-logos">
+                     <img src="https://via.placeholder.com/150x40?text=Coursera+Partner+Logo" alt="Process Mining Zertifizierung">
+                </div>
+            </div>
         </article>
     </div>
-
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
-
 </body>
 </html>
