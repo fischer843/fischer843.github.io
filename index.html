@@ -6,6 +6,9 @@
     <title>Jens Fischer | Boutique-Beratung für Prozessoptimierung & Digitale Transformation</title>
     <style>
         /* Globaler Stil */
+        html {
+            scroll-behavior: smooth; /* Sorgt für sanftes Scrollen bei Klick auf die Ankerlinks */
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -32,7 +35,53 @@
             text-align: center;
         }
 
-        /* Header / Hero-Bereich */
+        /* === NEU: Navigation & Header Stile === */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 70px;
+        }
+        .logo a {
+            font-family: "Georgia", serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        nav a:hover {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+
+        /* Hero-Bereich */
         .hero {
             background-color: #f0f0f0;
             padding: 4rem 2rem;
@@ -59,7 +108,7 @@
         
         /* Allgemeine Sektions-Stile */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0; /* Etwas mehr Abstand für die Sprungmarken */
         }
         .section-title {
             font-family: "Georgia", serif;
@@ -140,28 +189,28 @@
         }
 
         /* Call-to-Action am Ende */
-        .final-cta {
+        #contact { /* ID für den Sprunglink */
             background-color: #0056b3;
             color: #fff;
             padding: 4rem 2rem;
             text-align: center;
         }
-        .final-cta h2 {
+        #contact h2 {
             font-family: "Georgia", serif;
             font-size: 2.5rem;
             color: #fff;
             margin-top: 0;
         }
-        .final-cta p {
+        #contact p {
             max-width: 600px;
             margin: 1rem auto;
             font-size: 1.1rem;
         }
-        .final-cta .button-link {
+        #contact .button-link {
              background-color: #fff;
              color: #0056b3;
         }
-         .final-cta .button-link:hover {
+         #contact .button-link:hover {
               background-color: #e0e0e0;
          }
 
@@ -173,9 +222,30 @@
             font-size: 0.9rem;
             color: #666;
         }
+        
+        /* === NEU: "Nach oben"-Link Stil === */
+        .back-to-top {
+            display: block;
+            text-align: right;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
     </style>
 </head>
-<body>
+<body id="top"> <header>
+        <div class="nav-container">
+            <div class="logo"><a href="#top">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Über Mich</a></li>
+                    <li><a href="#cases">Fallstudien</a></li>
+                    <li><a href="#competencies">Kompetenzen</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="hero">
         <div class="container">
@@ -185,15 +255,16 @@
         </div>
     </div>
 
-    <section id="about-teaser" class="section">
+    <section id="about" class="section">
         <div class="container center-text">
             <h2 class="section-title">Einzigartige Perspektive</h2>
             <p style="max-width: 700px; margin: 0 auto;">Ich verbinde jahrzehntelange, praxiserprobte Erfahrung in der Lösung fundamentaler IT-Herausforderungen mit der strategischen Weitsicht eines Architekten und der zertifizierten Kompetenz in modernen Cloud-Technologien. Mein Ziel ist es, robuste, pragmatische und nachhaltige Lösungen für Ihre komplexesten Probleme zu schaffen.</p>
-            <a href="ueber-mich.html" class="button-link">Meine Geschichte & Philosophie</a>
+            <p style="max-width: 700px; margin: 1rem auto 0 auto;">Diese einzigartige Kombination aus technischem Tiefgang und menschlicher Reife ermöglicht es mir, nicht nur Systeme zu verstehen, sondern auch die Menschen, die mit ihnen arbeiten.</p>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
-    <section id="cases-teaser" class="section" style="background-color: #f9f9f9;">
+    <section id="cases" class="section" style="background-color: #f9f9f9;">
         <div class="container center-text">
             <h2 class="section-title">Ausgewählte Fallstudien</h2>
             <div class="card-container">
@@ -213,7 +284,7 @@
                     <p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p>
                 </div>
             </div>
-            <a href="case-studies.html" class="button-link">Alle Fallstudien ansehen</a>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
@@ -234,14 +305,18 @@
                     <p>Entwicklung von validen Messsystemen zur Überprüfung der Zuverlässigkeit und des Reifegrads von KI-Komponenten.</p>
                 </div>
             </div>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
-    <div class="final-cta">
-        <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
-        <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
-        <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
-    </div>
+    <section id="contact" class="section">
+        <div class="container center-text">
+            <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
+            <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
+            <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
