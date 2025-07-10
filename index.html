@@ -6,6 +6,9 @@
     <title>Jens Fischer | Boutique-Beratung für Prozessoptimierung & Digitale Transformation</title>
     <style>
         /* Globaler Stil */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -105,7 +108,7 @@
         
         /* Allgemeine Sektions-Stile */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0; /* Mehr Abstand für die Sprungmarken */
         }
         .section-title {
             font-family: "Georgia", serif;
@@ -179,44 +182,45 @@
             font-weight: 500;
         }
         
-        /* Kernkompetenzen */
-        .competencies {
+        /* Neuer "Mein Ansatz" Abschnitt */
+        .approach-items {
              display: flex;
              justify-content: space-around;
              flex-wrap: wrap;
              gap: 2rem;
              text-align: center;
         }
-        .competency {
+        .approach-item {
              flex-basis: 300px;
         }
-        .competency h3 {
+        .approach-item h3 {
              font-size: 1.4rem;
+             color: #1a1a1a;
         }
 
         /* Call-to-Action am Ende */
-        .final-cta {
+        #contact { /* ID für den Sprunglink */
             background-color: #0056b3;
             color: #fff;
             padding: 4rem 2rem;
             text-align: center;
         }
-        .final-cta h2 {
+        #contact h2 {
             font-family: "Georgia", serif;
             font-size: 2.5rem;
             color: #fff;
             margin-top: 0;
         }
-        .final-cta p {
+        #contact p {
             max-width: 600px;
             margin: 1rem auto;
             font-size: 1.1rem;
         }
-        .final-cta .button-link {
+        #contact .button-link {
              background-color: #fff;
              color: #0056b3;
         }
-         .final-cta .button-link:hover {
+         #contact .button-link:hover {
               background-color: #e0e0e0;
          }
 
@@ -228,19 +232,26 @@
             font-size: 0.9rem;
             color: #666;
         }
+        
+        /* "Nach oben"-Link Stil */
+        .back-to-top {
+            display: block;
+            text-align: right;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
     </style>
 </head>
-<body>
-
-    <header>
+<body id="top"> <header>
         <div class="nav-container">
-            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <div class="logo"><a href="#top">Jens Fischer</a></div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="ueber-mich.html">Über Mich</a></li>
-                    <li><a href="case-studies.html">Fallstudien</a></li>
-                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                    <li><a href="#about">Über Mich</a></li>
+                    <li><a href="#cases">Fallstudien</a></li>
+                    <li><a href="#approach">Mein Ansatz</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -254,17 +265,18 @@
         </div>
     </div>
 
-    <section id="about-teaser" class="section">
+    <section id="about" class="section">
         <div class="container center-text">
             <h2 class="section-title">Perspektive mit Tiefgang</h2>
             <p style="max-width: 700px; margin: 0 auto;">
                 Mein Ansatz ist einzigartig, denn er basiert nicht nur auf moderner, zertifizierter Technologie-Kompetenz. Er ist tief verwurzelt in meinem Verständnis für die <strong>gesamte Geschichte der digitalen Revolution und der künstlichen Intelligenz</strong>. Diese historische Perspektive erlaubt es mir, den aktuellen Hype von nachhaltigem Wert zu trennen und Ihnen zu helfen, die richtigen strategischen Entscheidungen zu treffen.
             </p>
             <a href="ueber-mich.html" class="button-link">Meine Geschichte & Philosophie</a>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
-    <section id="cases-teaser" class="section" style="background-color: #f9f9f9;">
+    <section id="cases" class="section" style="background-color: #f9f9f9;">
         <div class="container center-text">
             <h2 class="section-title">Ausgewählte Fallstudien</h2>
             <div class="card-container">
@@ -291,34 +303,39 @@
                 </a>
             </div>
             <a href="case-studies.html" class="button-link">Alle Fallstudien ansehen</a>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
-    <section id="competencies" class="section">
+    <section id="approach" class="section">
         <div class="container center-text">
-            <h2 class="section-title">Kernkompetenzen</h2>
-            <div class="competencies">
-                <div class="competency">
-                    <h3>Prozessoptimierung & Automatisierung</h3>
-                    <p>Analyse und Heilung ineffizienter, manueller Arbeitsabläufe durch intelligente, massgeschneiderte Werkzeuge.</p>
+            <h2 class="section-title">Mein Ansatz: Wie ich Probleme löse</h2>
+            <div class="approach-items">
+                <div class="approach-item">
+                    <h3>Evidenz statt Meinung</h3>
+                    <p>Ich beende fruchtlose Debatten, indem ich die notwendigen Daten schaffe. Meine Lösungen basieren auf Fakten und Analyse, nicht auf Vermutungen oder Autorität.</p>
                 </div>
-                <div class="competency">
-                    <h3>Software-Architektur & Risiko-Analyse</h3>
-                    <p>Bewertung komplexer Systemlandschaften zur Aufdeckung von versteckten Abhängigkeiten und architektonischen Schwachstellen.</p>
+                <div class="approach-item">
+                    <h3>Werkzeuge statt Worte</h3>
+                    <p>Für komplexe Probleme baue ich das passende Werkzeug. Ein funktionierender Prototyp oder eine klare Analyse-Matrix ist überzeugender als jede PowerPoint-Präsentation.</p>
                 </div>
-                <div class="competency">
-                    <h3>Qualitätssicherung für KI & Black-Box-Systeme</h3>
-                    <p>Entwicklung von validen Messsystemen zur Überprüfung der Zuverlässigkeit und des Reifegrads von KI-Komponenten.</p>
+                <div class="approach-item">
+                    <h3>System statt Symptom</h3>
+                    <p>Ich repariere keine oberflächlichen Symptome. Ich tauche tief in die Architektur Ihrer Prozesse und Systeme ein, um die wahre Ursache zu finden und eine nachhaltige, stabile Lösung zu schaffen.</p>
                 </div>
             </div>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
         </div>
     </section>
 
-    <div class="final-cta">
-        <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
-        <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
-        <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
-    </div>
+    <section id="contact" class="section">
+        <div class="container center-text">
+            <h2>Bereit, Ihre komplexesten Probleme zu lösen?</h2>
+            <p>Wenn auch Sie vor einer Herausforderung stehen, für die eine Standard-Lösung nicht ausreicht, lassen Sie uns sprechen. Gemeinsam finden wir eine pragmatische, robuste und nachhaltige Lösung.</p>
+            <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            <a href="#top" class="back-to-top">Nach oben &uarr;</a>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
