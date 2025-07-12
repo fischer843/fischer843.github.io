@@ -33,36 +33,10 @@
         .project-meta li { margin-bottom: 0.5rem; }
         .project-meta strong { display: inline-block; width: 140px; }
         
-        /* === NEU: Call-to-Action Stil === */
-        .call-to-action {
-            background-color: #eaf4ff;
-            border: 1px solid #b8d9f7;
-            padding: 1.5rem 2rem;
-            margin-top: 3rem;
-            text-align: center;
-            border-radius: 5px;
-        }
-        .call-to-action h2 {
-            border-bottom: none;
-            margin-top: 0;
-            font-size: 1.6rem;
-        }
-        .button-link {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.8rem 1.8rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-        }
-        .button-link:hover {
-            background-color: #0056b3;
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
     </style>
 </head>
 <body>
@@ -96,9 +70,9 @@
                 </ul>
             </div>
 
-            <h2>Die Ausgangslage: Unerklärliche Systemausfälle</h2>
+            <h2>Die Ausgangslage: Ein politisches "Problemkind"</h2>
             <p>
-                Im Second-Level Support wurden wir mit einer Welle von Systemausfällen konfrontiert. Diverse, scheinbar unzusammenhängende Anwendungen fielen aus. Meine Kollegen konzentrierten sich auf die Symptome und versuchten, die einzelnen Dienste neu zu starten, doch die wahre Ursache blieb im Dunkeln.
+                Eine in England entwickelte, geschäftskritische Anwendung sorgte dort für massive Probleme im produktiven Einsatz. Anstatt die Ursache zu beheben, wurde die Verantwortung **politisch geschickt in die Schweiz verlagert**, ohne die wahren technischen Gründe für die Instabilität offenzulegen. Wie zu erwarten war, verursachte die Applikation auch in der Schweiz im geteilten Server-Umfeld massive, wiederkehrende Ausfälle.
             </p>
 
             <h2>Meine Intervention: Vom technischen Analysten zum strategischen Akteur</h2>
@@ -114,18 +88,18 @@
                 Meine mehrtägige, akribische Analyse brachte klare Muster zutage. Ich fasste die komplexen Ergebnisse in einem detaillierten Bericht zusammen und präsentierte sie einem hochrangigen Manager. Er erkannte sofort die Tragweite, aber auch, dass der Bericht zu detailliert für das Top-Management war. Seine Bitte: "Dampfen Sie das auf eine einzige PowerPoint-Folie ein."
             </p>
             <p>
-                Mit dieser einen, schlagkräftigen Folie bewaffnet, ging ich in die nächste Sitzung mit allen Beteiligten, inklusive des CIO. Hier spielte ich meinen letzten Trumpf aus, der auf meiner langjährigen Erfahrung als Java-Entwickler basierte. Ich stellte ein Ultimatum:
+                Mit dieser einen, schlagkräftigen Folie bewaffnet, ging ich in die nächste Sitzung mit allen Beteiligten, inklusive des CIO. Hier spielte ich meinen letzten Trumpf aus, der auf meiner langjährigen Erfahrung als Java-Entwickler basierte. Ich stellte ein Ultimatum.
+            </p>
+            
+            <h2>Das Ergebnis: Wahrheit, Deeskalation und die Rückkehr der Verantwortung</h2>
+            <p>
+                Der strategische Druck wirkte. Etwa eine Woche später verkündete das verantwortliche Team, man habe den Fehler gefunden: Eine veraltete, nicht für den parallelen Betrieb geeignete Bibliothek war die Ursache – genau das Szenario, das meine Logfile-Analyse nahegelegt hatte.
             </p>
             <p>
-                <strong>"Wenn Sie den Root-Cause mithilfe meiner Analyse nicht innerhalb von 14 Tagen finden, verlange ich die Herausgabe des gesamten Source-Codes. Dann werde ich ihn selbst analysieren – und ich garantiere Ihnen, ich werde unangenehme Dinge finden. Wenn Sie den Fehler jedoch selbst finden, müssen Sie im Gremium nur den Erfolg melden, nicht die peinlichen Details."</strong>
-            </p>
-
-            <h2>Das Ergebnis: Wahrheit und Deeskalation</h2>
-            <p>
-                Der strategische Druck wirkte. Etwa eine Woche später verkündete das verantwortliche Team, man habe den Fehler gefunden: Eine veraltete, nicht für den parallelen Betrieb geeignete Bibliothek war die Ursache – genau das Szenario, das meine Logfile-Analyse nahegelegt hatte. Die Eskalation war beendet.
+                Nachdem die wahre Ursache – ein fundamentaler Designfehler des englischen Teams – auf dem Tisch lag, wollte in der Schweiz niemand mehr die Verantwortung für die fehlerhafte Applikation tragen. In einer finalen politischen Rochade wurde die Anwendung **dorthin zurückverlagert, wo sie entstanden war: nach England.** Die Eskalation war beendet.
             </p>
             <p>
-                Diese Fallstudie ist ein Paradebeispiel dafür, dass man zur Lösung kritischer Probleme nicht immer den Source-Code braucht, sondern vor allem ein tiefes Systemverständnis. Sie unterstreicht meine Fähigkeit, **allein durch die forensische Analyse von Log-Daten fundamentale Architekturfehler aufzudecken** und durch strategisches Handeln eine Lösung herbeizuführen, selbst wenn alle anderen im Dunkeln tappen.
+                Diese Fallstudie zeigt, wie technische Probleme oft von organisatorischem und politischem 'Nebel' umgeben sind. Sie beweist meine Fähigkeit, diesen Nebel mit forensischer Analyse zu durchdringen, die Wahrheit ans Licht zu bringen und dadurch eine **klare Verantwortlichkeit wiederherzustellen** – selbst wenn das bedeutet, unpopuläre Entscheidungen zu treffen.
             </p>
 
             <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
