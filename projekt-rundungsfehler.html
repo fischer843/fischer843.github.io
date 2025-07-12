@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Der fatale Rundungsfehler | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        .page-title { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; border-bottom: 3px solid #c82333; display: inline-block; padding-bottom: 0.5rem; }
+        .center-heading { text-align: center; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+
+        /* Fallstudien-spezifische Stile */
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #c82333; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Der fatale Rundungsfehler – Wie eine unbemerkte Änderung von Microsoft Bilanzsummen gefährdete</h1>
+            <p>Eine Geschichte über die forensische Detektivarbeit, die nötig war, um eine versteckte Änderung in einer Microsoft-Bibliothek aufzudecken und den Software-Giganten zu einer kundenspezifischen Lösung zu zwingen.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> IT-Dienstleister (Rechenzentrum für Steuerberater)</li>
+                    <li><strong>Technologie:</strong> Microsoft .NET-Framework, MSDN</li>
+                    <li><strong>Herausforderung:</strong> Unerklärliche, falsche Bilanzsummen in einer neuen Software-Version, deren Ursache für die Entwickler nicht auffindbar war.</li>
+                    <li><strong>Meine Rolle:</strong> Third-Level-Support-Experte mit forensischem Recherche-Auftrag.</li>
+                    <li><strong>Ergebnis:</strong> Identifizierung einer undokumentierten Änderung im Rundungsverhalten, erfolgreiche Eskalation und Erzwingung einer Sonderversion von Microsoft zur Sicherstellung der Finanzdaten-Integrität.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Falsche Bilanzen aus dem Nichts</h2>
+            <p>
+                Die Entwicklungsabteilung stand vor einem Rätsel: Beim Test einer neuen Software-Version stimmten die berechneten Bilanzsummen plötzlich nicht mehr. Das Problem war kritisch, da die Software für Steuerberater im Einsatz war, wo absolute Genauigkeit unerlässlich ist. Die Entwickler waren ratlos, da sie nachweislich keine Änderungen am Berechnungs-Code vorgenommen hatten.
+            </p>
+
+            <h2>Meine Analyse: Detektivarbeit in der Microsoft-Dokumentation</h2>
+            <p>
+                Meine Aufgabe war es, in der Microsoft Developer Network (MSDN) nach möglichen Ursachen zu forschen. Nach intensiver Recherche stiess ich auf einen unscheinbaren, als "Bug-Report" getarnten Artikel. Darin wurde eine fundamentale Änderung in einer zentralen mathematischen Bibliothek beschrieben: Microsoft hatte das **kaufmännische Runden** (bis 4 abrunden, ab 5 aufrunden) durch das **symmetrische Runden** (gerade Zahlen abrunden, ungerade aufrunden) ersetzt.
+            </p>
+            <p>
+                Der Fehler im Rechenzentrum lag darin, dass nicht erst das Endergebnis, sondern bereits die Zwischenergebnisse gerundet und mit diesen weitergerechnet wurde. Durch die Änderung im Rundungsverfahren von Microsoft kumulierten sich über tausende von Berechnungen winzige Abweichungen zu einer signifikant falschen Bilanzsumme.
+            </p>
+            
+            <h2>Die Konfrontation und Eskalation</h2>
+            <p>
+                Ich konfrontierte den Key Account Manager von Microsoft mit meinen Erkenntnissen und den potenziell katastrophalen Folgen für die Kunden des Rechenzentrums. Die erste Reaktion seitens Microsoft war von fehlender Einsicht geprägt, da die Änderung als technische "Verbesserung" angesehen wurde.
+            </p>
+            <p>
+                Da eine einfache Lösung nicht in Sicht war, initiierte ich einen offiziellen Eskalationsprozess innerhalb des Rechenzentrums. Ich legte dar, welche finanziellen und rechtlichen Konsequenzen drohten, wenn Tausende von Bilanzen auf Basis eines fehlerhaften Rundungsverfahrens erstellt würden.
+            </p>
+
+            <h2>Das Ergebnis: Eine Sonderlösung von Microsoft</h2>
+            <p>
+                Der Druck durch die formale Eskalation und die klare Aufarbeitung der kommerziellen Risiken zeigte Wirkung. Nach zähen Verhandlungen lenkte Microsoft ein und traf eine aussergewöhnliche Entscheidung: Sie erstellten eine **spezielle Version der Bibliothek exklusiv für das Rechenzentrum**, in der das ursprüngliche Rundungsverhalten wiederhergestellt war.
+            </p>
+            <p>
+                Dieser Fall beweist, wie entscheidend es ist, nicht nur den eigenen Code zu kennen, sondern auch die verborgenen Abhängigkeiten und das Verhalten der zugrundeliegenden Plattformen bis ins kleinste Detail zu verstehen. Es zeigt meine Fähigkeit, technische Details mit ihren geschäftlichen Auswirkungen zu verknüpfen und die Interessen eines Unternehmens selbst gegenüber einem Weltkonzern erfolgreich durchzusetzen.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Versteckt sich auch in Ihren Systemen ein teurer Fehler?</h2>
+                <p>Manchmal sind es die kleinsten, unscheinbarsten Änderungen, die die grössten Probleme verursachen. Wenn Sie einen Partner suchen, der mit forensischer Gründlichkeit nach der wahren Ursache sucht, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+</body>
+</html>
