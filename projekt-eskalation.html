@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Eskalation auf CIO-Ebene | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        .page-title { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; border-bottom: 3px solid #c82333; display: inline-block; padding-bottom: 0.5rem; }
+        .center-heading { text-align: center; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+
+        /* Fallstudien-spezifische Stile */
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #c82333; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Die Eskalation auf CIO-Ebene – Wie man eine politische Krise mit technischer Expertise löst</h1>
+            <p>Eine Geschichte darüber, wie man als externer Spezialist in einen eskalierenden, internationalen Konflikt hineingezogen wird und durch forensische Analyse und strategisches Handeln die Wahrheit aufdeckt.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Internationales Banking</li>
+                    <li><strong>Herausforderung:</strong> Eine politisch heikle, instabile Anwendung, die auf Top-Management-Ebene eskaliert war.</li>
+                    <li><strong>Meine Rolle:</strong> Als "letzte Hoffnung" vom Incident-Management angeforderter Spezialist zur Deeskalation.</li>
+                    <li><strong>Methode:</strong> Forensische Offline-Logfile-Analyse, Management-Kommunikation, strategische Verhandlungsführung.</li>
+                    <li><strong>Ergebnis:</strong> Aufdeckung des fundamentalen Designfehlers, Beendigung der politischen Eskalation und Wiederherstellung der Reputation des Schweizer Teams.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Ein politisches "Problemkind"</h2>
+            <p>
+                Eine Java-basierte Anwendung, die ursprünglich in England entwickelt wurde, sorgte dort für massive Probleme im produktiven Einsatz. Aus politischen Gründen wurde die Anwendung in die Schweiz verschoben, ohne die wahren technischen Gründe für die Instabilität zu kommunizieren. Wie zu erwarten war, verursachte die Applikation auch in der Schweiz im geteilten Server-Umfeld massive, wiederkehrende Ausfälle.
+            </p>
+            <p>
+                Anstatt die Ursache zu suchen, wurde versucht, das Problem durch das Hinzufügen weiterer Server zu lösen – was die Lage nur verschlimmerte. Die Situation eskalierte bis zum CIO, da die englische Seite behauptete, das Schweizer Team bekäme das Problem nicht in den Griff.
+            </p>
+
+            <h2>Meine Intervention: Vom technischen Analysten zum strategischen Akteur</h2>
+            <p>
+                In dieser hochgradig politisierten Situation wurde ich auf ausdrücklichen Wunsch des leitenden Incident-Managers, der meine Fähigkeiten aus anderen Krisen kannte, zu dem Fall hinzugezogen – obwohl ich die Anwendung nicht kannte. Er forderte mich bei meinem Vorgesetzten mit den Worten an: "Ich brauche Fischer."
+            </p>
+            <p>
+                Nach den ersten Sitzungen erkannte ich, dass das Problem weniger technisch als vielmehr politisch festgefahren war. Ich traf eine unkonventionelle Entscheidung: Ich zog sämtliche Log-Files aller beteiligten Server auf meine lokale Arbeitsstation und begann eine mehrtägige, akribische Offline-Analyse, um Muster und Gemeinsamkeiten zu finden, die im Live-Betrieb unsichtbar blieben.
+            </p>
+            
+            <h2>Der Durchbruch: Die eine Folie und der letzte Trumpf</h2>
+            <p>
+                Meine Analyse brachte klare Muster zutage und ich fasste die Ergebnisse in einem detaillierten, seitenlangen Bericht zusammen. Diesen legte ich einem Manager drei Stufen über mir vor. Er erkannte sofort die Tragweite, aber auch, dass ein solcher Bericht in dieser Form niemals beim CIO ankommen würde. Seine Bitte: "Dampfen Sie das auf eine einzige PowerPoint-Folie ein."
+            </p>
+            <p>
+                Mit dieser einen, schlagkräftigen Folie bewaffnet, ging ich in die nächste Sitzung mit allen Beteiligten, inklusive des CIO. Hier spielte ich meinen letzten Trumpf aus, der auf meiner langjährigen Erfahrung als Java-Entwickler basierte. Ich stellte ein Ultimatum:
+            </p>
+            <p>
+                <strong>"Wenn Sie den Root-Cause mithilfe meiner Analyse nicht innerhalb von 14 Tagen finden, verlange ich die Herausgabe des gesamten Source-Codes. Dann werde ich ihn selbst analysieren – und ich garantiere Ihnen, ich werde unangenehme Dinge finden. Wenn Sie den Fehler jedoch selbst finden, müssen Sie im Gremium nur den Erfolg melden, nicht die peinlichen Details."</strong>
+            </p>
+
+            <h2>Das Ergebnis: Wahrheit und Deeskalation</h2>
+            <p>
+                Der strategische Druck wirkte. Etwa eine Woche später verkündete das englische Team im selben Gremium, man habe den Fehler gefunden: Eine veraltete, nicht für den parallelen Betrieb geeignete Bibliothek war die Ursache – genau das Szenario, das meine Logfile-Analyse nahegelegt hatte. Kurz darauf wurde die Anwendung stillschweigend nach England zurückportiert.
+            </p>
+            <p>
+                Mein direkter Vorgesetzter war zwar über mein forsches Vorgehen nicht erfreut, aber das Ergebnis sprach für sich. Diese Fallstudie zeigt, dass zur Lösung kritischer Probleme oft mehr gehört als nur technisches Wissen: Es braucht forensische Tiefe, die Fähigkeit zur radikalen Vereinfachung für das Management und den Mut, seine Expertise als strategisches Druckmittel zur richtigen Zeit am richtigen Ort einzusetzen.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+</body>
+</html>
