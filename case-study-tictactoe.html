@@ -3,76 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fallstudie: Selbstlernendes Tic-Tac-Toe - Jens Fischer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-gray-100 text-gray-800">
+    <title>Fallstudie: Reinforcement Learning in den 80ern | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
 
-    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header -->
-        <div class="container max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-3">
-                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
-            </div>
-            <!-- Navigation -->
-            <nav class="border-t border-gray-200">
-                <div class="flex justify-between items-center py-2">
-                    <div class="hidden md:flex space-x-8">
-                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
-                        <a href="werdegang.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Mein Werdegang</a>
-                        <a href="case-studies.html" class="nav-link active">Fallstudien</a>
-                    </div>
-                </div>
+        /* Fallstudien-spezifische Stile */
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #6a1b9a; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
             </nav>
         </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Reinforcement Learning in den 80ern – Ein autodidaktisches Experiment</h1>
+            <p>Ein frühes Experiment aus meiner Schulzeit, das die Kernprinzipien des modernen Reinforcement Learning intuitiv vorwegnahm und die Macht lernender Systeme auf einfachster Hardware demonstrierte.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Zeitpunkt:</strong> Vor meiner formalen Berufsausbildung</li>
+                    <li><strong>Plattform:</strong> Atari 400XL (1,79 MHz CPU, 16 KB RAM)</li>
+                    <li><strong>Methode:</strong> Ein früher, intuitiver Ansatz des Reinforcement Learning durch Belohnung und Bestrafung von Spielzügen.</li>
+                    <li><strong>Ergebnis:</strong> Ein Programm, das durch Erfahrung lernte, seine Strategie verbesserte und nach einiger Zeit für einen menschlichen Spieler kaum noch zu besiegen war.</li>
+                </ul>
+            </div>
+
+            <h2>Die Herausforderung: Lernfähigkeit auf 16 Kilobyte – autodidaktisch</h2>
+            <p>
+                Auf einem Atari 400XL, einem Computer mit extrem begrenzten Ressourcen, sollte ein Tic-Tac-Toe-Programm entstehen. Die besondere Herausforderung: Zu dieser Zeit gab es noch kein etabliertes Schulfach "Informatik". Das gesamte Wissen musste **autodidaktisch aus Büchern und den wenigen verfügbaren Fachzeitschriften** erarbeitet werden. Ziel war es, ein Programm zu schaffen, das nicht nur nach festen Regeln spielt, sondern aus seinen eigenen Spielen **lernt** und mit der Zeit immer besser wird.
+            </p>
+
+            <h2>Meine Lösung: Ein lernender Algorithmus durch Belohnung und Bestrafung</h2>
+            <p>
+                Der von mir in BASIC entwickelte Ansatz basierte auf einem einfachen, aber effektiven Prinzip. Anstatt komplexe Spieltheorie zu implementieren, schuf ich ein System, das aus seinen Erfolgen und Misserfolgen lernte:
+            </p>
+            <ol>
+                <li><strong>Zustandsbewertung:</strong> Das Programm speicherte alle möglichen Spielbrett-Konstellationen und bewertete jeden möglichen Zug aus der aktuellen Position mit einem numerischen Wert ("Gewicht").</li>
+                <li><strong>Lernen nach dem Spiel:</strong> Nach jeder Partie wurde die Bewertungsmatrix angepasst.
+                    <ul>
+                        <li>Bei einem **Sieg** wurden die "Gewichte" aller Züge, die zu diesem Sieg führten, leicht erhöht (Belohnung).</li>
+                        <li>Bei einer **Niederlage** wurden die "Gewichte" der Züge, die zur Niederlage führten, deutlich verringert (Bestrafung).</li>
+                    </ul>
+                </li>
+                <li><strong>Strategische Entscheidung:</strong> Bei seinem nächsten Zug wählte der Computer immer den Zug mit dem höchsten "Gewicht" für die aktuelle Spielsituation.</li>
+            </ol>
+            
+            <h2>Das Ergebnis: Die intuitive Vorwegnahme von Reinforcement Learning</h2>
+            <p>
+                Nach Dutzenden von Spielen gegen einen menschlichen Gegner wurde das Programm immer stärker. Es begann, typische menschliche Fehler auszunutzen und wurde schliesslich fast unbesiegbar. Es hatte gelernt, welche Zugfolgen statistisch am wahrscheinlichsten zum Erfolg führen.
+            </p>
+            <p>
+                Dieses simple Prinzip der "Belohnung und Bestrafung" ist die konzeptionelle Grundlage dessen, was heute als **Reinforcement Learning** bekannt ist. Dieses frühe, autodidaktische Projekt beweist meine Fähigkeit, komplexe Konzepte auf ihre fundamentalen Prinzipien herunterzubrechen und auch mit den einfachsten Mitteln eine funktionierende, intelligente Lösung zu schaffen.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Suchen Sie nach dem Prinzip hinter dem Hype?</h2>
+                <p>Wenn Sie einen Partner suchen, der die fundamentalen Konzepte hinter den aktuellen Technologie-Buzzwords versteht, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
     </div>
 
-    <main class="container max-w-6xl mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
-            <div class="prose prose-lg max-w-none">
-                 <a href="case-studies.html" class="text-teal-600 font-semibold hover:underline">&larr; Zurück zu den Fallstudien</a>
-                <h1 class="text-5xl font-black text-gray-900 mt-4">Fallstudie: Selbstlernendes Tic-Tac-Toe auf dem Atari</h1>
-                <p class="text-xl text-gray-500 lead">Ein frühes Experiment aus den 1980er Jahren, das die Kernprinzipien des modernen Reinforcement Learning intuitiv vorwegnahm.</p>
-
-                <h2 class="mt-10 text-3xl font-bold">Die Herausforderung</h2>
-                <p>Auf einem Atari 400XL, einem Computer mit extrem begrenzten Ressourcen, sollte ein Tic-Tac-Toe-Programm entstehen, das nicht nur nach festen Regeln spielt, sondern aus seinen eigenen Spielen lernt und mit der Zeit immer besser wird.</p>
-
-                <h2 class="mt-10 text-3xl font-bold">Die Umsetzung: Intuitives Reinforcement Learning</h2>
-                <p>Der Ansatz war eine einfache, aber effektive Form des Lernens durch Erfahrung:</p>
-                <ol class="list-decimal list-inside space-y-4 mt-6">
-                    <li><strong>Regelwerk als Basis:</strong> Zuerst wurde das grundlegende Regelwerk von Tic-Tac-Toe implementiert. Das Programm wusste, welche Züge legal sind und wann ein Spiel gewonnen, verloren oder unentschieden ist.</li>
-                    <li><strong>Aufbau einer Datenbasis:</strong> Jeder mögliche Spielzug in jeder denkbaren Spielsituation wurde in einer Datenbasis gespeichert.</li>
-                    <li><strong>Lernen durch Gewichtung:</strong> Das war der entscheidende Schritt. Nach jedem abgeschlossenen Spiel wurden alle Züge, die zu diesem Ergebnis geführt haben, bewertet:
-                        <ul class="list-disc pl-5 mt-2 space-y-2">
-                            <li>Züge, die zu einem <strong>Sieg</strong> führten, erhielten einen positiven Wert (ihr "Gewicht" wurde erhöht).</li>
-                            <li>Züge, die zu einer <strong>Niederlage</strong> führten, erhielten einen negativen Wert (ihr "Gewicht" wurde gesenkt).</li>
-                        </ul>
-                    </li>
-                    <li><strong>Die Strategie:</strong> Bei seinem nächsten Zug wählte das Programm immer den legalen Zug mit dem höchsten erlernten Gewicht aus.</li>
-                </ol>
-
-                <h2 class="mt-16 text-3xl font-bold">Die Verbindung zur modernen KI</h2>
-                <p>Dieses einfache System ist im Grunde eine Vorform dessen, was DeepMind Jahrzehnte später mit **AlphaGo** und **AlphaZero** perfektionierte. Es demonstriert die Kernidee des **Reinforcement Learning durch Selbstspiel**:</p>
-                <ul class="list-disc pl-5 mt-4 space-y-2">
-                    <li>Das System benötigt kein menschliches Expertenwissen, sondern lernt ausschließlich aus den Ergebnissen seiner eigenen Aktionen.</li>
-                    <li>Es entwickelt eine "Value Function", also eine Bewertung für die Güte eines Zuges oder einer Spielsituation.</li>
-                    <li>Durch Tausende von Spielen (bei AlphaZero Milliarden) wird diese Bewertungsfunktion immer genauer und führt zu einer übermenschlichen Spielstärke.</li>
-                </ul>
-
-                <h2 class="mt-16 text-3xl font-bold">Fazit</h2>
-                <p>Dieses frühe Projekt zeigt, dass die fundamentalen Ideen der KI oft älter sind als die Technologie, um sie in großem Stil umzusetzen. Es unterstreicht, wie wichtig praktische Erfahrung und ein intuitives Verständnis für Lernprozesse sind, um die komplexen Systeme von heute zu verstehen und zu gestalten.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-white mt-16">
-        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
-            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
-
 </body>
 </html>
