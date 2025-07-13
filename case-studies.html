@@ -12,7 +12,14 @@
         .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
         .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
         .center-heading { text-align: center; }
-        .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        
+        /* === Kachel-Container mit CSS Grid für gleiche Höhen und Abstände === */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem; /* Dieser Wert steuert den Abstand horizontal UND vertikal */
+        }
+
         .card-link-wrapper { text-decoration: none; color: inherit; }
         .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; height: 100%; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
@@ -58,6 +65,8 @@
         </p>
         <div class="card-container">
 
+            <a href="projekt-schreibmaschinen.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Strategischer Vertrieb</span></div><h3>Der Verkauf des "Transformations-Werkzeugs"</h3><p>Wie ich als Azubi 150 'veraltete' Schreibmaschinen verkaufte, indem ich sie nicht als Produkt, sondern als Lösung für ein Change-Management-Problem positionierte.</p></div></div></a>
+            
             <a href="projekt-eskalation.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag critical">Krisenmanagement</span></div><h3>Eskalation auf CIO-Ebene</h3><p>Wie durch forensische Logfile-Analyse und strategisches Handeln ein hochpolitischer, internationaler Konflikt um eine instabile Anwendung gelöst wurde.</p></div></div></a>
             
             <a href="projekt-neukundengewinnung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Vertrauensverkauf</span></div><h3>Neukundengewinnung durch Expertise</h3><p>Wie ein zufälliges Telefongespräch eine festgefahrene Kundenbeziehung aufbrach und bewies, dass echte Hilfe die beste Verkaufsstrategie ist.</p></div></div></a>
@@ -83,7 +92,7 @@
             <a href="projekt-rueckversicherung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Daten-Transparenz</span></div><h3>Optimierung von IT-Support-Prozessen</h3><p>Durch Reverse-Engineering einer SQL-Datenbank wurde ein "blinder Fleck" im Ticket-System aufgedeckt, was zur Schliessung von über 70% der "verlorenen" Tickets führte.</p></div></div></a>
 
             <a href="projekt-logistik.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Effizienz</span></div><h3>Effizienzsteigerung im IT-Betrieb</h3><p>Ein proaktiver Hinweis auf eine Automatisierungsmöglichkeit führte zur Reduktion eines täglichen, manuellen Arbeitsaufwands von ca. 5 Personenstunden auf nur noch eine.</p></div></div></a>
-
+            
         </div>
     </div>
     <footer>
