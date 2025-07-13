@@ -33,6 +33,37 @@
         .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
         .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
         .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
+        
+        /* Kachel-Layout Stile */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive Grid */
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            max-width: 100%;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            text-align: left;
+            display: flex;       /* NEU */
+            flex-direction: column; /* NEU */
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #444;
+            flex-grow: 1; /* NEU: Sorgt dafür, dass der Textbereich wächst und der Button unten bleibt */
+        }
+
     </style>
 </head>
 <body>
@@ -60,47 +91,45 @@
 
             <h2>Fallbeispiel: Das Verschwinden des Schriftsetzers – Die DTP-Revolution</h2>
             <p>
-                Als Zeitzeuge habe ich eine der dramatischsten Transformationen der jüngeren Berufsgeschichte hautnah miterlebt: die Einführung des Desktop Publishing (DTP) in den späten 1980er und frühen 1990er Jahren.
-            </p>
-
-            <h3>Die Welt davor: Ein spezialisiertes und arbeitsteiliges Handwerk</h3>
-            <p>
-                Vor dem DTP war die Erstellung einer einfachen Broschüre ein hochkomplexer Prozess, der eine Kette von Spezialisten erforderte: den **Schriftsetzer**, den **Lithografen** und den Drucker. Jeder Schritt war ein eigenes Gewerk, das jahrelange Ausbildung erforderte.
-            </p>
-
-            <h3>Der Umbruch: Der Computer übernimmt die Kontrolle</h3>
-            <p>
-                Mit dem Aufkommen des Apple Macintosh und Software wie Aldus PageMaker konnte eine einzige Person am Bildschirm das tun, wofür man früher ein ganzes Team brauchte: Text setzen, Bilder layouten und eine druckfertige Vorlage erstellen.
-            </p>
-
-            <h3>Die Konsequenz: Ein Berufszweig erodiert</h3>
-            <p>
-                Die Auswirkungen waren brutal und schnell. Das über Jahrhunderte gewachsene Berufsbild des Schriftsetzers wurde innerhalb weniger Jahre praktisch ausgelöscht. Die hochspezialisierten Fähigkeiten waren von einem Tag auf den anderen wertlos geworden.
+                Als Zeitzeuge habe ich eine der dramatischsten Transformationen der jüngeren Berufsgeschichte hautnah miterlebt: die Einführung des Desktop Publishing (DTP). Vor dem DTP war die Erstellung einer Broschüre ein hochkomplexer Prozess, der eine Kette von Spezialisten erforderte. Mit dem Aufkommen des Apple Macintosh konnte eine einzige Person das tun, wofür man früher ein ganzes Team brauchte. Die Auswirkung war, dass das Berufsbild des Schriftsetzers innerhalb weniger Jahre praktisch ausgelöscht wurde.
             </p>
             
             <h2>Weitere Beispiele des Wandels</h2>
-            <p>Die DTP-Revolution war nur ein Vorbote. Unzählige weitere Berufe wurden durch die Digitalisierung fundamental verändert oder ersetzt:</p>
-
-            <h3>Die Sekretärin: Von der Schreibkraft zur Management-Assistenz</h3>
-            <p><strong>Früher:</strong> Stenografie, Schreibmaschine tippen, Akten physisch ablegen. <strong>Heute:</strong> Digitale Kalender- und Reisekoordination, Erstellung von Präsentationen, Online-Recherche, Funktion als Kommunikationsdrehscheibe. Die Rolle wurde von einer ausführenden zu einer organisatorischen und technischen.</p>
+            <p>Die DTP-Revolution war nur ein Vorbote. Unzählige weitere Berufe wurden durch die Digitalisierung fundamental verändert oder ihre Existenz in Frage gestellt:</p>
             
-            <h3>Der Bibliothekar: Vom Bücherwart zum Informations-Manager</h3>
-            <p><strong>Früher:</strong> Physische Bücher katalogisieren, Karteikarten verwalten. <strong>Heute:</strong> Digitale Datenbanken kuratieren, Nutzer in Informations- und Recherchekompetenz schulen, E-Journals und digitale Archive verwalten. Der Fokus verschob sich vom Objekt zum Datenstrom.</p>
-            
-            <h3>Das Reisebüro: Vom Ticket-Bucher zum Erlebnis-Kurator</h3>
-            <p><strong>Früher:</strong> Der exklusive Zugang zu Buchungssystemen wie Amadeus oder Galileo. <strong>Heute:</strong> Durch Online-Plattformen wie Expedia und Booking.com grösstenteils ersetzt. Der Beruf überlebt in der Nische der hochkomplexen, kuratierten Luxus- und Erlebnisreisen, die Algorithmen nicht abbilden können.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Die Sekretärin &rarr; Management-Assistenz</h3>
+                    <p><strong>Früher:</strong> Stenografie, Schreibmaschine, physische Aktenablage.<br><strong>Heute:</strong> Digitale Kalender- und Reisekoordination, Erstellung von Präsentationen, Online-Recherche, Funktion als Kommunikationsdrehscheibe.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Der Bibliothekar &rarr; Informations-Manager</h3>
+                    <p><strong>Früher:</strong> Physische Bücher und Karteikarten verwalten.<br><strong>Heute:</strong> Digitale Datenbanken kuratieren, Nutzer in Recherchekompetenz schulen, E-Journals und digitale Archive managen.</p>
+                </div>
 
-            <h3>Der Copy-Shop: Vom Vervielfältiger zum Kreativ-Dienstleister</h3>
-            <p><strong>Früher:</strong> Schwarz-Weiss-Kopien und Spiralbindungen. <strong>Heute:</strong> Durch leistungsfähige Heim- und Bürodrucker unter Druck geraten. Erfolgreiche Shops haben sich zu Kreativ-Hubs entwickelt mit Digitaldruck, Grossformat-Postern, Textildruck und Design-Dienstleistungen.</p>
+                <div class="card">
+                    <h3>Das Reisebüro &rarr; Erlebnis-Kurator</h3>
+                    <p><strong>Früher:</strong> Exklusiver Zugang zu Buchungssystemen.<br><strong>Heute:</strong> Durch Online-Plattformen grösstenteils ersetzt, Überleben in der Nische für hochkomplexe, kuratierte Luxusreisen.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Der Copy-Shop &rarr; Kreativ-Dienstleister</h3>
+                    <p><strong>Früher:</strong> Schwarz-Weiss-Kopien und Spiralbindungen.<br><strong>Heute:</strong> Transformation zu Kreativ-Hubs mit Digitaldruck, Grossformat-Postern, Textildruck und Design-Dienstleistungen.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Der Fahrradkurier &rarr; Gig-Economy-Fahrer</h3>
+                    <p><strong>Früher:</strong> Schneller Transport von physischen Dokumenten, Briefen und Filmrollen von Büro zu Büro.<br><strong>Heute:</strong> Durch E-Mail und digitale Datenübertragung fast überflüssig geworden; Wiedergeburt als App-gesteuerter Essens- und Warenlieferant.</p>
+                </div>
+            </div>
+
             <h2>Die Lektion für heute: Muster der Transformation im Zeitalter der KI</h2>
             <blockquote>
                 Die DTP-Revolution hat die **kreative Montage** automatisiert. Die aktuelle KI-Revolution automatisiert die **informative Synthese**. Das Muster der Disruption ist dasselbe.
             </blockquote>
             <p>
-                Die Geschichte dieser Berufe ist eine perfekte Blaupause für die Umwälzungen, die uns durch die künstliche Intelligenz heute bevorstehen. So wie damals der Grafiker die Arbeit des Setzers übernahm, könnten heute KI-Systeme die Routine-Arbeit von Textern, Programmierern oder Analysten übernehmen.
-            </p>
-            <p>
-                Zu verstehen, welche Fähigkeiten durch Technologie ersetzt werden und welche an Wert gewinnen – wie damals Kreativität und konzeptionelles Denken – ist die entscheidende Kompetenz, um sich und sein Unternehmen für die Zukunft richtig aufzustellen.
+                Die Geschichte dieser Berufe ist eine perfekte Blaupause für die Umwälzungen, die uns durch die künstliche Intelligenz heute bevorstehen. Zu verstehen, welche Fähigkeiten durch Technologie ersetzt werden und welche an Wert gewinnen, ist die entscheidende Kompetenz, um sich und sein Unternehmen für die Zukunft richtig aufzustellen.
             </p>
 
             <div class="call-to-action">
