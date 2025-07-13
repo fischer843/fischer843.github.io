@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Einblicke & Historischer Kontext | Jens Fischer</title>
+    <title>Einblicke & Analysen | Jens Fischer</title>
     <style>
-        /* (CSS bleibt unverändert) */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
         .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
         header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
         .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
-        .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
+        .page-intro { text-align: left; font-size: 1.1rem; max-width: 800px; margin: 2rem auto 3rem auto; color: #444; border-left: 4px solid #007bff; padding-left: 1.5rem; }
         .center-heading { text-align: center; }
         .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
-        .card-link-wrapper { text-decoration: none; color: inherit; }
+        .card-link-wrapper { text-decoration: none; color: inherit; display: block; height: 100%; }
         .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; height: 100%; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
         .card-content { flex-grow: 1; }
@@ -29,6 +29,11 @@
         nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
         nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
         footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+        
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .call-to-action h2 { font-family: "Georgia", serif; border-bottom: none; margin-top: 0; font-size: 1.6rem; color: #1a1a1a;}
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -48,22 +53,29 @@
     </header>
     <div class="container">
         <div class="center-heading">
-            <h1 class="page-title">Historischer Kontext & Einblicke</h1>
+            <h1 class="page-title">Einblicke & Analysen</h1>
         </div>
         <p class="page-intro">
-            Um die technologischen Revolutionen von heute zu meistern, ist ein tiefes Verständnis ihrer Geschichte unerlässlich. Die folgenden Artikel bieten Einblicke und Analysen zur Entwicklung der digitalen Welt und ihren Auswirkungen auf unsere Gesellschaft.
+            Die digitale Revolution ist kein einzelnes Ereignis, sondern das Ergebnis einer ständigen **Wechselwirkung fundamentaler Kräfte**. Die **Hardware-Evolution** schafft die physische Grundlage, die **Software und Logik der KI** verleiht den Maschinen Intelligenz, und beides zusammen führt zu tiefgreifenden **gesellschaftlichen Transformationen**. Die folgenden Artikel bieten Ihnen einen tiefen Einblick in diese Themen.
         </p>
         <div class="card-container">
+
+            <a href="analyse-computer-oekosystem.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Deep Dive</span></div><h3>Das Computer-Ökosystem</h3><p>Eine umfassende Analyse der evolutionären Schritte vom Laptop zum Smartphone und die Muster, die unsere technologische Zukunft prägen.</p></div></div></a>
 
             <a href="history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">KI-Kontext</span></div><h3>Die Geschichte der Künstlichen Intelligenz</h3><p>Eine Reise durch die "Sommer" und "Winter" der KI-Forschung, um die Fähigkeiten und Grenzen heutiger Modelle realistisch einschätzen zu können.</p></div></div></a>
 
             <a href="computer-history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Technikgeschichte</span></div><h3>Die Geschichte des Computers</h3><p>Von den ersten mechanischen Rechenmaschinen bis zum Personal Computer. Ein Einblick in die Meilensteine, die unsere digitale Gegenwart geformt haben.</p></div></div></a>
             
-            <a href="analyse-smartphone-oekosystem.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Strategische Analyse</span></div><h3>Deep Dive: Das Smartphone-Ökosystem</h3><p>Eine umfassende Analyse der Geschichte, der Geschäftsmodelle und der gesellschaftlichen Auswirkungen der Technologie, die unsere Welt für immer verändert hat.</p></div></div></a>
-            
-             <a href="professional-transformation.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Der Wandel der Berufsbilder</h3><p>Eine Analyse, wie die Digitalisierung und KI ganze Berufszweige wie den Schriftsetzer, die Sekretärin oder das Reisebüro transformiert oder ersetzt hat.</p></div></div></a>
+            <a href="professional-transformation.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Der Wandel der Berufsbilder</h3><p>Eine Analyse, wie die Digitalisierung ganze Berufszweige wie den Schriftsetzer oder das Reisebüro transformiert oder überflüssig gemacht hat.</p></div></div></a>
 
         </div>
+
+        <div class="call-to-action">
+            <h2>Von der Analyse zur Strategie</h2>
+            <p>Historisches Wissen und analytische Einblicke sind die Grundlage für weise Entscheidungen in der Gegenwart. Wenn Sie diese Perspektiven für Ihr Unternehmen nutzen möchten, lassen Sie uns sprechen.</p>
+            <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+        </div>
+
     </div>
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
