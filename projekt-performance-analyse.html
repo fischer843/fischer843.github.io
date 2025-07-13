@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Die Performance-Analyse-Maschine | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        /* ... weitere Stile ... */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #007bff; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Die Performance-Analyse-Maschine – Wie ein Tool das 'Blame Game' beendete</h1>
+            <p>Die Geschichte der Entwicklung eines vollautomatisierten Analyse-Werkzeugs, das die Erstellung von Performance-Reports von zwei Wochen auf einen Tag reduzierte und eine Kultur der Schuldzuweisungen durch objektive Fakten beendete.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Grossbank (Performance Analyse)</li>
+                    <li><strong>Herausforderung:</strong> Manuelle, 2 Wochen dauernde Erstellung von Performance-Reports, die zu einem ineffizienten "Blame Game" zwischen Applikations- und Infrastruktur-Teams führten.</li>
+                    <li><strong>Meine Rolle:</strong> Architekt und Entwickler eines End-to-End-Automatisierungstools.</li>
+                    <li><strong>Methode:</strong> Verknüpfung diverser Datenquellen (CMDB, Monitoring) via SQL und Automatisierung der Diagramm- und Report-Generierung.</li>
+                    <li><strong>Ergebnis:</strong> Reduktion der Report-Erstellungszeit von 2 Wochen auf 1 Tag; Schaffung objektiver Evidenz, die Performance-Engpässe stets auf der Applikations-Seite nachwies.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Zwei Wochen für einen Report</h2>
+            <p>
+                Bei Beschwerden über Performance-Probleme war es die Aufgabe unserer Abteilung, die Ursache zu finden. Dieser Prozess war extrem mühsam: Mein Kollege musste alle Messwerte und Systeminformationen manuell aus verschiedensten Quellen zusammensuchen und die Berichte in Word von Hand erstellen. Ein einziger Report dauerte so bis zu zwei Wochen. Dies führte zu langen Wartezeiten und einem konstanten "Blame Game".
+            </p>
+
+            <h2>Die Chance: Grünes Licht für ein bewährtes Konzept</h2>
+            <p>
+                Ich musste das Rad nicht neu erfinden. Für die Lösung konnte ich auf das Konzept eines früheren Werkzeugs zurückgreifen, das ich zur <a href="projekt-bank.html">automatisierten Impact-Analyse</a> entwickelt hatte. Mein Management wusste bereits, dass ich an einem solchen Tool gearbeitet hatte, um meine eigene Arbeit bei der Erstellung von Betriebshandbüchern zu erleichtern. Eine breitere Umsetzung wurde jedoch aus politischen Gründen blockiert. Durch eine Umstrukturierung erhielt ich nun über einen eleganten 'Schachzug' des Managements grünes Licht, meine bewährte Lösung für die Performance-Analyse auszurollen.
+            </p>
+            
+            <h2>Meine Lösung: Die vollautomatisierte Analyse-Pipeline</h2>
+            <p>
+                Ich entwickelte das Tool zu einer End-to-End-Lösung weiter. Der neue Prozess war radikal einfach:
+            </p>
+            <ol>
+                <li>Ein Mitarbeiter musste nur noch ein Excel-Sheet mit einer dreistelligen Komponenten-Bezeichnung der Anwendung füttern.</li>
+                <li>Mein Tool fragte automatisiert die Konfigurationsdatenbank (CIM) ab und ermittelte alle zugehörigen Server und abhängigen Komponenten.</li>
+                <li>Anschliessend wurden die Datenbank-Server und sogar die zugewiesenen Storage-Ressourcen bis hin zum betroffenen SAN-System identifiziert.</li>
+                <li>Im nächsten Schritt sammelte das Tool die relevanten Monitoring-Daten, validierte sie und überführte sie automatisch in Excel-Diagramme.</li>
+                <li>Zuletzt wurden alle diese Artefakte zu einem fertigen, strukturierten Word-Dokument zusammengefasst.</li>
+            </ol>
+            
+            <h2>Das Ergebnis: Geschwindigkeit, Wahrheit und überraschte Gesichter</h2>
+            <p>
+                Die Entwicklung des Tools dauerte etwa vier Wochen. Danach war der Nutzen überwältigend: Die Erstellung eines umfassenden Performance-Reports dauerte nur noch **einen Tag statt zwei Wochen**.
+            </p>
+            <p>
+                Die Applikations-Teams, die zuvor routinemässig die Infrastruktur beschuldigten, waren überrascht, wie detailliert wir über unsere Systeme Bescheid wussten. Das "Blame Game" endete abrupt, da wir mit objektiven Daten nachweisen konnten, dass die Performance-Probleme nie auf unserer Seite lagen.
+            </p>
+             <p>
+                Hätte ich dieses Werkzeug bereits während des <a href="projekt-eskalation.html">eskalierten Falls der englischen Applikation</a> zur Verfügung gehabt, wäre meine Analyse für den CIO wahrscheinlich noch vernichtender gewesen.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Beenden auch Sie das "Blame Game" mit Fakten?</h2>
+                <p>Wenn auch Sie in Ihrem Unternehmen ineffiziente, manuelle Prozesse und unproduktive Schuldzuweisungen durch datenbasierte, automatisierte Analysen ersetzen wollen, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+</body>
+</html>
