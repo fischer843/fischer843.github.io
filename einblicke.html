@@ -48,7 +48,7 @@
         .card-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1.5rem;
+            gap: 1.5rem; /* Dieser Wert steuert den Abstand horizontal und vertikal */
         }
 
         .card-link-wrapper {
@@ -65,7 +65,7 @@
             padding: 1.5rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-align: left;
-            height: 100%; /* Sorgt dafür, dass die Karte den vollen Platz im Grid einnimmt */
+            /* height: 100%;  <-- DIESE ZEILE WURDE ENTFERNT */
         }
         .card:hover {
             transform: translateY(-5px);
@@ -185,7 +185,7 @@
 
             <a href="https://www.jens-fischer.ch/#die-geschichte-des-computers" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Technikgeschichte</span></div><h3>Die Geschichte des Computers</h3><p>Von den ersten mechanischen Rechenmaschinen bis zum Personal Computer. Ein tiefer Einblick in die Meilensteine, die unsere digitale Gegenwart geformt haben.</p></div></div></a>
 
-            <a href="https://www.jens-fischer.ch/#die-gesellschaftlichen-folgen" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Die gesellschaftlichen Folgen der Digitalisierung</h3><p>Wie haben Computer und KI unsere Arbeits- und Lebenswelt verändert? Eine Analyse der grossen Transformationen und der Herausforderungen für die Zukunft.</p></div></div></a>
+            <a href="https://www.jens-fischer.ch/#die-gesellschaftlichen-folgen" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Die gesellschaftlichen Folgen der Digitalisierung</h3><p>Wie haben Computer und KI unsere Arbeits- und Lebenswelt verändert? Eine Analyse der grossen Transformationen und der Herausforderungen für die Zukunft.</p></div></div></a>
             
             <a href="https://www.jens-fischer.ch/#die-gesellschaftlichen-folgen" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Mobile Transformation</span></div><h3>Die Smartphone-Revolution</h3><p>Vom ersten iPhone bis heute: Wie das Smartphone nicht nur die Kommunikation, sondern ganze Industrien und unsere Gesellschaft fundamental verändert hat.</p></div></div></a>
 
