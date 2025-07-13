@@ -12,15 +12,8 @@
         .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
         .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
         .center-heading { text-align: center; }
-        
-        /* === Kachel-Container mit CSS Grid für gleiche Höhen und Abstände === */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1.5rem; /* Dieser Wert steuert den Abstand horizontal UND vertikal */
-        }
-
-        .card-link-wrapper { text-decoration: none; color: inherit; }
+        .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        .card-link-wrapper { text-decoration: none; color: inherit; display: block; height: 100%; }
         .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; height: 100%; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
         .card-content { flex-grow: 1; }
@@ -32,6 +25,7 @@
         .tag.security { background-color: #f8d7da; color: #721c24; }
         .tag.critical { background-color: #f8d7da; color: #721c24;}
         .tag.success { background-color: #d4edda; color: #155724;}
+        .tag.ki { background-color: #f3e5f5; color: #6a1b9a; }
         header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
         .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
@@ -65,33 +59,31 @@
         </p>
         <div class="card-container">
 
-            <a href="projekt-schreibmaschinen.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Strategischer Vertrieb</span></div><h3>Der Verkauf des "Transformations-Werkzeugs"</h3><p>Wie ich als Azubi 150 'veraltete' Schreibmaschinen verkaufte, indem ich sie nicht als Produkt, sondern als Lösung für ein Change-Management-Problem positionierte.</p></div></div></a>
+            <a href="projekt-schreibmaschinen.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Strategischer Vertrieb</span></div><h3>Der Verkauf des "Transformations-Werkzeugs"</h3><p>Wie ich als Azubi 150 'veraltete' Schreibmaschinen verkaufte, indem ich sie als Lösung für ein Change-Management-Problem positionierte.</p></div></div></a>
+            
+            <a href="projekt-buchpruefung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Prozess-Logik</span></div><h3>Rettung der Buchprüfung als Azubi</h3><p>Wie durch prozessorientiertes Denken und eine logische Neubewertung des Kontexts eine drohende Steuernachzahlung abgewendet wurde.</p></div></div></a>
+
+            <a href="projekt-neukundengewinnung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Vertrauensverkauf</span></div><h3>Neukundengewinnung als Azubi</h3><p>Wie ein zufälliges Telefongespräch eine festgefahrene Kundenbeziehung aufbrach und bewies, dass echte Hilfe die beste Verkaufsstrategie ist.</p></div></div></a>
+
+            <a href="projekt-tictactoe.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag ki">Frühe KI-Konzepte</span></div><h3>Reinforcement Learning in den 80ern</h3><p>Ein privates Experiment aus meiner Schulzeit, das auf einem 16KB-Computer die Kernprinzipien des modernen Reinforcement Learning intuitiv vorwegnahm.</p></div></div></a>
             
             <a href="projekt-eskalation.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag critical">Krisenmanagement</span></div><h3>Eskalation auf CIO-Ebene</h3><p>Wie durch forensische Logfile-Analyse und strategisches Handeln ein hochpolitischer, internationaler Konflikt um eine instabile Anwendung gelöst wurde.</p></div></div></a>
-            
-            <a href="projekt-neukundengewinnung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag success">Vertrauensverkauf</span></div><h3>Neukundengewinnung durch Expertise</h3><p>Wie ein zufälliges Telefongespräch eine festgefahrene Kundenbeziehung aufbrach und bewies, dass echte Hilfe die beste Verkaufsstrategie ist.</p></div></div></a>
+
+            <a href="projekt-performance-analyse.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Automatisierung</span></div><h3>Die Performance-Analyse-Maschine</h3><p>Wie ein Tool die Reporterstellung von 2 Wochen auf 1 Tag reduzierte und ein "Blame Game" zwischen Abteilungen durch Fakten beendete.</p></div></div></a>
 
             <a href="projekt-rundungsfehler.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag critical">Risiko-Analyse</span></div><h3>Der fatale Rundungsfehler</h3><p>Aufdeckung einer versteckten Änderung in einer Microsoft-Bibliothek, die Bilanzen gefährdete, und erfolgreiche Eskalation zur Erzwingung einer Sonderlösung.</p></div></div></a>
             
             <a href="projekt-microsoft.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Kommunikation</span></div><h3>Die Brücke zu Microsoft</h3><p>Wie eine spontane Whiteboard-Skizze komplexer Kundenprozesse die Wissenslücke bei einem US-Team von Microsoft schloss und zur offiziellen Vorlage wurde.</p></div></div></a>
 
-            <a href="projekt-sparkasse.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Automatisierung</span></div><h3>Revolution der Software-Entwicklung</h3><p>In einem Gross-Projekt der Finanzindustrie wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte.</p></div></div></a>
-
-            <a href="projekt-bank.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag risk">Risiko-Analyse</span></div><h3>Automatisierte Impact-Analyse</h3><p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p></div></div></a>
-
+            <a href="projekt-qualitaetssicherung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Qualitäts-Audit</span></div><h3>Qualitätssicherung im Outsourcing</h3><p>Wie die sorgfältige Prüfung einer externen Spezifikation zwei fundamentale Designfehler aufdeckte und ein Projekt vor dem Scheitern bewahrte.</p></div></div></a>
+            
             <a href="projekt-dependencymanagement.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag risk">Best Practice</span></div><h3>Vorausschauendes Dependency-Management</h3><p>Eine frühzeitige Warnung vor instabilen Software-Abhängigkeiten wurde ignoriert – mit der Folge eines viertägigen Stillstands für ein Entwicklerteam.</p></div></div></a>
 
-            <a href="projekt-ki-qualitaet.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">KI-Validierung</span></div><h3>Qualitätssicherung für KI-Systeme</h3><p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p></div></div></a>
+            <a href="projekt-ki-qualitaet.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag ki">KI-Validierung</span></div><h3>Qualitätssicherung für KI-Systeme</h3><p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p></div></div></a>
 
             <a href="projekt-wordpress-sicherheit.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag security">Sicherheitsanalyse</span></div><h3>Das WordPress-Sicherheitsdilemma</h3><p>Nach einem Totalverlust durch einen Hacker-Angriff deckte eine Tiefenanalyse eine fundamentale architektonische Schwachstelle in WordPress auf.</p></div></div></a>
 
-            <a href="projekt-ki-halluzination.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">KI-Analyse</span></div><h3>Der stille Fehler der KI</h3><p>Eine live entstandene Fallstudie, die beweist, warum menschliche Expertise zur Aufdeckung von Fehlern in modernen KI-Systemen unersetzlich ist.</p></div></div></a>
-
-            <a href="projekt-chemie.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Prozessoptimierung</span></div><h3>Reporting-Framework für die Chemie-Industrie</h3><p>Für einen kritischen Qualitätsnachweis wurde ein massgeschneidertes Framework in Excel/VBA entwickelt, das den gesamten Prozess von den Rohdaten bis zum finalen Report automatisierte.</p></div></div></a>
-
-            <a href="projekt-rueckversicherung.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Daten-Transparenz</span></div><h3>Optimierung von IT-Support-Prozessen</h3><p>Durch Reverse-Engineering einer SQL-Datenbank wurde ein "blinder Fleck" im Ticket-System aufgedeckt, was zur Schliessung von über 70% der "verlorenen" Tickets führte.</p></div></div></a>
-
-            <a href="projekt-logistik.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag">Effizienz</span></div><h3>Effizienzsteigerung im IT-Betrieb</h3><p>Ein proaktiver Hinweis auf eine Automatisierungsmöglichkeit führte zur Reduktion eines täglichen, manuellen Arbeitsaufwands von ca. 5 Personenstunden auf nur noch eine.</p></div></div></a>
+            <a href="projekt-ki-halluzination.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag ki">KI-Analyse</span></div><h3>Der stille Fehler der KI</h3><p>Eine live entstandene Fallstudie, die beweist, warum menschliche Expertise zur Aufdeckung von Fehlern in modernen KI-Systemen unersetzlich ist.</p></div></div></a>
             
         </div>
     </div>
