@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Qualitätssicherung im Outsourcing | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        /* ... weitere Stile ... */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #c82333; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Qualitätssicherung im Outsourcing – Wie man die Fehler externer Berater findet</h1>
+            <p>Die Geschichte, wie eine sorgfältige technische Plausibilitätsprüfung zwei fundamentale Designfehler in einer von einem externen Partner gelieferten Prozess-Spezifikation aufdeckte und das Projekt vor einem Scheitern in der Produktion bewahrte.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Branche:</strong> Grossbank (Internationales Banking)</li>
+                    <li><strong>Herausforderung:</strong> Überprüfung einer von einem externen Partner entworfenen Prozess-Spezifikation für ein heikles, internationales Outsourcing-Projekt via ServiceNow.</li>
+                    <li><strong>Meine Rolle:</strong> Technischer Qualitäts-Auditor und "letzte Instanz" vor der Implementierung.</li>
+                    <li><strong>Methode:</strong> Detaillierte technische Plausibilitätsprüfung, Analyse von Logik- und Sicherheitskonzepten.</li>
+                    <li><strong>Ergebnis:</strong> Aufdeckung von zwei fundamentalen Designfehlern (logische Blockade und Missachtung von Sicherheits-Policies), die die Lösung unbrauchbar und unsicher gemacht hätten.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: Ein heikles Transformations-Projekt</h2>
+            <p>
+                In einem grossen Transformationsprojekt sollten diverse Prozesse auf Schweizer Servern so gestaltet werden, dass sie von indischen und polnischen Call-Centern angestossen werden konnten, ohne diesen direkten Systemzugriff zu gewähren. Die Umsetzung erfolgte über die Plattform ServiceNow. Das Projekt war menschlich heikel, da es die Entlassung von ehemaligen Kollegen zur Folge haben würde.
+            </p>
+
+            <h2>Meine Aufgabe: Mehr als nur Verpacken</h2>
+            <p>
+                Meine offizielle Aufgabe bestand darin, von meinen Teamkollegen erstellte Skripte in Installationspakete zu verpacken. Zusätzlich gehörte zu meinen Aufgaben jedoch auch die Qualitätsprüfung von Prozess-Spezifikationen, die von einem externen Partner erstellt wurden. Hierbei führte ich stets eine tiefgehende technische Plausibilitätsprüfung durch.
+            </p>
+            
+            <h2>Die Analyse: Zwei fundamentale Designfehler aufgedeckt</h2>
+            <h3>1. Der Logik-Fehler: Die Einweg-Statusdatei</h3>
+            <p>
+                Der Prozess sah vor, eine Statusdatei zu erzeugen, um eine doppelte Ausführung des Skripts zu verhindern. Jedoch gab es im gesamten nachfolgenden Prozess keinen einzigen Schritt, der diese Statusdatei je wieder gelöscht hätte. Die Konsequenz wäre gewesen, dass das Skript auf jedem Server **exakt ein einziges Mal** hätte ausgeführt werden können und danach für immer blockiert gewesen wäre.
+            </p>
+            <h3>2. Der Sicherheits-Fehler: Der ignorierte Ping</h3>
+            <p>
+                Um den Status eines Servers zu prüfen, verwendete das Skript ein simples "Ping"-Kommando. In einem hochsicheren Banking-Umfeld ist dieser Dienst auf gehärteten Betriebssystemen jedoch standardmässig deaktiviert. Zusätzlich hätten die zahlreichen Firewalls zwischen den internationalen Standorten die Ping-Anfragen ohnehin unterbunden. Die Lösung ignorierte also fundamentale Sicherheitskonzepte und wäre in der Produktion niemals lauffähig gewesen.
+            </p>
+
+            <h2>Das Ergebnis & die Lektion</h2>
+            <p>
+                Durch meine gründliche Analyse konnte ich diese beiden Designfehler aufdecken, bevor sie in die teure Umsetzungsphase gingen. Ich verhinderte damit nicht nur den Einsatz einer nicht-funktionsfähigen und unsicheren Lösung, sondern ersparte dem Unternehmen auch erhebliche Kosten für Fehlersuche in der Produktion und den Reputationsschaden eines gescheiterten Projekts.
+            </p>
+             <p>
+                Diese Erfahrung zeigt, wie entscheidend eine unabhängige, technisch versierte Qualitätskontrolle ist – insbesondere, wenn man mit externen Partnern arbeitet. Es beweist meine Fähigkeit, über den Tellerrand der reinen Spezifikation hinauszuschauen und die praktische, technische Realität eines komplexen Unternehmensumfelds zu berücksichtigen.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Verlassen auch Sie sich auf externe Spezifikationen?</h2>
+                <p>Wenn Sie eine unabhängige, tiefgehende technische Prüfung Ihrer Konzepte und Architekturen benötigen, bevor teure Fehler in der Umsetzung entstehen, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+</body>
+</html>
