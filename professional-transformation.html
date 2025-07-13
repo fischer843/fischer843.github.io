@@ -3,97 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vom Ausführenden zum Berater: Die Aufwertung der Berufe - Jens Fischer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Beruflicher Wandel in der Digitalisierung | Jens Fischer</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-        }
-        .prose h2 {
-            font-size: 1.875rem; /* text-3xl */
-            font-weight: 800; /* extrabold */
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        .page-title { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
+        .center-heading { text-align: center; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+
+        /* Spezifische Stile */
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        article h3 { font-family: "Georgia", serif; font-size: 1.4rem; color: #1a1a1a; border: none; margin-top: 2rem; }
+        blockquote { border-left: 5px solid #ffc107; margin: 2rem 0; padding: 1rem 2rem; background-color: #fffbeb; font-style: italic; font-size: 1.2rem; color: #555; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
     </style>
 </head>
-<body class="text-gray-800">
-
-    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header -->
-        <div class="container max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-3">
-                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
-            </div>
-            <!-- Navigation -->
-            <nav class="border-t border-gray-200">
-                <div class="flex justify-between items-center py-2">
-                    <div class="hidden md:flex space-x-8">
-                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
-                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
-                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
-                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
-                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
-                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
-                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
-                    </div>
-                </div>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
             </nav>
         </div>
+    </header>
+
+    <div class="container">
+        <div class="center-heading"><h1 class="page-title">Der Berufliche Wandel</h1></div>
+        <article>
+            <p class="page-intro" style="text-align: left; max-width: 100%;">
+                Die digitale Transformation ist eine Medaille mit zwei Seiten. Während sie unglaubliche neue Möglichkeiten und Berufsfelder schafft, macht sie gleichzeitig traditionelle Fähigkeiten und ganze Berufszweige überflüssig. Wer die Muster der Vergangenheit versteht, kann die Umwälzungen von heute und morgen besser navigieren.
+            </p>
+
+            <h2>Fallbeispiel: Das Verschwinden des Schriftsetzers – Die DTP-Revolution</h2>
+            <p>
+                Als Zeitzeuge habe ich eine der dramatischsten Transformationen der jüngeren Berufsgeschichte hautnah miterlebt: die Einführung des Desktop Publishing (DTP) in den späten 1980er und frühen 1990er Jahren.
+            </p>
+
+            <h3>Die Welt davor: Ein spezialisiertes und arbeitsteiliges Handwerk</h3>
+            <p>
+                Vor dem DTP war die Erstellung einer einfachen Broschüre oder einer Zeitung ein hochkomplexer, arbeitsteiliger Prozess. Er erforderte eine Kette von hochspezialisierten Handwerkern: den **Schriftsetzer**, der mit Blei- oder Fotosatz arbeitete, den **Lithografen**, der die Druckvorlagen erstellte, und den Drucker. Jeder Schritt war ein eigenes Gewerk, das jahrelange Ausbildung erforderte.
+            </p>
+
+            <h3>Der Umbruch: Der Computer übernimmt die Kontrolle</h3>
+            <p>
+                Mit dem Aufkommen des Apple Macintosh, des Laserdruckers und wegweisender Software wie Aldus PageMaker oder QuarkXPress änderte sich alles. Plötzlich konnte eine einzige Person – typischerweise ein Grafiker – am Bildschirm das tun, wofür man früher ein ganzes Team von Spezialisten brauchte: Text setzen, Bilder layouten und eine druckfertige Vorlage erstellen.
+            </p>
+
+            <h3>Die Konsequenz: Ein Berufszweig erodiert</h3>
+            <p>
+                Die Auswirkungen waren brutal und schnell. Das über Jahrhunderte gewachsene Berufsbild des Schriftsetzers wurde innerhalb weniger Jahre praktisch ausgelöscht. Die hochspezialisierten Fähigkeiten im Umgang mit Setzmaschinen waren von einem Tag auf den anderen wertlos geworden. Ganze Betriebe mussten schliessen oder sich radikal neu erfinden.
+            </p>
+
+            <h2>Die Lektion für heute: Muster der Transformation im Zeitalter der KI</h2>
+            <blockquote>
+                Die DTP-Revolution hat die **kreative Montage** automatisiert. Die aktuelle KI-Revolution automatisiert die **informative Synthese**. Das Muster der Disruption ist dasselbe.
+            </blockquote>
+            <p>
+                Die Geschichte des DTP ist eine perfekte Blaupause für die Umwälzungen, die uns durch die künstliche Intelligenz heute bevorstehen. So wie damals der Grafiker die Arbeit des Setzers übernahm, könnten heute KI-Systeme die Routine-Arbeit von Textern, Programmierern, Analysten oder Sachbearbeitern übernehmen.
+            </p>
+            <p>
+                Zu verstehen, welche Fähigkeiten durch Technologie ersetzt werden und welche an Wert gewinnen – wie damals Kreativität und konzeptionelles Denken – ist die entscheidende Kompetenz, um sich und sein Unternehmen für die Zukunft richtig aufzustellen.
+            </p>
+
+            <div class="call-to-action">
+                <h2>Steht auch Ihre Branche vor einem tiefgreifenden Wandel?</h2>
+                <p>Lassen Sie uns die Muster der Vergangenheit nutzen, um die Risiken und Chancen der technologischen Transformation für Ihr Unternehmen zu bewerten und eine zukunftssichere Strategie zu entwickeln.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
     </div>
 
-    <main class="container max-w-6xl mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
-            <div class="prose prose-lg max-w-none">
-                 <a href="societal-impact.html" class="text-teal-600 font-semibold hover:underline">&larr; Zurück zu den Gesellschaftlichen Folgen</a>
-                <h1 class="text-5xl font-black text-gray-900 mt-4">Vom Ausführenden zum Berater: Die Aufwertung der Berufe durch Technologie</h1>
-                <p class="text-xl text-gray-500 lead">Die digitale Revolution hat viele Berufe nicht ausgelöscht, sondern ihre Kernkompetenzen auf eine höhere, strategischere Ebene gehoben. Wo früher die manuelle Ausführung im Vordergrund stand, sind heute menschliche Fähigkeiten wie Beratung, Kreativität und Problemlösung gefragt.</p>
-
-                <div class="mt-12 grid md:grid-cols-2 gap-8">
-                    <!-- Reisebüro -->
-                    <div class="bg-gray-50 p-6 rounded-lg border">
-                        <h3 class="font-bold text-lg mb-2">Der Reiseberater</h3>
-                        <p>Der Mitarbeiter im Reisebüro ist vom reinen Verkäufer von Pauschalreisen zum hochspezialisierten Kurator für komplexe, individuelle Erlebnisse geworden, dessen Wert in persönlicher Erfahrung und Netzwerk liegt.</p>
-                    </div>
-                    <!-- Bibliothekar -->
-                    <div class="bg-gray-50 p-6 rounded-lg border">
-                        <h3 class="font-bold text-lg mb-2">Der Bibliothekar</h3>
-                        <p>Der Bibliothekar hat sich vom stillen Verwalter von Büchern zum aktiven Navigator für digitale Informationen, zum Lizenzmanager und zum Pädagogen für Medienkompetenz gewandelt.</p>
-                    </div>
-                    <!-- Sekretärin -->
-                    <div class="bg-gray-50 p-6 rounded-lg border">
-                        <h3 class="font-bold text-lg mb-2">Die administrative Assistenz</h3>
-                        <p>Die Sekretärin ist von der reinen Schreibkraft, deren Hauptwerkzeug die Schreibmaschine war, zur Informationsmanagerin geworden, die komplexe Prozesse mit digitalen Werkzeugen koordiniert.</p>
-                    </div>
-                    <!-- CNC-Bediener -->
-                    <div class="bg-gray-50 p-6 rounded-lg border">
-                        <h3 class="font-bold text-lg mb-2">Der Fertigungstechnologe</h3>
-                        <p>Der CNC-Bediener ist vom Abarbeiter von Prototypen-Aufträgen zum hochqualifizierten Spezialisten für die Herstellung komplexer Endprodukte aus Hochleistungsmaterialien aufgestiegen.</p>
-                    </div>
-                </div>
-
-                <h2 class="mt-16">Das übergreifende Muster: Die neue menschliche Kernkompetenz</h2>
-                <p>In all diesen Beispielen zeigt sich ein klares Muster: Technologie automatisiert repetitive, standardisierbare Aufgaben. Dies macht die menschliche Arbeitskraft nicht überflüssig, sondern verlagert ihren Wert. Die entscheidende Kernkompetenz der Zukunft ist nicht mehr die manuelle Ausführung einer Aufgabe, sondern die Fähigkeit:</p>
-                <ul class="list-disc pl-5 mt-4 space-y-2">
-                    <li>komplexe Probleme zu verstehen und zu strukturieren,</li>
-                    <li>kreative, individuelle Lösungen zu entwickeln,</li>
-                    <li>Kunden und Nutzer kompetent zu beraten,</li>
-                    <li>und digitale Werkzeuge strategisch zu steuern und ihre Ergebnisse kritisch zu bewerten.</li>
-                </ul>
-                <p>Die digitale Revolution ist also weniger eine Geschichte des Verlusts von Arbeitsplätzen als vielmehr eine Geschichte der **Transformation und Aufwertung menschlicher Fähigkeiten**.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-white mt-16">
-        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
-            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
-
 </body>
 </html>
