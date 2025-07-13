@@ -44,11 +44,12 @@
             text-align: center;
         }
         
-        /* Kachel-Container mit CSS Grid für gleiche Höhen */
+        /* Kachel-Container mit Flexbox */
         .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1.5rem; /* Dieser Wert steuert den Abstand horizontal und vertikal */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
         }
 
         .card-link-wrapper {
@@ -60,12 +61,13 @@
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            width: 350px;
             display: flex;
             flex-direction: column;
             padding: 1.5rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-align: left;
-            /* height: 100%;  <-- DIESE ZEILE WURDE ENTFERNT */
+            min-height: 290px; /* NEU: Stellt eine Mindesthöhe für alle Kacheln sicher */
         }
         .card:hover {
             transform: translateY(-5px);
@@ -180,19 +182,3 @@
             Um die technologischen Revolutionen von heute zu meistern, ist ein tiefes Verständnis ihrer Geschichte unerlässlich. Die folgenden Artikel bieten Einblicke und Analysen zur Entwicklung der digitalen Welt und ihren Auswirkungen auf unsere Gesellschaft.
         </p>
         <div class="card-container">
-
-            <a href="https://www.jens-fischer.ch/#geschichte-der-ki" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">KI-Kontext</span></div><h3>Die Geschichte der Künstlichen Intelligenz</h3><p>Eine Reise durch die "Sommer" und "Winter" der KI-Forschung. Verstehen, woher die heutigen Modelle kommen, um ihre Fähigkeiten und Grenzen realistisch einschätzen zu können.</p></div></div></a>
-
-            <a href="https://www.jens-fischer.ch/#die-geschichte-des-computers" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Technikgeschichte</span></div><h3>Die Geschichte des Computers</h3><p>Von den ersten mechanischen Rechenmaschinen bis zum Personal Computer. Ein tiefer Einblick in die Meilensteine, die unsere digitale Gegenwart geformt haben.</p></div></div></a>
-
-            <a href="https://www.jens-fischer.ch/#die-gesellschaftlichen-folgen" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Die gesellschaftlichen Folgen der Digitalisierung</h3><p>Wie haben Computer und KI unsere Arbeits- und Lebenswelt verändert? Eine Analyse der grossen Transformationen und der Herausforderungen für die Zukunft.</p></div></div></a>
-            
-            <a href="https://www.jens-fischer.ch/#die-gesellschaftlichen-folgen" target="_blank" rel="noopener noreferrer" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Mobile Transformation</span></div><h3>Die Smartphone-Revolution</h3><p>Vom ersten iPhone bis heute: Wie das Smartphone nicht nur die Kommunikation, sondern ganze Industrien und unsere Gesellschaft fundamental verändert hat.</p></div></div></a>
-
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2025 Jens Fischer | Impressum</p>
-    </footer>
-</body>
-</html>
