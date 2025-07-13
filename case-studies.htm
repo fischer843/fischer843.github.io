@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fallstudien | Jens Fischer</title>
-    <style>
-        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+    <style>/* (CSS bleibt unverändert) */
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
         .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
         header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
         .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
         .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
         .center-heading { text-align: center; }
-        .card-container { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
         .card-link-wrapper { text-decoration: none; color: inherit; }
-        .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); width: 350px; display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; }
+        .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
         .card-content { flex-grow: 1; }
         .card h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: #0056b3; margin-top: 0; margin-bottom: 0.75rem; }
@@ -24,7 +23,7 @@
         .tag.risk { background-color: #fffbeb; color: #856404; }
         .tag.security { background-color: #f8d7da; color: #721c24; }
         .tag.critical { background-color: #f8d7da; color: #721c24;}
-        /* Navigation Stile */
+        .tag.success { background-color: #d4edda; color: #155724;}
         header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
         .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
@@ -43,6 +42,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="ueber-mich.html">Über Mich</a></li>
                     <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
                     <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
                 </ul>
             </nav>
@@ -57,25 +57,13 @@
         </p>
         <div class="card-container">
 
+            <a href="projekt-neukundengewinnung.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag success">Vertrauensverkauf</span><span class="tag">Kommunikation</span></div><h3>Neukundengewinnung durch Expertise</h3><p>Wie ein zufälliges Telefongespräch eine festgefahrene Kundenbeziehung aufbrach und bewies, dass echte Hilfe die beste Verkaufsstrategie ist.</p></div></a>
+
             <a href="projekt-eskalation.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag critical">Krisenmanagement</span><span class="tag">Analyse</span></div><h3>Eskalation auf CIO-Ebene</h3><p>Wie durch forensische Logfile-Analyse und strategisches Handeln ein hochpolitischer, internationaler Konflikt um eine instabile Anwendung gelöst wurde.</p></div></a>
 
             <a href="projekt-rundungsfehler.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag critical">Risiko-Analyse</span><span class="tag">Verhandlung</span></div><h3>Der fatale Rundungsfehler</h3><p>Aufdeckung einer versteckten Änderung in einer Microsoft-Bibliothek, die Bilanzen gefährdete, und erfolgreiche Eskalation zur Erzwingung einer Sonderlösung.</p></div></a>
-
-            <a href="projekt-microsoft.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag">Kommunikation</span><span class="tag">Prozess-Visualisierung</span></div><h3>Die Brücke zu Microsoft</h3><p>Wie eine spontane Whiteboard-Skizze komplexer Kundenprozesse die Wissenslücke bei einem US-Team von Microsoft schloss und zur offiziellen Vorlage wurde.</p></div></a>
-
-            <a href="projekt-sparkasse.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag">Automatisierung</span><span class="tag">Architektur</span></div><h3>Revolution der Software-Entwicklung</h3><p>In einem Gross-Projekt der Finanzindustrie wurde ein manueller Prozess durch einen selbst entwickelten Compiler ersetzt, was die Produktivität vervielfachte.</p></div></a>
-
-            <a href="projekt-bank.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag risk">Risiko-Analyse</span><span class="tag">Tool-Entwicklung</span></div><h3>Automatisierte Impact-Analyse</h3><p>Um Risiken bei Software-Änderungen sichtbar zu machen, wurde ein Tool entwickelt, das Abhängigkeiten automatisch analysiert und die Zeit für die Analyse um 70% reduzierte.</p></div></a>
-
-            <a href="projekt-dependencymanagement.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag risk">Risiko-Management</span><span class="tag">Best Practice</span></div><h3>Vorausschauendes Dependency-Management</h3><p>Eine frühzeitige Warnung vor instabilen Software-Abhängigkeiten wurde ignoriert – mit der Folge eines viertägigen Stillstands für ein 10-köpfiges Entwicklerteam.</p></div></a>
-
-            <a href="projekt-ki-qualitaet.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag">KI-Validierung</span><span class="tag">Qualitätssicherung</span></div><h3>Qualitätssicherung für KI-Systeme</h3><p>Nach unerklärlichen Fehlern einer "Black Box" KI-Komponente wurde ein forensisches System zur Qualitätsmessung entwickelt, das die Unreife der KI objektiv nachwies.</p></div></a>
-
-            <a href="projekt-wordpress-sicherheit.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag security">Sicherheitsanalyse</span><span class="tag">Architektur</span></div><h3>Das WordPress-Sicherheitsdilemma</h3><p>Nach einem Totalverlust durch einen Hacker-Angriff deckte eine Tiefenanalyse eine fundamentale architektonische Schwachstelle in WordPress auf.</p></div></a>
-
-            <a href="projekt-ki-halluzination.html" class="card-link-wrapper"><div class="card"><div class="card-tags"><span class="tag">KI-Analyse</span><span class="tag">Qualitäts-Audit</span></div><h3>Der stille Fehler der KI</h3><p>Eine live entstandene Fallstudie, die beweist, warum menschliche Expertise zur Aufdeckung von Fehlern in modernen KI-Systemen unersetzlich ist.</p></div></a>
             
-        </div>
+            </div>
     </div>
     <footer>
         <p>&copy; 2025 Jens Fischer | Impressum</p>
