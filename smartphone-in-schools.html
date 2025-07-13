@@ -3,115 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Smartphone-Kontroverse in Schulen - Jens Fischer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Smartphones in Schulen | Jens Fischer</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-        }
-        .prose h2 {
-            font-size: 1.875rem; /* text-3xl */
-            font-weight: 800; /* extrabold */
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .prose h3 {
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 700; /* bold */
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        .page-title { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
+        .center-heading { text-align: center; }
+        /* Navigation Stile */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+
+        /* Artikel-spezifische Stile */
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s ease, transform 0.2s ease; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; transform: translateY(-2px); }
     </style>
 </head>
-<body class="text-gray-800">
-
-    <div class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <!-- Header -->
-        <div class="container max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-3">
-                <a href="index.html" class="text-2xl font-bold text-gray-800">Jens Fischer</a>
-            </div>
-            <!-- Navigation -->
-            <nav class="border-t border-gray-200">
-                <div class="flex justify-between items-center py-2">
-                    <div class="hidden md:flex space-x-8">
-                        <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Startseite</a>
-                        <a href="about.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Über mich</a>
-                        <a href="history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">KI-Geschichte</a>
-                        <a href="computer-history.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Computer-Geschichte</a>
-                        <a href="societal-impact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Gesellschaftliche Folgen</a>
-                        <a href="research-analysis.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Analyse</a>
-                        <a href="contact.html" class="nav-link text-gray-600 hover:text-teal-600 transition duration-300">Kontakt</a>
-                    </div>
-                </div>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html">Fallstudien</a></li>
+                    <li><a href="einblicke.html" class="active">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
             </nav>
         </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Smartphones in der Schule: Ein zweischneidiges Schwert</h1>
+            
+            <p>Die Debatte um Smartphones im Klassenzimmer ist so alt wie das iPhone selbst und ein perfektes Beispiel für die Ambivalenz der digitalen Transformation. Einerseits bieten die Geräte als "Computer für die Hosentasche" unglaubliche Chancen, andererseits bergen sie erhebliche Risiken für den Lernerfolg und das soziale Gefüge.</p>
+            
+            <h2>Die Chance: Das unendliche Lehrmittel in der Hosentasche</h2>
+            <p>Smartphones ermöglichen einen sofortigen Zugriff auf einen schier unendlichen Wissenspool. Schüler können für Referate in Echtzeit recherchieren, komplexe Sachverhalte durch Erklärvideos visualisieren oder spezialisierte Lern-Apps für Sprachen und Naturwissenschaften nutzen. Richtig eingesetzt, fördern sie die Eigenverantwortung und bereiten auf eine Arbeitswelt vor, in der der Umgang mit digitalen Informationen eine Schlüsselkompetenz ist.</p>
+            
+            <h2>Die Herausforderung: Ablenkung und soziale Risiken</h2>
+            <p>Die Kehrseite ist die massive Herausforderung der Ablenkung. Die ständige Verfügbarkeit von Social Media, Messengern und Spielen steht in direkter Konkurrenz zur tiefen Konzentration, die für nachhaltiges Lernen unerlässlich ist. Abseits des Unterrichts verändern Smartphones zudem die soziale Dynamik auf dem Schulhof, können sozialen Druck erzeugen und sind ein Einfallstor für Cybermobbing, das weit über den Schulschluss hinaus wirkt.</p>
+
+            <h2>Der Weg nach vorn: Medienkompetenz als Kernfach</h2>
+            <p>Es gibt keine einfache Antwort auf dieses Dilemma. Ein generelles Verbot ist ebenso kurzsichtig wie eine unregulierte Freigabe, da beides die Schüler nicht auf die Realität vorbereitet. Der einzig nachhaltige Weg ist die Vermittlung von **Medienkompetenz** als zentrales, fächerübergreifendes Prinzip. Schüler müssen lernen, wann der Einsatz eines Smartphones sinnvoll ist und wann es bewusst zur Seite gelegt werden muss. Sie müssen über die Mechanismen von sozialen Netzwerken und die Gefahren von Cybermobbing aufgeklärt werden, um sich souverän und sicher in der digitalen Welt bewegen zu können.</p>
+
+            <a href="einblicke.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Einblicke-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Steht Ihre Organisation vor einer ähnlichen Herausforderung?</h2>
+                <p>Wenn Sie die Chancen und Risiken der Digitalisierung in Ihrem Bildungs- oder Unternehmensumfeld bewerten und eine klare Strategie für den Umgang damit entwickeln möchten, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
     </div>
 
-    <main class="container max-w-6xl mx-auto p-6 md:p-12">
-        <section class="bg-white p-8 md:p-16 rounded-2xl shadow-lg">
-            <div class="prose prose-lg max-w-none">
-                 <a href="societal-impact.html" class="text-teal-600 font-semibold hover:underline">&larr; Zurück zu den Gesellschaftlichen Folgen</a>
-                <h1 class="text-5xl font-black text-gray-900 mt-4">Die Smartphone-Kontroverse in Schulen</h1>
-                <p class="text-xl text-gray-500 lead">Kaum eine Technologie spaltet die Meinungen im Bildungsbereich so sehr wie das Smartphone. Ist es ein unersetzliches Lernwerkzeug oder der größte Störfaktor im Klassenzimmer? Die Debatte um ein Verbot beleuchtet die tiefen Gräben zwischen den Chancen und Risiken der Digitalisierung.</p>
-
-                <h2>Die Debatte: Pro und Contra Smartphone im Unterricht</h2>
-                <div class="grid md:grid-cols-2 gap-8 mt-6">
-                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                        <h3 class="font-bold text-red-800">Contra: Argumente für ein Verbot</h3>
-                        <ul class="list-disc pl-5 mt-2 space-y-2">
-                            <li><strong>Massive Ablenkung:</strong> Die größte Sorge ist, dass Smartphones durch soziale Medien, Spiele und ständige Benachrichtigungen die Konzentration vom eigentlichen Unterricht ablenken.</li>
-                            <li><strong>Cybermobbing:</strong> Das Smartphone ermöglicht es, Mobbing über den Schulhof hinaus in den digitalen Raum zu tragen, 24 Stunden am Tag.</li>
-                            <li><strong>Soziale Ungleichheit:</strong> Nicht alle Schüler besitzen das neueste Modell, was zu sozialem Druck und Ausgrenzung führen kann.</li>
-                            <li><strong>Gesundheitliche Bedenken:</strong> Eine übermäßige Nutzung kann zu Haltungsschäden, Kurzsichtigkeit und einer Abnahme der körperlichen Aktivität führen.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                        <h3 class="font-bold text-green-800">Pro: Argumente für eine Integration</h3>
-                        <ul class="list-disc pl-5 mt-2 space-y-2">
-                            <li><strong>Zugang zu Wissen:</strong> Das Smartphone ist ein Tor zur größten Bibliothek der Welt. Schüler können Informationen in Echtzeit recherchieren und Fakten überprüfen.</li>
-                            <li><strong>Entwicklung von Medienkompetenz:</strong> Ein Verbot verhindert nicht, dass Schüler Smartphones nutzen. Eine kontrollierte Integration im Unterricht ist die beste Möglichkeit, ihnen einen kritischen und verantwortungsvollen Umgang beizubringen.</li>
-                            <li><strong>Individuelles Lernen:</strong> Lern-Apps ermöglichen es, auf das individuelle Tempo der Schüler einzugehen und personalisierte Übungen anzubieten.</li>
-                            <li><strong>Vorbereitung auf die Realität:</strong> Das Smartphone ist ein zentrales Werkzeug der modernen Arbeits- und Lebenswelt. Die Schule hat den Auftrag, auf diese Realität vorzubereiten.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2 class="mt-16 text-3xl font-bold">Der Elefant im Raum: Kommerzielle Interessen vs. Pädagogik</h2>
-                <p>Die Debatte wird zusätzlich durch die massiven kommerziellen Interessen von Technologieunternehmen verkompliziert. Firmen wie Apple, Google und Microsoft haben ein ureigenes Interesse daran, ihre Produkte und Ökosysteme (iPads, Chromebooks, Microsoft 365) so früh wie möglich im Bildungssystem zu verankern. Ihr Ziel ist es, die traditionellen Schulbücher und Lehrmittel durch ihre digitalen Plattformen zu ersetzen.</p>
-                <p>Dies schafft eine Spannung zwischen pädagogischen Zielen und wirtschaftlichen Interessen:</p>
-                <ul class="list-disc pl-5 mt-4 space-y-2">
-                    <li><strong>Abhängigkeit (Lock-in-Effekt):</strong> Wenn Schulen sich für ein Ökosystem entscheiden, sind sie und ihre Schüler oft für Jahre daran gebunden.</li>
-                    <li><strong>Datenschutz:</strong> Die Nutzung kommerzieller Plattformen wirft ernsthafte Fragen zum Schutz der Daten von Schülern auf.</li>
-                    <li><strong>Didaktischer Mehrwert vs. Marketing:</strong> Es muss kritisch hinterfragt werden, ob ein digitales Produkt tatsächlich einen pädagogischen Mehrwert bietet oder ob es primär darum geht, zukünftige Kunden an eine Marke zu binden.</li>
-                </ul>
-
-                <h2>Fazit: Nicht "ob", sondern "wie"</h2>
-                <p>Ein generelles Verbot von Smartphones ignoriert die Lebensrealität der Schüler und vergibt die Chance, entscheidende Zukunftskompetenzen zu vermitteln. Ein unregulierter Einsatz ignoriert die erheblichen Risiken der Ablenkung und des Missbrauchs. Die wahrscheinlichste und sinnvollste Lösung liegt in einem klaren, von der Schule vorgegebenen Regelwerk: Phasen der konzentrierten Arbeit ohne Geräte ("Handy-freie Zonen/Zeiten") wechseln sich mit Phasen ab, in denen das Smartphone gezielt als Werkzeug für Recherche, Kollaboration oder kreative Projekte eingesetzt wird. Die entscheidende Aufgabe für die Pädagogik ist es, nicht die Technologie zu verbieten, sondern den mündigen und verantwortungsvollen Umgang mit ihr zu lehren.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-white mt-16">
-        <div class="container max-w-6xl mx-auto px-6 py-8 text-center text-gray-600">
-            <a href="sitemap.html" class="text-blue-600 hover:underline">Sitemap</a>
-            <p class="mt-4">&copy; 2025 Jens Fischer. Alle Rechte vorbehalten.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
     </footer>
-
-    <script>
-        // Skript für das mobile Menü
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    </script>
 </body>
 </html>
