@@ -5,158 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einblicke & Historischer Kontext | Jens Fischer</title>
     <style>
-        /* Globaler Stil */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        header, footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #f0f0f0;
-        }
-        .page-title {
-            font-family: "Georgia", serif;
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #007bff;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-        .page-intro {
-            text-align: center;
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 3rem auto;
-            color: #555;
-        }
-        .center-heading {
-            text-align: center;
-        }
-        
-        /* Kachel-Container */
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .card-link-wrapper {
-            text-decoration: none;
-            color: inherit;
-        }
-        .card {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-            width: 350px;
-            display: flex;
-            flex-direction: column;
-            padding: 1.5rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-align: left;
-            min-height: 290px;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-        }
-        .card-content {
-            flex-grow: 1;
-        }
-        .card h3 {
-            font-family: "Georgia", serif;
-            font-size: 1.5rem;
-            color: #0056b3;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-        }
-        .card p {
-            font-size: 1rem;
-            color: #444;
-        }
-        .card-tags {
-            margin-bottom: 1rem;
-        }
-        .tag {
-            display: inline-block;
-            background-color: #eaf4ff;
-            color: #0056b3;
-            font-size: 0.8rem;
-            padding: 0.25rem 0.6rem;
-            border-radius: 12px;
-            margin-right: 0.5rem;
-            font-weight: 500;
-        }
-        .tag.history {
-            background-color: #f3e5f5;
-            color: #6a1b9a;
-        }
-        /* Navigation Stile */
-        header {
-            background-color: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 0 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 70px;
-        }
-        .logo a {
-            font-family: "Georgia", serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            gap: 1.5rem;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease, color 0.2s ease;
-        }
-        nav a:hover, nav a.active {
-            color: #007bff;
-            border-bottom-color: #007bff;
-        }
-        footer {
-            margin-top: 4rem;
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: #f0f0f0;
-            font-size: 0.9rem;
-            color: #666;
-        }
+        /* (CSS bleibt unverändert) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        .page-title { font-family: "Georgia", serif; font-size: 2.8rem; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 0.5rem; }
+        .page-intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto; color: #555; }
+        .center-heading { text-align: center; }
+        .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        .card-link-wrapper { text-decoration: none; color: inherit; }
+        .card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: left; height: 100%; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
+        .card-content { flex-grow: 1; }
+        .card h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: #0056b3; margin-top: 0; margin-bottom: 0.75rem; }
+        .card p { font-size: 1rem; color: #444; }
+        .card-tags { margin-bottom: 1rem; }
+        .tag { display: inline-block; background-color: #eaf4ff; color: #0056b3; font-size: 0.8rem; padding: 0.25rem 0.6rem; border-radius: 12px; margin-right: 0.5rem; font-weight: 500; }
+        .tag.history { background-color: #f3e5f5; color: #6a1b9a; }
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
     </style>
 </head>
 <body>
@@ -183,13 +55,13 @@
         </p>
         <div class="card-container">
 
-            <a href="history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">KI-Kontext</span></div><h3>Die Geschichte der Künstlichen Intelligenz</h3><p>Eine Reise durch die "Sommer" und "Winter" der KI-Forschung. Verstehen, woher die heutigen Modelle kommen, um ihre Fähigkeiten und Grenzen realistisch einschätzen zu können.</p></div></div></a>
+            <a href="history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">KI-Kontext</span></div><h3>Die Geschichte der Künstlichen Intelligenz</h3><p>Eine Reise durch die "Sommer" und "Winter" der KI-Forschung, um die Fähigkeiten und Grenzen heutiger Modelle realistisch einschätzen zu können.</p></div></div></a>
 
-            <a href="computer-history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Technikgeschichte</span></div><h3>Die Geschichte des Computers</h3><p>Von den ersten mechanischen Rechenmaschinen bis zum Personal Computer. Ein tiefer Einblick in die Meilensteine, die unsere digitale Gegenwart geformt haben.</p></div></div></a>
-
-            <a href="societal-impact.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Die gesellschaftlichen Folgen der Digitalisierung</h3><p>Wie haben Computer und KI unsere Arbeits- und Lebenswelt verändert? Eine Analyse der grossen Transformationen und der Herausforderungen für die Zukunft.</p></div></div></a>
+            <a href="computer-history.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Technikgeschichte</span></div><h3>Die Geschichte des Computers</h3><p>Von den ersten mechanischen Rechenmaschinen bis zum Personal Computer. Ein Einblick in die Meilensteine, die unsere digitale Gegenwart geformt haben.</p></div></div></a>
             
-            <a href="smartphone-summary.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Mobile Transformation</span></div><h3>Die Smartphone-Revolution</h3><p>Vom ersten iPhone bis heute: Wie das Smartphone nicht nur die Kommunikation, sondern ganze Industrien und unsere Gesellschaft fundamental verändert hat.</p></div></div></a>
+            <a href="analyse-smartphone-oekosystem.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Strategische Analyse</span></div><h3>Deep Dive: Das Smartphone-Ökosystem</h3><p>Eine umfassende Analyse der Geschichte, der Geschäftsmodelle und der gesellschaftlichen Auswirkungen der Technologie, die unsere Welt für immer verändert hat.</p></div></div></a>
+            
+             <a href="professional-transformation.html" class="card-link-wrapper"><div class="card"><div class="card-content"><div class="card-tags"><span class="tag history">Gesellschaft</span></div><h3>Der Wandel der Berufsbilder</h3><p>Eine Analyse, wie die Digitalisierung und KI ganze Berufszweige wie den Schriftsetzer, die Sekretärin oder das Reisebüro transformiert oder ersetzt hat.</p></div></div></a>
 
         </div>
     </div>
