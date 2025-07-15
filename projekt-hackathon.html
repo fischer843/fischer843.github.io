@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: Top 20 beim Kanzleramt-Hackathon | Jens Fischer</title>
+    <style>
+        /* (Hier ist derselbe CSS-Code wie auf Ihren anderen Seiten für Konsistenz) */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+        header, footer { text-align: center; padding: 1rem 0; background-color: #f0f0f0; }
+        h1, h2, h3 { font-family: "Georgia", serif; color: #1a1a1a; line-height: 1.3; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
+        /* ... weitere Stile ... */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 70px; }
+        .logo a { font-family: "Georgia", serif; font-size: 1.5rem; font-weight: bold; color: #1a1a1a; text-decoration: none; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 1.5rem; }
+        nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+        nav a:hover, nav a.active { color: #007bff; border-bottom-color: #007bff; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem 1rem; background-color: #f0f0f0; font-size: 0.9rem; color: #666;}
+        article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        article p { margin-bottom: 1rem; font-size: 1.1rem; }
+        article h2 { font-size: 1.8rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+        .project-meta { background-color: #f7f7f7; border-left: 5px solid #007bff; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .project-meta h3 { margin-top: 0; font-size: 1.4rem; }
+        .project-meta ul { list-style-type: none; padding: 0; margin: 0; }
+        .project-meta li { margin-bottom: 0.5rem; }
+        .project-meta strong { display: inline-block; width: 140px; }
+        .call-to-action { background-color: #eaf4ff; border: 1px solid #b8d9f7; padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; border-radius: 5px; }
+        .call-to-action h2 { border-bottom: none; margin-top: 0; font-size: 1.6rem; }
+        .button-link { display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="nav-container">
+            <div class="logo"><a href="index.html">Jens Fischer</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ueber-mich.html">Über Mich</a></li>
+                    <li><a href="case-studies.html" class="active">Fallstudien</a></li>
+                    <li><a href="einblicke.html">Einblicke</a></li>
+                    <li><a href="mailto:ihre.email@beispiel.ch">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <h1>Fallstudie: Top 20 beim Kanzleramt-Hackathon – Wie man am Wochenende eine Krise löst</h1>
+            <p>Die Geschichte, wie sich ein Team von Fremden an einem Wochenende zusammenfand, um eine zukunftsweisende Lösung für die Pandemie-Kontrolle zu entwickeln, und dabei sowohl technische als auch politische Hürden überwand.</p>
+
+            <div class="project-meta">
+                <h3>Projekt-Steckbrief</h3>
+                <ul>
+                    <li><strong>Umfeld:</strong> Regierungs-Hackathon (#WirVsVirus)</li>
+                    <li><strong>Herausforderung:</strong> Entwicklung eines funktionierenden Proof-of-Concept für eine dezentrale Grenzkontrolle innerhalb von 72 Stunden.</li>
+                    <li><strong>Meine Rolle:</strong> Spontaner System-Architekt für Datenbank und Mittelschicht, Datenschutz-Beauftragter.</li>
+                    <li><strong>Methode:</strong> Agile Teambildung und Rollenverteilung, schnelle architektonische Kurskorrektur.</li>
+                    <li><strong>Ergebnis:</strong> Platzierung unter den Top 20 von 1200 Projekten; funktionierender POC; wertvolle Lektionen über politische Realitäten.</li>
+                </ul>
+            </div>
+
+            <h2>Die Ausgangslage: 72 Stunden für eine Lösung</h2>
+            <p>
+                Zu Beginn der Pandemie fand ein grosser, von der deutschen Bundesregierung initiierter Hackathon statt. Ich schloss mich einem Team von Menschen an, die sich zuvor untereinander nicht kannten. Innerhalb kürzester Zeit fand eine natürliche Rollenverteilung statt: Während sich andere auf die App-Entwicklung fokussierten, konnten wir fehlende Design-Kompetenz durch einen kurzfristig für das Projekt begeisterten Profi aus dem Freundeskreis eines Mitglieds abdecken. Ein anderer Kollege organisierte dank seiner AWS-Kenntnisse kostenlose Server-Ressourcen. Ich selbst positionierte mich bewusst in der **Datenbank- und Mittelschicht**, da ich dort meine architektonische Stärke am besten für das Team einbringen konnte.
+            </p>
+
+            <h2>Die entscheidende Weichenstellung: Fahrer statt Fahrzeug</h2>
+            <p>
+                Die erste Idee des Teams war es, auf die Kennzeichen von LKWs als Identifikator zu setzen. Ich erkannte jedoch sehr schnell den fundamentalen Denkfehler: Die Kombination von Fahrer und Fahrzeug kann sich jederzeit ändern. Eine auf das Fahrzeug bezogene Kontrolle wäre wertlos, wenn der Fahrer die entscheidende Einheit ist. Ich konnte das Team von der Notwendigkeit überzeugen, die Architektur auf den **Fahrer als dezentrale Identität** auszurichten und passte die Datenstrukturen noch rechtzeitig an. Dies rettete das Projekt vor einem konzeptionellen Scheitern.
+            </p>
+            
+            <h2>Die Lösung: Ein dezentraler POC mit Datenschutz-Konzept</h2>
+            <p>
+                Innerhalb des Wochenendes entwickelten wir einen lauffähigen Proof-of-Concept auf Basis der IOTA-Technologie. Dank meiner Erfahrung aus dem Bankenbereich konnte ich zudem ein **robustes Datenschutzkonzept** entwerfen. Es stellte nach dem "Need-to-know"-Prinzip sicher, dass jede Partei nur exakt die Informationen einsehen konnte, die für ihre spezifische Aufgabe zwingend notwendig waren.
+            </p>
+
+            <h2>Das Ergebnis: Erfolg und die Realität der Politik</h2>
+            <p>
+                Unser Projekt wurde von der Jury unter die **Top 20 der 1200 eingereichten Vorschläge** gewählt und vom Bundeskanzleramt der Presse als grosser Erfolg verkauft. Danach folgte jedoch die Ernüchterung. Trotz des Erfolgs war auf deutscher Seite im Kanzleramt niemand bereit, uns die notwendige Unterstützung zu geben, um mit den zuständigen Fachämtern in Kontakt zu treten.
+            </p>
+            
+            <p>
+                In einer finalen Videokonferenz zog unser Team die Konsequenz aus dieser Erkenntnis. Wir sahen, dass die Projekte, die von der Organisation hinter dem Hackathon weiter gefördert wurden, primär solche waren, die keine tiefgreifenden politischen oder administrativen Änderungen erforderten – meist lokale Lösungen für ein globales Problem. Schweren Herzens, aber mit klarem Blick für die Realität, beschlossen wir daraufhin, unser Projekt nicht weiter zu forcieren und uns aus dem Wettbewerb zurückzuziehen. Die grösste Lektion war somit nicht nur technischer, sondern auch strategischer Natur: Die beste Lösung ist wertlos, wenn das Umfeld für ihre Umsetzung nicht bereit ist.
+            </p>
+
+            <a href="case-studies.html" style="display:inline-block; margin-top: 2rem; font-weight: bold;">&larr; Zurück zur Fallstudien-Übersicht</a>
+
+            <div class="call-to-action">
+                <h2>Steht Ihre Innovation auch vor einer Mauer?</h2>
+                <p>Wenn Sie einen Partner suchen, der nicht nur die technische Lösung entwickelt, sondern auch die organisatorischen und politischen Realitäten versteht, die über Erfolg oder Misserfolg entscheiden, lassen Sie uns sprechen.</p>
+                <a href="mailto:ihre.email@beispiel.ch" class="button-link">Unverbindliches Erstgespräch vereinbaren</a>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jens Fischer | Impressum</p>
+    </footer>
+</body>
+</html>
